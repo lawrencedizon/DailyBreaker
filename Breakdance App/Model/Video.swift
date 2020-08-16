@@ -1,0 +1,56 @@
+//
+//  Video.swift
+//  Breakdance App
+//
+//  Created by Lawrence Dizon on 8/15/20.
+//  Copyright © 2020 Lawrence Dizon. All rights reserved.
+//
+
+import UIKit
+
+class Video {
+    var id = UUID()
+    var title: String
+    var thumbnail: UIImage?
+    var lessonCount: Int
+    var link: URL?
+    
+    init(title: String, thumbnail: UIImage? = nil, lessonCount: Int, link: URL?){
+        self.title = title
+        self.thumbnail = thumbnail
+        self.lessonCount = lessonCount
+        self.link = link
+    }
+}
+    
+
+// MARK: - Video Data
+extension Video {
+    static let allVideos = [
+        Video(
+                title: "Toprock",
+                thumbnail: UIImage(named: "toprock"),
+                lessonCount: 29,
+                link: URL(string: "https://www.youtube.com/watch?v=7R9SLdD3eOU&list=PL57E01028C82367BD")
+              ),
+        Video(
+            title: "Footwork",
+            thumbnail: UIImage(named: "footwork"),
+            lessonCount: 37,
+            link: URL(string: "https://www.youtube.com/watch?v=9OOzN7QNE_Y&list=PLC03D627286ADDD94")
+        ),
+        Video(
+            title: "Freezes",
+            thumbnail: UIImage(named: "freezes"),
+            lessonCount: 8,
+            link: URL(string: "https://www.youtube.com/watch?v=FGiG47yG2KE&list=PL667C395494400FC0")
+        ),
+        Video(
+            title: "Powermoves",
+            thumbnail: UIImage(named: "powermoves"),
+            lessonCount: 18,
+            link: URL(string: "https://www.youtube.com/watch?v=9OOzN7QNE_Y&list=PLC03D627286ADDD94")
+        ),
+    ]
+}
+

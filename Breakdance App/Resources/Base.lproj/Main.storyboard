@@ -14,12 +14,13 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="BU7-DB-isl" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="PNu-FV-vWG">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
                         <segue destination="YHq-qh-IBz" kind="relationship" relationship="viewControllers" id="E5k-1g-Td5"/>
-                        <segue destination="qXF-dl-tKj" kind="relationship" relationship="viewControllers" id="eQt-Ow-apS"/>
+                        <segue destination="3RZ-TM-JaA" kind="relationship" relationship="viewControllers" id="yQJ-Q1-MMy"/>
                         <segue destination="vKW-xk-3C9" kind="relationship" relationship="viewControllers" id="OYP-dP-e2V"/>
                     </connections>
                 </tabBarController>
@@ -63,33 +64,80 @@
             <point key="canvasLocation" x="1038" y="-1325"/>
         </scene>
         <!--Learn-->
-        <scene sceneID="xNy-g6-e9R">
+        <scene sceneID="eWp-Xv-lyO">
             <objects>
-                <tableViewController id="qXF-dl-tKj" customClass="LearnViewController" customModule="Breakdance_App" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="0Ww-49-JHP">
+                <collectionViewController id="3RZ-TM-JaA" customClass="LearnViewController" customModule="Breakdance_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="Iiq-3P-pyf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="0qu-ii-he0">
-                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0qu-ii-he0" id="9QD-65-cxu">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="PdE-tf-tpv">
+                            <size key="itemSize" width="128" height="128"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="VideoCollectionViewCell" id="VhU-XP-kSu" customClass="VideoCollectionViewCell" customModule="Breakdance_App" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="280"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="SyH-Cs-SWC">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="280"/>
                                     <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Vrg-1V-ToZ">
+                                            <rect key="frame" x="8" y="8" width="398" height="204"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dro-sV-we5">
+                                            <rect key="frame" x="8" y="220" width="398" height="22"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="22" id="zZc-n6-NjR"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="meX-ek-DiW">
+                                            <rect key="frame" x="8" y="250" width="398" height="22"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="22" id="RSr-cj-cud"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="meX-ek-DiW" secondAttribute="bottom" constant="8" id="2ZU-fY-kYD"/>
+                                        <constraint firstItem="meX-ek-DiW" firstAttribute="leading" secondItem="SyH-Cs-SWC" secondAttribute="leading" constant="8" id="7kq-up-g8z"/>
+                                        <constraint firstAttribute="trailing" secondItem="meX-ek-DiW" secondAttribute="trailing" constant="8" id="NXo-gD-1fo"/>
+                                        <constraint firstAttribute="trailing" secondItem="Vrg-1V-ToZ" secondAttribute="trailing" constant="8" id="UGh-x3-I0R"/>
+                                        <constraint firstAttribute="trailing" secondItem="dro-sV-we5" secondAttribute="trailing" constant="8" id="YyV-fo-57f"/>
+                                        <constraint firstItem="dro-sV-we5" firstAttribute="leading" secondItem="SyH-Cs-SWC" secondAttribute="leading" constant="8" id="ag2-hQ-FX8"/>
+                                        <constraint firstItem="Vrg-1V-ToZ" firstAttribute="top" secondItem="SyH-Cs-SWC" secondAttribute="top" constant="8" id="dlH-GA-oyU"/>
+                                        <constraint firstItem="meX-ek-DiW" firstAttribute="top" secondItem="dro-sV-we5" secondAttribute="bottom" constant="8" id="lGu-Jc-xmW"/>
+                                        <constraint firstItem="dro-sV-we5" firstAttribute="top" secondItem="Vrg-1V-ToZ" secondAttribute="bottom" constant="8" id="npB-VE-6mc"/>
+                                        <constraint firstItem="Vrg-1V-ToZ" firstAttribute="leading" secondItem="SyH-Cs-SWC" secondAttribute="leading" constant="8" id="zgV-2H-rUV"/>
+                                    </constraints>
+                                </collectionViewCellContentView>
+                                <size key="customSize" width="414" height="280"/>
+                                <connections>
+                                    <outlet property="subtitleLabel" destination="meX-ek-DiW" id="hVR-cF-xkw"/>
+                                    <outlet property="thumbnailView" destination="Vrg-1V-ToZ" id="ale-Rc-Hvc"/>
+                                    <outlet property="titleLabel" destination="dro-sV-we5" id="Kzk-fl-NcG"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
                         <connections>
-                            <outlet property="dataSource" destination="qXF-dl-tKj" id="xvy-56-jC4"/>
-                            <outlet property="delegate" destination="qXF-dl-tKj" id="IqR-B6-XMK"/>
+                            <outlet property="dataSource" destination="3RZ-TM-JaA" id="ZRR-Er-m9w"/>
+                            <outlet property="delegate" destination="3RZ-TM-JaA" id="g5F-Pv-Czw"/>
                         </connections>
-                    </tableView>
-                    <tabBarItem key="tabBarItem" title="Learn" image="lightbulb" catalog="system" id="sQj-5m-f8E"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="n7G-LJ-50N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                    </collectionView>
+                    <tabBarItem key="tabBarItem" title="Learn" image="lightbulb" catalog="system" id="UaM-mo-Uyx"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ReB-MN-DgX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1038" y="-593"/>
+            <point key="canvasLocation" x="1037.68115942029" y="-587.27678571428567"/>
         </scene>
         <!--Profiles-->
         <scene sceneID="TGE-Cy-6nT">
