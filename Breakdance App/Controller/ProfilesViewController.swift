@@ -18,10 +18,9 @@ class ProfilesViewController: UITableViewController {
         super.viewDidLoad()
         table.dataSource = self
         table.delegate = self
-        
     }
     
-    //MARK:- Data Source
+//MARK:- Data Source
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return Profiles.profiles.count
     }
@@ -41,6 +40,5 @@ class ProfilesViewController: UITableViewController {
            cell.detailTextLabel?.font = UIFont(name: "Helvetica", size: 17 )
            return cell
        }
-    
 }
 

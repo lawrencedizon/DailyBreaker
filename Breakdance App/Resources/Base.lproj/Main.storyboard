@@ -3,7 +3,6 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -16,7 +15,6 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="PNu-FV-vWG">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
                         <segue destination="YHq-qh-IBz" kind="relationship" relationship="viewControllers" id="E5k-1g-Td5"/>
@@ -32,31 +30,6 @@
         <scene sceneID="oce-0m-MCy">
             <objects>
                 <collectionViewController id="vKW-xk-3C9" customClass="MusicPlaylistViewController" customModule="Breakdance_App" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="rhv-u7-1fA">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="SCK-EM-uj2">
-                            <size key="itemSize" width="128" height="128"/>
-                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                        </collectionViewFlowLayout>
-                        <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="k8Q-DE-U3Y">
-                                <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Qxe-4a-2z3">
-                                    <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </collectionViewCellContentView>
-                            </collectionViewCell>
-                        </cells>
-                        <connections>
-                            <outlet property="dataSource" destination="vKW-xk-3C9" id="sYW-aa-0Hd"/>
-                            <outlet property="delegate" destination="vKW-xk-3C9" id="nxB-BI-8yM"/>
-                        </connections>
-                    </collectionView>
                     <tabBarItem key="tabBarItem" title="Music" image="music.note.list" catalog="system" id="pTr-Tt-0jv"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MjB-Xh-imL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -86,43 +59,30 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Vrg-1V-ToZ">
-                                            <rect key="frame" x="8" y="8" width="398" height="204"/>
+                                            <rect key="frame" x="8" y="8" width="398" height="238"/>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dro-sV-we5">
-                                            <rect key="frame" x="8" y="220" width="398" height="22"/>
+                                            <rect key="frame" x="8" y="254" width="398" height="22"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="22" id="zZc-n6-NjR"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="meX-ek-DiW">
-                                            <rect key="frame" x="8" y="250" width="398" height="22"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="22" id="RSr-cj-cud"/>
-                                            </constraints>
-                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstAttribute="bottom" secondItem="meX-ek-DiW" secondAttribute="bottom" constant="8" id="2ZU-fY-kYD"/>
-                                        <constraint firstItem="meX-ek-DiW" firstAttribute="leading" secondItem="SyH-Cs-SWC" secondAttribute="leading" constant="8" id="7kq-up-g8z"/>
-                                        <constraint firstAttribute="trailing" secondItem="meX-ek-DiW" secondAttribute="trailing" constant="8" id="NXo-gD-1fo"/>
+                                        <constraint firstAttribute="bottom" secondItem="dro-sV-we5" secondAttribute="bottom" constant="4" id="LBX-0u-hl7"/>
                                         <constraint firstAttribute="trailing" secondItem="Vrg-1V-ToZ" secondAttribute="trailing" constant="8" id="UGh-x3-I0R"/>
                                         <constraint firstAttribute="trailing" secondItem="dro-sV-we5" secondAttribute="trailing" constant="8" id="YyV-fo-57f"/>
                                         <constraint firstItem="dro-sV-we5" firstAttribute="leading" secondItem="SyH-Cs-SWC" secondAttribute="leading" constant="8" id="ag2-hQ-FX8"/>
                                         <constraint firstItem="Vrg-1V-ToZ" firstAttribute="top" secondItem="SyH-Cs-SWC" secondAttribute="top" constant="8" id="dlH-GA-oyU"/>
-                                        <constraint firstItem="meX-ek-DiW" firstAttribute="top" secondItem="dro-sV-we5" secondAttribute="bottom" constant="8" id="lGu-Jc-xmW"/>
                                         <constraint firstItem="dro-sV-we5" firstAttribute="top" secondItem="Vrg-1V-ToZ" secondAttribute="bottom" constant="8" id="npB-VE-6mc"/>
                                         <constraint firstItem="Vrg-1V-ToZ" firstAttribute="leading" secondItem="SyH-Cs-SWC" secondAttribute="leading" constant="8" id="zgV-2H-rUV"/>
                                     </constraints>
                                 </collectionViewCellContentView>
                                 <size key="customSize" width="414" height="280"/>
                                 <connections>
-                                    <outlet property="subtitleLabel" destination="meX-ek-DiW" id="hVR-cF-xkw"/>
                                     <outlet property="thumbnailView" destination="Vrg-1V-ToZ" id="ale-Rc-Hvc"/>
                                     <outlet property="titleLabel" destination="dro-sV-we5" id="Kzk-fl-NcG"/>
                                 </connections>
@@ -139,7 +99,7 @@
             </objects>
             <point key="canvasLocation" x="1037.68115942029" y="-587.27678571428567"/>
         </scene>
-        <!--Profiles-->
+        <!--Home-->
         <scene sceneID="TGE-Cy-6nT">
             <objects>
                 <tableViewController id="YHq-qh-IBz" customClass="ProfilesViewController" customModule="Breakdance_App" customModuleProvider="target" sceneMemberID="viewController">
@@ -171,7 +131,7 @@
                             <outlet property="delegate" destination="YHq-qh-IBz" id="38z-ao-ojn"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Profiles" image="person" catalog="system" id="ei3-7m-8ug"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="house.fill" catalog="system" id="ei3-7m-8ug"/>
                     <connections>
                         <outlet property="table" destination="h8b-CA-q5b" id="eMj-Se-qeo"/>
                     </connections>
@@ -180,25 +140,10 @@
             </objects>
             <point key="canvasLocation" x="1038" y="139"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="1Wp-xB-xhB">
-            <objects>
-                <viewController id="vIQ-0K-w9j" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="SpE-3V-nan">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="1h9-lL-BaR"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="KGB-hF-vaY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1987" y="137"/>
-        </scene>
     </scenes>
     <resources>
+        <image name="house.fill" catalog="system" width="128" height="106"/>
         <image name="lightbulb" catalog="system" width="113" height="128"/>
         <image name="music.note.list" catalog="system" width="128" height="113"/>
-        <image name="person" catalog="system" width="128" height="117"/>
     </resources>
 </document>

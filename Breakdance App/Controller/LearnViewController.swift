@@ -19,7 +19,6 @@ class LearnViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureLayout()
-        print("LearnViewController loaded")
     }
 }
 

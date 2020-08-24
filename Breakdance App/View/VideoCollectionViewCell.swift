@@ -11,7 +11,6 @@ import UIKit
 class VideoCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var thumbnailView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var subtitleLabel: UILabel!
     
     var video: Video? {
         didSet {
@@ -19,7 +18,6 @@ class VideoCollectionViewCell: UICollectionViewCell {
             thumbnailView.layer.cornerRadius = 10
             thumbnailView.clipsToBounds = true
             titleLabel.text = video?.title
-            subtitleLabel.text = "\(video?.lessonCount ?? 0) lessons"
         }
     }
 }
