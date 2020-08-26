@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -17,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </tabBar>
                     <connections>
-                        <segue destination="YHq-qh-IBz" kind="relationship" relationship="viewControllers" id="E5k-1g-Td5"/>
+                        <segue destination="aPw-q0-SMW" kind="relationship" relationship="viewControllers" id="IAz-c7-Jon"/>
                         <segue destination="3RZ-TM-JaA" kind="relationship" relationship="viewControllers" id="yQJ-Q1-MMy"/>
                         <segue destination="vKW-xk-3C9" kind="relationship" relationship="viewControllers" id="OYP-dP-e2V"/>
                     </connections>
@@ -100,50 +101,47 @@
             <point key="canvasLocation" x="1037.68115942029" y="-587.27678571428567"/>
         </scene>
         <!--Home-->
-        <scene sceneID="TGE-Cy-6nT">
+        <scene sceneID="fDR-0k-cAW">
             <objects>
-                <tableViewController id="YHq-qh-IBz" customClass="ProfilesViewController" customModule="Breakdance_App" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="h8b-CA-q5b">
+                <viewController id="aPw-q0-SMW" customClass="HomeViewController" customModule="Breakdance_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="r3Z-sd-18q">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Practice" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="E2B-pt-eN9">
+                                <rect key="frame" x="20" y="60" width="374" height="37.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EXd-Gl-2JH">
+                                <rect key="frame" x="369" y="54" width="25" height="48"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
+                                <state key="normal" image="plus.circle" catalog="system">
+                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" textLabel="aNS-M2-avU" style="IBUITableViewCellStyleDefault" id="llX-K9-4jf">
-                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="llX-K9-4jf" id="sEd-n9-YH9">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="aNS-M2-avU">
-                                            <rect key="frame" x="20" y="0.0" width="374" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="YHq-qh-IBz" id="Vva-JO-IYZ"/>
-                            <outlet property="delegate" destination="YHq-qh-IBz" id="38z-ao-ojn"/>
-                        </connections>
-                    </tableView>
-                    <tabBarItem key="tabBarItem" title="Home" image="house.fill" catalog="system" id="ei3-7m-8ug"/>
-                    <connections>
-                        <outlet property="table" destination="h8b-CA-q5b" id="eMj-Se-qeo"/>
-                    </connections>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="hnq-Hu-Qfi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                        <constraints>
+                            <constraint firstItem="EXd-Gl-2JH" firstAttribute="top" secondItem="lO7-dy-ej6" secondAttribute="top" constant="10" id="8ea-fP-0sd"/>
+                            <constraint firstItem="E2B-pt-eN9" firstAttribute="top" secondItem="lO7-dy-ej6" secondAttribute="top" constant="16" id="K4u-bQ-3yq"/>
+                            <constraint firstItem="E2B-pt-eN9" firstAttribute="centerX" secondItem="r3Z-sd-18q" secondAttribute="centerX" id="SaX-CW-GxU"/>
+                            <constraint firstItem="E2B-pt-eN9" firstAttribute="leading" secondItem="lO7-dy-ej6" secondAttribute="leading" constant="20" id="TDK-nc-18u"/>
+                            <constraint firstItem="lO7-dy-ej6" firstAttribute="trailing" secondItem="EXd-Gl-2JH" secondAttribute="trailing" constant="20" id="yvd-aZ-6f2"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="lO7-dy-ej6"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Home" image="house" catalog="system" id="ML7-eO-ZHW"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hU8-zx-FmZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1038" y="139"/>
+            <point key="canvasLocation" x="1037.68115942029" y="138.61607142857142"/>
         </scene>
     </scenes>
     <resources>
-        <image name="house.fill" catalog="system" width="128" height="106"/>
+        <image name="house" catalog="system" width="128" height="110"/>
         <image name="lightbulb" catalog="system" width="113" height="128"/>
         <image name="music.note.list" catalog="system" width="128" height="113"/>
+        <image name="plus.circle" catalog="system" width="128" height="121"/>
     </resources>
 </document>
