@@ -46,7 +46,7 @@ extension ThirtyDayCell {
         
         dayLabel.heightAnchor.constraint(equalToConstant: 200).isActive = true
         dayLabel.widthAnchor.constraint(equalToConstant: 200).isActive = true
-        dayLabel.dayLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: 20).isActive = true.centerYAnchor).isActive = true
+        dayLabel.centerYAnchor.constraint(equalTo: cellView.centerYAnchor).isActive = true
         dayLabel.leftAnchor.constraint(equalTo: cellView.leftAnchor).isActive = true
     }
 }
