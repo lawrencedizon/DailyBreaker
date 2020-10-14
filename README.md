@@ -11,6 +11,6 @@
 
 ## Development Information
 
-SFSafariViewController- to display pre-existing video tutorials and music playlist content.\
-TableViewController- to list rows of information.\
-TabBarController- switch between different view controllers.
+**SFSafariViewController** to display pre-existing video tutorials and music playlist content.\
+**TableViewController** to list rows of information.\
+**TabBarController** switch between different view controllers.
