@@ -9,3 +9,8 @@
 ## Daily Breaker App Preview 8/23/2020
 [Video Link](https://www.youtube.com/watch?v=6lDL9-F2rSg)
 
+## Development Information
+
+SFSafariViewController- to display pre-existing video tutorials and music playlist content.
+TableViewController- to list rows of information. 
+TabBarController- switch between different view controllers.
