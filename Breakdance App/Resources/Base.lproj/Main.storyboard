@@ -102,7 +102,7 @@
             </objects>
             <point key="canvasLocation" x="1037.68115942029" y="-587.27678571428567"/>
         </scene>
-        <!--Home-->
+        <!--Practice-->
         <scene sceneID="fDR-0k-cAW">
             <objects>
                 <viewController id="aPw-q0-SMW" customClass="HomeViewController" customModule="Breakdance_App" customModuleProvider="target" sceneMemberID="viewController">
@@ -110,54 +110,93 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Practice" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="E2B-pt-eN9">
-                                <rect key="frame" x="20" y="60" width="374" height="37.5"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EXd-Gl-2JH">
-                                <rect key="frame" x="369" y="54" width="25" height="48"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
-                                <state key="normal" image="plus.circle" catalog="system">
-                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wBL-bT-VqP">
-                                <rect key="frame" x="207" y="220" width="0.0" height="0.0"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wBL-bT-VqP">
+                                <rect key="frame" x="136.5" y="248" width="141" height="60"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="50"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7oA-6e-hJr">
                                 <rect key="frame" x="270" y="455" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="qCq-wL-5Je"/>
+                                </constraints>
+                                <state key="normal" title="Reset"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jso-Qo-Rk1">
-                                <rect key="frame" x="101" y="455" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                                <rect key="frame" x="101" y="455" width="34" height="30"/>
+                                <state key="normal" title="Start"/>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="216" translatesAutoresizingMaskIntoConstraints="NO" id="pkp-O0-7xB">
+                                <rect key="frame" x="20" y="44" width="374" height="48"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Practice" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="E2B-pt-eN9">
+                                        <rect key="frame" x="0.0" y="0.0" width="133" height="48"/>
+                                        <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="34"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EXd-Gl-2JH">
+                                        <rect key="frame" x="349" y="0.0" width="25" height="48"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
+                                        <state key="normal" image="plus.circle" catalog="system">
+                                            <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <viewLayoutGuide key="safeArea" id="42Y-mo-9w9"/>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qPX-vm-DCU">
+                                <rect key="frame" x="79" y="690" width="56" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Toprock"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tkk-EM-E9t">
+                                <rect key="frame" x="175" y="690" width="64" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Footwork"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PlF-Fd-z18">
+                                <rect key="frame" x="296" y="690" width="43" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Power"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OY7-bl-afN">
+                                <rect key="frame" x="296" y="591" width="47" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Freeze"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ekZ-lM-3O4">
+                                <rect key="frame" x="79" y="591" width="58" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Warmup"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Current Timer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WwM-x2-ZYi">
+                                <rect key="frame" x="136" y="119" width="143" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pEh-qb-sxi">
+                                <rect key="frame" x="199" y="591" width="40" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Battle"/>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="lO7-dy-ej6"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="lO7-dy-ej6" firstAttribute="bottom" secondItem="jso-Qo-Rk1" secondAttribute="bottom" constant="328" id="0d4-tY-SIo"/>
-                            <constraint firstItem="jso-Qo-Rk1" firstAttribute="leading" secondItem="lO7-dy-ej6" secondAttribute="leading" constant="101" id="1Rz-eV-1eK"/>
-                            <constraint firstItem="7oA-6e-hJr" firstAttribute="leading" secondItem="jso-Qo-Rk1" secondAttribute="trailing" constant="123" id="Ghy-8r-xtF"/>
-                            <constraint firstItem="E2B-pt-eN9" firstAttribute="top" secondItem="lO7-dy-ej6" secondAttribute="top" constant="16" id="K4u-bQ-3yq"/>
-                            <constraint firstItem="jso-Qo-Rk1" firstAttribute="top" secondItem="E2B-pt-eN9" secondAttribute="bottom" constant="357.5" id="MA0-ig-gdp"/>
-                            <constraint firstItem="lO7-dy-ej6" firstAttribute="trailing" secondItem="7oA-6e-hJr" secondAttribute="trailing" constant="98" id="ObT-dI-lOL"/>
-                            <constraint firstItem="lO7-dy-ej6" firstAttribute="bottom" secondItem="7oA-6e-hJr" secondAttribute="bottom" constant="328" id="PnU-Ku-IxV"/>
-                            <constraint firstItem="E2B-pt-eN9" firstAttribute="centerX" secondItem="r3Z-sd-18q" secondAttribute="centerX" id="SaX-CW-GxU"/>
-                            <constraint firstItem="E2B-pt-eN9" firstAttribute="leading" secondItem="lO7-dy-ej6" secondAttribute="leading" constant="20" id="TDK-nc-18u"/>
-                            <constraint firstItem="EXd-Gl-2JH" firstAttribute="top" secondItem="lO7-dy-ej6" secondAttribute="top" constant="10" id="UMl-2X-YUQ"/>
-                            <constraint firstItem="7oA-6e-hJr" firstAttribute="leading" secondItem="jso-Qo-Rk1" secondAttribute="trailing" constant="123" id="a01-3a-RWh"/>
-                            <constraint firstItem="wBL-bT-VqP" firstAttribute="centerX" secondItem="lO7-dy-ej6" secondAttribute="centerX" id="byY-Bk-ULP"/>
-                            <constraint firstItem="wBL-bT-VqP" firstAttribute="top" secondItem="lO7-dy-ej6" secondAttribute="top" constant="176" id="cmF-Zk-WzQ"/>
-                            <constraint firstItem="7oA-6e-hJr" firstAttribute="top" secondItem="E2B-pt-eN9" secondAttribute="bottom" constant="357.5" id="lFK-oP-1Df"/>
-                            <constraint firstItem="lO7-dy-ej6" firstAttribute="trailing" secondItem="EXd-Gl-2JH" secondAttribute="trailing" constant="20" id="yvd-aZ-6f2"/>
+                            <constraint firstItem="lO7-dy-ej6" firstAttribute="bottom" secondItem="jso-Qo-Rk1" secondAttribute="bottom" constant="328" id="5Mu-VD-gRz"/>
+                            <constraint firstItem="pkp-O0-7xB" firstAttribute="top" secondItem="lO7-dy-ej6" secondAttribute="top" id="6hP-gv-Fsp"/>
+                            <constraint firstItem="jso-Qo-Rk1" firstAttribute="leading" secondItem="lO7-dy-ej6" secondAttribute="leading" constant="101" id="HcO-zL-W1U"/>
+                            <constraint firstItem="lO7-dy-ej6" firstAttribute="bottom" secondItem="wBL-bT-VqP" secondAttribute="bottom" constant="505" id="Pjp-dP-BSk"/>
+                            <constraint firstItem="lO7-dy-ej6" firstAttribute="trailing" secondItem="7oA-6e-hJr" secondAttribute="trailing" constant="98" id="eat-Fe-ZBJ"/>
+                            <constraint firstItem="pkp-O0-7xB" firstAttribute="leading" secondItem="r3Z-sd-18q" secondAttribute="leadingMargin" id="ffh-Dv-VGU"/>
+                            <constraint firstItem="pkp-O0-7xB" firstAttribute="centerX" secondItem="wBL-bT-VqP" secondAttribute="centerX" id="kjF-EO-8ni"/>
+                            <constraint firstItem="jso-Qo-Rk1" firstAttribute="baseline" secondItem="7oA-6e-hJr" secondAttribute="baseline" id="mYB-H1-q8C"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" image="house" catalog="system" id="ML7-eO-ZHW"/>
+                    <tabBarItem key="tabBarItem" title="Practice" image="target" catalog="system" id="ML7-eO-ZHW"/>
                     <connections>
                         <outlet property="timerLabel" destination="wBL-bT-VqP" id="GO2-e4-Yin"/>
                     </connections>
@@ -168,10 +207,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="house" catalog="system" width="128" height="106"/>
         <image name="lightbulb" catalog="system" width="113" height="128"/>
         <image name="music.note.list" catalog="system" width="128" height="115"/>
         <image name="plus.circle" catalog="system" width="128" height="121"/>
+        <image name="target" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
