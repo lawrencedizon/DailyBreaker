@@ -14,7 +14,7 @@ class HomeViewController: UIViewController{
     var timer: Timer?
     @IBOutlet var timerLabel: UILabel!
     
-    var timeLeft = 10 {
+    var timeLeft = 300 {
         didSet {
             timerLabel.text = String(timeLeft)
         }
