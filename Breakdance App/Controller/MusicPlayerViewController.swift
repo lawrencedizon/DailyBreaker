@@ -63,7 +63,6 @@ class MusicPlayerViewController: UIViewController, UITableViewDelegate, UITableV
         //configure
         cell.textLabel?.text = song.name
         cell.detailTextLabel?.text = song.albumName
-        cell.accessoryType = .disclosureIndicator
         cell.imageView?.image = UIImage(named:   song.imageName)
         
         cell.textLabel?.font = UIFont(name: "Helvetica-Bold", size: 18 )
@@ -78,6 +77,11 @@ class MusicPlayerViewController: UIViewController, UITableViewDelegate, UITableV
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         table.deselectRow(at: indexPath, animated: true )
         
+        //For playlist cell, do nothing for now
+        if indexPath == IndexPath(row: 0, section: 0){
+            return
+        }
+        
         //present the player
         let position = indexPath.row
         guard let vc = storyboard?.instantiateViewController(identifier:  "player" ) as? PlayerViewController else {
@@ -90,7 +94,7 @@ class MusicPlayerViewController: UIViewController, UITableViewDelegate, UITableV
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath == IndexPath(row: 0, section: 0){
-            return 90
+            return 80
         }
         return 60
     }

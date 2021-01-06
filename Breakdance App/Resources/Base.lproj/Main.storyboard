@@ -52,7 +52,7 @@
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="eAN-kI-hmB">
                                                     <rect key="frame" x="59.75" y="0.0" width="334.25" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -214,17 +214,6 @@
                                 <rect key="frame" x="101" y="455" width="34" height="30"/>
                                 <state key="normal" title="Start"/>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="216" translatesAutoresizingMaskIntoConstraints="NO" id="pkp-O0-7xB">
-                                <rect key="frame" x="20" y="44" width="133" height="60"/>
-                                <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Practice" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="E2B-pt-eN9">
-                                        <rect key="frame" x="0.0" y="0.0" width="133" height="60"/>
-                                        <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="34"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                </subviews>
-                                <viewLayoutGuide key="safeArea" id="42Y-mo-9w9"/>
-                            </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qPX-vm-DCU">
                                 <rect key="frame" x="79" y="690" width="56" height="30"/>
                                 <state key="normal" title="Toprock"/>
@@ -245,7 +234,7 @@
                                 <rect key="frame" x="79" y="591" width="58" height="30"/>
                                 <state key="normal" title="Warmup"/>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current Timer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WwM-x2-ZYi">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current Timer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="WwM-x2-ZYi">
                                 <rect key="frame" x="135" y="131" width="144" height="29"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <nil key="textColor"/>
@@ -270,9 +259,9 @@
                             <constraint firstItem="wBL-bT-VqP" firstAttribute="centerX" secondItem="r3Z-sd-18q" secondAttribute="centerX" id="CPf-zV-wXM"/>
                             <constraint firstItem="lO7-dy-ej6" firstAttribute="trailing" secondItem="PlF-Fd-z18" secondAttribute="trailing" constant="75" id="Eaa-U8-WHb"/>
                             <constraint firstItem="PlF-Fd-z18" firstAttribute="leading" secondItem="tkk-EM-E9t" secondAttribute="trailing" constant="57" id="FPt-js-4CB"/>
-                            <constraint firstItem="pkp-O0-7xB" firstAttribute="top" secondItem="lO7-dy-ej6" secondAttribute="top" id="JFH-K3-Cgg"/>
                             <constraint firstItem="tkk-EM-E9t" firstAttribute="top" secondItem="pEh-qb-sxi" secondAttribute="bottom" constant="69" id="L6Q-g4-AGU"/>
                             <constraint firstItem="OY7-bl-afN" firstAttribute="top" secondItem="7oA-6e-hJr" secondAttribute="bottom" constant="106" id="MAI-3O-awM"/>
+                            <constraint firstItem="lO7-dy-ej6" firstAttribute="trailing" secondItem="7oA-6e-hJr" secondAttribute="trailing" constant="105" id="NIh-Jy-J1O"/>
                             <constraint firstItem="OY7-bl-afN" firstAttribute="leading" secondItem="pEh-qb-sxi" secondAttribute="trailing" constant="57" id="NyV-Pk-yNA"/>
                             <constraint firstItem="qPX-vm-DCU" firstAttribute="top" secondItem="ekZ-lM-3O4" secondAttribute="bottom" constant="69" id="Qy9-PY-yA6"/>
                             <constraint firstItem="WwM-x2-ZYi" firstAttribute="leading" secondItem="lO7-dy-ej6" secondAttribute="leading" constant="135" id="U4u-0N-wX7"/>
@@ -287,13 +276,11 @@
                             <constraint firstItem="lO7-dy-ej6" firstAttribute="bottom" secondItem="qPX-vm-DCU" secondAttribute="bottom" constant="93" id="q1g-bx-z7D"/>
                             <constraint firstItem="ekZ-lM-3O4" firstAttribute="top" secondItem="jso-Qo-Rk1" secondAttribute="bottom" constant="106" id="qTL-YH-tFQ"/>
                             <constraint firstItem="tkk-EM-E9t" firstAttribute="top" secondItem="pEh-qb-sxi" secondAttribute="bottom" constant="69" id="qbR-AY-hK7"/>
-                            <constraint firstItem="pkp-O0-7xB" firstAttribute="leading" secondItem="lO7-dy-ej6" secondAttribute="leading" constant="20" id="rLC-w5-UEG"/>
                             <constraint firstItem="qPX-vm-DCU" firstAttribute="leading" secondItem="lO7-dy-ej6" secondAttribute="leading" constant="79" id="ruO-XK-AMC"/>
                             <constraint firstItem="PlF-Fd-z18" firstAttribute="leading" secondItem="tkk-EM-E9t" secondAttribute="trailing" constant="57" id="tnS-ow-G6W"/>
                             <constraint firstItem="ekZ-lM-3O4" firstAttribute="leading" secondItem="lO7-dy-ej6" secondAttribute="leading" constant="79" id="u92-ur-RBV"/>
                             <constraint firstItem="7oA-6e-hJr" firstAttribute="top" secondItem="wBL-bT-VqP" secondAttribute="bottom" constant="147" id="uZO-of-hao"/>
                             <constraint firstItem="7oA-6e-hJr" firstAttribute="leading" secondItem="jso-Qo-Rk1" secondAttribute="trailing" constant="135" id="vgL-Mb-eEN"/>
-                            <constraint firstItem="WwM-x2-ZYi" firstAttribute="top" secondItem="pkp-O0-7xB" secondAttribute="bottom" constant="27" id="yqk-CM-tUp"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Train" image="target" catalog="system" id="ML7-eO-ZHW"/>
