@@ -112,9 +112,9 @@
 			isa = PBXGroup;
 			children = (
 				90407E0B24E350C4009160A3 /* HomeViewController.swift */,
+				90407E2524E369D0009160A3 /* LearnViewController.swift */,
 				90407E2324E3648D009160A3 /* MusicPlayerViewController.swift */,
 				90912C67259AE1AA009AE8C0 /* PlayerViewController.swift */,
-				90407E2524E369D0009160A3 /* LearnViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";

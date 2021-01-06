@@ -4,6 +4,8 @@ import AVFoundation
 class MusicPlayerViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
     
     @IBOutlet var table: UITableView!
+
+    
     var songs = [Song]()
 
 
@@ -12,6 +14,9 @@ class MusicPlayerViewController: UIViewController, UITableViewDelegate, UITableV
         super.viewDidLoad()
         table.dataSource = self
         table.delegate = self
+        
+        navigationItem.title = "Music Library"
+        
         configureSongs()
     }
     
@@ -43,6 +48,14 @@ class MusicPlayerViewController: UIViewController, UITableViewDelegate, UITableV
    
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        //Create playlist row
+        if indexPath == IndexPath(row: 0, section: 0){
+            let cell = tableView.dequeueReusableCell(withIdentifier: "PlaylistCell", for: indexPath)
+            cell.textLabel?.text = "Playlists"
+            return cell
+            
+        }
         let cell = table.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         
         let song = songs[indexPath.row ]
@@ -76,7 +89,10 @@ class MusicPlayerViewController: UIViewController, UITableViewDelegate, UITableV
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100
+        if indexPath == IndexPath(row: 0, section: 0){
+            return 90
+        }
+        return 60
     }
     
 }
