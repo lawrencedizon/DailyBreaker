@@ -1,3 +1,2 @@
 1/7/2020
-
-Used CoreAnimation to draw Timer Circular ProgressBar
+-Used CoreAnimation to draw Timer Circular ProgressBar
