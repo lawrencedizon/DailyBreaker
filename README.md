@@ -12,5 +12,9 @@
 ## Development Information
 
 **SFSafariViewController-** to display pre-existing video tutorials and music playlist content.\
-**TableViewController-** to list rows of information.\
+**TableViewController-** to list rows of information.
 **TabBarController-** switch between different view controllers.
+
+## Inspiration
+Break'n Reality - Roxrite is Stronger than Ever - Ep. 13 @ 2:30
+[Video](https://www.youtube.com/watch?v=4CofNyGY_AY&t=199s)
