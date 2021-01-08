@@ -17,4 +17,4 @@
 
 ## Inspiration
 Break'n Reality - Roxrite is Stronger than Ever - Ep. 13 @ 2:30
-[Video](https://www.youtube.com/watch?v=4CofNyGY_AY&t=199s&t=2m30)
+[Video](https://youtu.be/4CofNyGY_AY?t=150)
