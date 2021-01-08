@@ -16,5 +16,5 @@
 **TabBarController-** switch between different view controllers.
 
 ## Inspiration
-Break'n Reality - Roxrite is Stronger than Ever - Ep. 13 @ 2:30
+Break'n Reality - Roxrite is Stronger than Ever - Ep. 13
 [Video](https://youtu.be/4CofNyGY_AY?t=150)
