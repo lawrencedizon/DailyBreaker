@@ -15,7 +15,6 @@ class VideoCollectionViewCell: UICollectionViewCell {
     var video: Video? {
         didSet {
             thumbnailView.image = video?.thumbnail
-            thumbnailView.layer.cornerRadius = 10
             thumbnailView.clipsToBounds = true
             titleLabel.text = video?.title
         }
