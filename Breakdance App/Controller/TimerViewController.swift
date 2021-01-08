@@ -6,7 +6,7 @@ enum TimeEnum: Int {
     case hour = 3600, minute = 60, second = 1
 }
 
-class HomeViewController: UIViewController{
+class TimerViewController: UIViewController{
     //
     //MARK: - Properties
     //
@@ -15,6 +15,7 @@ class HomeViewController: UIViewController{
     let timerShapeLayer = CAShapeLayer()
     
     @IBOutlet var timerLabel: UILabel!
+    
     
     var timeLeft = 300 {
         didSet {
