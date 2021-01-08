@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		90407E0824E350C4009160A3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90407E0724E350C4009160A3 /* AppDelegate.swift */; };
 		90407E0A24E350C4009160A3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90407E0924E350C4009160A3 /* SceneDelegate.swift */; };
-		90407E0C24E350C4009160A3 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90407E0B24E350C4009160A3 /* HomeViewController.swift */; };
+		90407E0C24E350C4009160A3 /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90407E0B24E350C4009160A3 /* TimerViewController.swift */; };
 		90407E0F24E350C4009160A3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90407E0D24E350C4009160A3 /* Main.storyboard */; };
 		90407E1124E350C6009160A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90407E1024E350C6009160A3 /* Assets.xcassets */; };
 		90407E1424E350C6009160A3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90407E1224E350C6009160A3 /* LaunchScreen.storyboard */; };
@@ -23,13 +23,14 @@
 		90912C72259AE873009AE8C0 /* song2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 90912C6E259AE872009AE8C0 /* song2.mp3 */; };
 		90912C73259AE873009AE8C0 /* song4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 90912C6F259AE872009AE8C0 /* song4.mp3 */; };
 		90912C74259AE873009AE8C0 /* song3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 90912C70259AE873009AE8C0 /* song3.mp3 */; };
+		90E1E69025A8F36F00D29E25 /* TrainingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E1E68F25A8F36F00D29E25 /* TrainingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		90407E0424E350C4009160A3 /* Breakdance App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Breakdance App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		90407E0724E350C4009160A3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		90407E0924E350C4009160A3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		90407E0B24E350C4009160A3 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		90407E0B24E350C4009160A3 /* TimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
 		90407E0E24E350C4009160A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		90407E1024E350C6009160A3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		90407E1324E350C6009160A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -44,6 +45,7 @@
 		90912C6E259AE872009AE8C0 /* song2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = song2.mp3; sourceTree = "<group>"; };
 		90912C6F259AE872009AE8C0 /* song4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = song4.mp3; sourceTree = "<group>"; };
 		90912C70259AE873009AE8C0 /* song3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = song3.mp3; sourceTree = "<group>"; };
+		90E1E68F25A8F36F00D29E25 /* TrainingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,10 +113,11 @@
 		90407E1D24E35717009160A3 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				90407E0B24E350C4009160A3 /* HomeViewController.swift */,
+				90407E0B24E350C4009160A3 /* TimerViewController.swift */,
 				90407E2524E369D0009160A3 /* LearnViewController.swift */,
 				90407E2324E3648D009160A3 /* MusicPlayerViewController.swift */,
 				90912C67259AE1AA009AE8C0 /* PlayerViewController.swift */,
+				90E1E68F25A8F36F00D29E25 /* TrainingViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -204,9 +207,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90E1E69025A8F36F00D29E25 /* TrainingViewController.swift in Sources */,
 				906BC1B724E87A7B00901350 /* VideoCollectionViewCell.swift in Sources */,
 				90407E2624E369D0009160A3 /* LearnViewController.swift in Sources */,
-				90407E0C24E350C4009160A3 /* HomeViewController.swift in Sources */,
+				90407E0C24E350C4009160A3 /* TimerViewController.swift in Sources */,
 				90407E2024E3578B009160A3 /* Song.swift in Sources */,
 				90407E0824E350C4009160A3 /* AppDelegate.swift in Sources */,
 				90407E0A24E350C4009160A3 /* SceneDelegate.swift in Sources */,
