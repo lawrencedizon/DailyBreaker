@@ -21,7 +21,6 @@ class Video {
     }
 }
     
-
 // MARK: - Video Data
 extension Video {
     static let allVideos = [

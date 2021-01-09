@@ -10,8 +10,7 @@ import Foundation
 import UIKit
 
 class TrainingViewController: UITableViewController {
-    
-    private var skillArray: [String] = ["Stamina", "Battle", "Footwork"]
+    private var skillArray: [String] = ["Warm Up","Stamina", "Battle", "Footwork"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,9 +24,12 @@ class TrainingViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = skillArray[indexPath.row]
-       
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! TrainingTableViewCell
+        
+        cell.cellLabel?.text = skillArray[indexPath.row]
+        
+        cell.cellImage?.image = UIImage(named: skillArray[indexPath.row])
+        
         return cell
     }
     
