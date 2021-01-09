@@ -1,21 +1,27 @@
 
 import UIKit
 import Foundation
+import MediaPlayer
 
 enum TimeEnum: Int {
     case hour = 3600, minute = 60, second = 1
 }
 
-class TimerViewController: UIViewController{
+class TimerViewController: UIViewController, MPMediaPickerControllerDelegate{
     //
     //MARK: - Properties
     //
     
+    @IBOutlet var nowPlayingBar: UIStackView!
     var timer: Timer?
     let timerShapeLayer = CAShapeLayer()
     
-    @IBOutlet var timerLabel: UILabel!
+    // Get the system music player.
+    let musicPlayer = MPMusicPlayerController.systemMusicPlayer
     
+    @IBOutlet var songImage: UIImageView!
+    @IBOutlet var timerLabel: UILabel!
+    @IBOutlet var songTitle: UILabel!
     
     var timeLeft = 300 {
         didSet {
@@ -30,6 +36,7 @@ class TimerViewController: UIViewController{
     override func viewDidLoad() {
         timerLabel.text = String(timeLeft)
         createProgressBar()
+        
     }
     
     //
@@ -99,6 +106,42 @@ class TimerViewController: UIViewController{
         //Start timer
         timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(timerAction), userInfo: nil, repeats: true)
         print("Timer fired!")
+    }
+    @IBAction func onPressMusicPlayer(_ sender: UIButton) {
+        let controller = MPMediaPickerController(mediaTypes: .music)
+        controller.allowsPickingMultipleItems = true
+        controller.popoverPresentationController?.sourceView = sender
+        controller.delegate = self
+        present(controller, animated: true)
+    }
+    
+    func mediaPicker(_ mediaPicker: MPMediaPickerController,
+                     didPickMediaItems mediaItemCollection: MPMediaItemCollection) {
+        
+        
+        musicPlayer.setQueue(with: mediaItemCollection)
+        
+        mediaPicker.dismiss(animated: true)
+        
+        musicPlayer.play()
+        
+        if let title = musicPlayer.nowPlayingItem?.title {
+            songTitle.text = title
+        }
+        
+//        if let image = musicPlayer.nowPlayingItem?.artwork {
+//            songImage.image = UIImage(cgImage: (image as! CGImage))
+//        }
+        
+        nowPlayingBar.isHidden = false
+        
+
+    }
+    
+    
+
+    func mediaPickerDidCancel(_ mediaPicker: MPMediaPickerController) {
+        mediaPicker.dismiss(animated: true)
     }
     
 }
