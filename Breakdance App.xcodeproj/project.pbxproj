@@ -24,6 +24,7 @@
 		90912C73259AE873009AE8C0 /* song4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 90912C6F259AE872009AE8C0 /* song4.mp3 */; };
 		90912C74259AE873009AE8C0 /* song3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 90912C70259AE873009AE8C0 /* song3.mp3 */; };
 		90E1E69025A8F36F00D29E25 /* TrainingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E1E68F25A8F36F00D29E25 /* TrainingViewController.swift */; };
+		90E1E69A25A925FF00D29E25 /* TrainingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E1E69925A925FF00D29E25 /* TrainingTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		90912C6F259AE872009AE8C0 /* song4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = song4.mp3; sourceTree = "<group>"; };
 		90912C70259AE873009AE8C0 /* song3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = song3.mp3; sourceTree = "<group>"; };
 		90E1E68F25A8F36F00D29E25 /* TrainingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingViewController.swift; sourceTree = "<group>"; };
+		90E1E69925A925FF00D29E25 /* TrainingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,10 +80,8 @@
 		90407E0624E350C4009160A3 /* Breakdance App */ = {
 			isa = PBXGroup;
 			children = (
-				90912C6D259AE872009AE8C0 /* song1.mp3 */,
-				90912C6E259AE872009AE8C0 /* song2.mp3 */,
-				90912C70259AE873009AE8C0 /* song3.mp3 */,
-				90912C6F259AE872009AE8C0 /* song4.mp3 */,
+				90407E0D24E350C4009160A3 /* Main.storyboard */,
+				90407E1224E350C6009160A3 /* LaunchScreen.storyboard */,
 				90407E0724E350C4009160A3 /* AppDelegate.swift */,
 				90407E0924E350C4009160A3 /* SceneDelegate.swift */,
 				90407E1524E350C6009160A3 /* Info.plist */,
@@ -106,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				906BC1B624E87A7B00901350 /* VideoCollectionViewCell.swift */,
+				90E1E69925A925FF00D29E25 /* TrainingTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -113,11 +114,11 @@
 		90407E1D24E35717009160A3 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				90E1E68F25A8F36F00D29E25 /* TrainingViewController.swift */,
 				90407E0B24E350C4009160A3 /* TimerViewController.swift */,
 				90407E2524E369D0009160A3 /* LearnViewController.swift */,
 				90407E2324E3648D009160A3 /* MusicPlayerViewController.swift */,
 				90912C67259AE1AA009AE8C0 /* PlayerViewController.swift */,
-				90E1E68F25A8F36F00D29E25 /* TrainingViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -125,9 +126,11 @@
 		90407E1E24E3574A009160A3 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				90912C6D259AE872009AE8C0 /* song1.mp3 */,
+				90912C6E259AE872009AE8C0 /* song2.mp3 */,
+				90912C70259AE873009AE8C0 /* song3.mp3 */,
+				90912C6F259AE872009AE8C0 /* song4.mp3 */,
 				90407E1024E350C6009160A3 /* Assets.xcassets */,
-				90407E0D24E350C4009160A3 /* Main.storyboard */,
-				90407E1224E350C6009160A3 /* LaunchScreen.storyboard */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -211,6 +214,7 @@
 				906BC1B724E87A7B00901350 /* VideoCollectionViewCell.swift in Sources */,
 				90407E2624E369D0009160A3 /* LearnViewController.swift in Sources */,
 				90407E0C24E350C4009160A3 /* TimerViewController.swift in Sources */,
+				90E1E69A25A925FF00D29E25 /* TrainingTableViewCell.swift in Sources */,
 				90407E2024E3578B009160A3 /* Song.swift in Sources */,
 				90407E0824E350C4009160A3 /* AppDelegate.swift in Sources */,
 				90407E0A24E350C4009160A3 /* SceneDelegate.swift in Sources */,
