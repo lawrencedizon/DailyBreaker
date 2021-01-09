@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 class TrainingViewController: UITableViewController {
-    private var skillArray: [String] = ["Warm Up","Stamina", "Battle", "Footwork"]
+    private var skillArray: [String] = ["Warm Up","Stamina", "Battle"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,7 +34,7 @@ class TrainingViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 150
+        return 200
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

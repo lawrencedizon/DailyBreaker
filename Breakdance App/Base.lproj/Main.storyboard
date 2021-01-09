@@ -164,7 +164,7 @@
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="44" id="MCf-TY-deI"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -203,6 +203,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="sectionIndexBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="RF5-bg-pK6" customClass="TrainingTableViewCell" customModule="Breakdance_App" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="390" height="150"/>
@@ -211,22 +212,27 @@
                                     <rect key="frame" x="0.0" y="0.0" width="390" height="150"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vx5-3m-bFw">
-                                            <rect key="frame" x="0.0" y="0.0" width="390" height="150"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vx5-3m-bFw">
+                                            <rect key="frame" x="0.0" y="5" width="390" height="200"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="390" id="8mS-3I-S9J"/>
+                                                <constraint firstAttribute="height" constant="200" id="cOG-lc-4en"/>
+                                            </constraints>
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="abM-JW-49r">
-                                            <rect key="frame" x="20" y="53" width="56" height="44"/>
+                                            <rect key="frame" x="20.000000000000004" y="53" width="58.333333333333343" height="44"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="44" id="KLr-IL-bHD"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                            <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="22"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
                                         <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="abM-JW-49r" secondAttribute="trailing" constant="315.32999999999998" id="7pt-cY-7tr"/>
+                                        <constraint firstItem="Vx5-3m-bFw" firstAttribute="top" secondItem="MAr-1O-9uv" secondAttribute="top" constant="5" id="88p-le-WwK"/>
                                         <constraint firstItem="abM-JW-49r" firstAttribute="centerY" secondItem="MAr-1O-9uv" secondAttribute="centerY" id="Y2S-QA-FOA"/>
                                         <constraint firstItem="abM-JW-49r" firstAttribute="leading" secondItem="MAr-1O-9uv" secondAttribute="leading" constant="20" id="gh9-1R-vIh"/>
                                     </constraints>
@@ -371,6 +377,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="UNP-li-3Y0">
                         <rect key="frame" x="0.0" y="44" width="390" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <rect key="contentStretch" x="0.0" y="1" width="1" height="1"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
