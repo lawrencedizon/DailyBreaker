@@ -1,2 +1,10 @@
+Image Sources
+
+Warm-Up
+https://www.pexels.com/photo/man-in-blue-denim-jacket-and-white-shorts-in-handstand-position-4048236/
+
+Battle
+https://unsplash.com/photos/ucAMMD36Si0
+
 1/7/2020
 -Used CoreAnimation to draw Timer Circular ProgressBar
