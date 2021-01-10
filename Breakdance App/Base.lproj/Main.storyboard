@@ -15,9 +15,10 @@
             <objects>
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="BU7-DB-isl" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="PNu-FV-vWG">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="PNu-FV-vWG">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="selectedImageTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
                         <segue destination="6Oc-wq-zmV" kind="relationship" relationship="viewControllers" id="XGl-BG-vjw"/>
@@ -34,7 +35,7 @@
             <objects>
                 <viewController id="zff-5y-bN2" customClass="MusicPlayerViewController" customModule="Breakdance_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tr7-B6-AEc">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="761"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="8wG-lN-Fbd">
@@ -159,7 +160,7 @@
             <objects>
                 <collectionViewController id="3RZ-TM-JaA" customClass="LearnViewController" customModule="Breakdance_App" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="Iiq-3P-pyf">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="761"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="PdE-tf-tpv">
@@ -223,7 +224,7 @@
             <objects>
                 <tableViewController id="bTp-Dg-Nha" customClass="TrainingViewController" customModule="Breakdance_App" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="150" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="eQz-hE-aO7">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="761"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
@@ -299,19 +300,25 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="135" translatesAutoresizingMaskIntoConstraints="NO" id="XgR-QK-Umv" userLabel="Timer Control">
-                                <rect key="frame" x="91" y="407" width="208" height="30"/>
+                                <rect key="frame" x="90" y="407" width="210" height="30"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jso-Qo-Rk1">
-                                        <rect key="frame" x="0.0" y="0.0" width="34" height="30"/>
-                                        <state key="normal" title="Start"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="35" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                        <state key="normal" title="Start">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7oA-6e-hJr">
-                                        <rect key="frame" x="169" y="0.0" width="39" height="30"/>
-                                        <state key="normal" title="Reset"/>
+                                        <rect key="frame" x="170" y="0.0" width="40" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                        <state key="normal" title="Reset">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
                                     </button>
                                 </subviews>
                             </stackView>
-                            <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" alignment="center" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="mXj-dU-BVL" userLabel="Now Playing Bar">
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="mXj-dU-BVL" userLabel="Now Playing Bar">
                                 <rect key="frame" x="0.0" y="750" width="390" height="60"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="iZc-wa-mKa">
@@ -327,7 +334,7 @@
                                                 <imageReference key="image" image="cover1" symbolScale="default"/>
                                                 <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
                                             </imageView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="2.5" translatesAutoresizingMaskIntoConstraints="NO" id="Tu9-L0-mTa" userLabel="Now Playing &amp; Title">
+                                            <stackView autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="2.5" translatesAutoresizingMaskIntoConstraints="NO" id="Tu9-L0-mTa" userLabel="Now Playing &amp; Title">
                                                 <rect key="frame" x="55" y="3.3333333333333712" width="125" height="43.333333333333336"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Now Playing" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NkX-oa-jfV" userLabel="Now Playing">
@@ -336,8 +343,8 @@
                                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xee-4w-PAr">
-                                                        <rect key="frame" x="0.0" y="23" width="33" height="20.333333333333329"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xee-4w-PAr">
+                                                        <rect key="frame" x="0.0" y="23" width="4.666666666666667" height="20.333333333333329"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -352,22 +359,31 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="D94-DA-Ypv" userLabel="Music Controls">
                                         <rect key="frame" x="183" y="19" width="207" height="22"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5BT-TF-v2w" userLabel="Backward">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5BT-TF-v2w" userLabel="Backward">
                                                 <rect key="frame" x="0.0" y="0.0" width="69" height="22"/>
                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" image="backward" catalog="system"/>
+                                                <connections>
+                                                    <action selector="onPressBackwardButton:" destination="aPw-q0-SMW" eventType="touchUpInside" id="YHm-Vx-VIp"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JII-08-XpB" userLabel="Pause">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JII-08-XpB" userLabel="Pause">
                                                 <rect key="frame" x="69" y="0.0" width="69" height="22"/>
                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal">
-                                                    <imageReference key="image" image="pause.fill" catalog="system" symbolScale="medium"/>
+                                                    <imageReference key="image" image="play.fill" catalog="system" symbolScale="medium"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="onPressPauseButton:" destination="aPw-q0-SMW" eventType="touchUpInside" id="pcz-dm-P8L"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ngf-Yx-qIl" userLabel="Forward">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ngf-Yx-qIl" userLabel="Forward">
                                                 <rect key="frame" x="138" y="0.0" width="69" height="22"/>
                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" image="forward" catalog="system"/>
+                                                <connections>
+                                                    <action selector="onPressForwardButton:" destination="aPw-q0-SMW" eventType="touchUpInside" id="bUn-el-iDn"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -377,15 +393,17 @@
                                     <constraint firstAttribute="height" constant="60" id="Gen-8Y-Tjz"/>
                                 </constraints>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cGM-0F-uLz">
-                                <rect key="frame" x="173" y="681" width="44" height="44"/>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cGM-0F-uLz">
+                                <rect key="frame" x="145" y="675" width="100" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="44" id="HKz-Jq-sLL"/>
-                                    <constraint firstAttribute="height" constant="44" id="Z56-Pd-nM7"/>
+                                    <constraint firstAttribute="width" constant="100" id="HKz-Jq-sLL"/>
+                                    <constraint firstAttribute="height" constant="50" id="Z56-Pd-nM7"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Button">
-                                    <imageReference key="image" image="music.note.list" catalog="system" symbolScale="large"/>
+                                <state key="normal" title=" Playlist">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                    <imageReference key="image" image="music.note.list" catalog="system" symbolScale="medium"/>
                                 </state>
                                 <connections>
                                     <action selector="onPressMusicPlayer:" destination="aPw-q0-SMW" eventType="touchUpInside" id="fkO-Oo-2xo"/>
@@ -410,6 +428,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Timer" image="clock" catalog="system" id="ML7-eO-ZHW"/>
                     <connections>
+                        <outlet property="miniPauseButton" destination="JII-08-XpB" id="qVb-h7-13r"/>
                         <outlet property="nowPlayingBar" destination="mXj-dU-BVL" id="vgX-pl-mNX"/>
                         <outlet property="songImage" destination="fpI-gY-sRY" id="AQs-mo-7KY"/>
                         <outlet property="songTitle" destination="xee-4w-PAr" id="bs4-rB-RII"/>
@@ -487,7 +506,7 @@
         <image name="list.bullet" catalog="system" width="128" height="88"/>
         <image name="music.note.house" catalog="system" width="128" height="106"/>
         <image name="music.note.list" catalog="system" width="128" height="115"/>
-        <image name="pause.fill" catalog="system" width="116" height="128"/>
+        <image name="play.fill" catalog="system" width="116" height="128"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

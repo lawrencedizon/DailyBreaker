@@ -13,6 +13,8 @@ class TimerViewController: UIViewController, MPMediaPickerControllerDelegate{
     //
     
     @IBOutlet var nowPlayingBar: UIStackView!
+    
+    @IBOutlet var miniPauseButton: UIButton!
     var timer: Timer?
     let timerShapeLayer = CAShapeLayer()
     
@@ -36,8 +38,15 @@ class TimerViewController: UIViewController, MPMediaPickerControllerDelegate{
     override func viewDidLoad() {
         timerLabel.text = String(timeLeft)
         createProgressBar()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        if let title = musicPlayer.nowPlayingItem?.title {
+            songTitle.text = title
+        }
         
     }
+    
     
     //
     //MARK: - Timer
@@ -128,14 +137,7 @@ class TimerViewController: UIViewController, MPMediaPickerControllerDelegate{
         if let title = musicPlayer.nowPlayingItem?.title {
             songTitle.text = title
         }
-        
-//        if let image = musicPlayer.nowPlayingItem?.artwork {
-//            songImage.image = UIImage(cgImage: (image as! CGImage))
-//        }
-        
-        nowPlayingBar.isHidden = false
-        
-
+        miniPauseButton.setImage(UIImage(systemName: "pause.fill"),for: UIControl.State.normal)
     }
     
     
@@ -143,7 +145,33 @@ class TimerViewController: UIViewController, MPMediaPickerControllerDelegate{
     func mediaPickerDidCancel(_ mediaPicker: MPMediaPickerController) {
         mediaPicker.dismiss(animated: true)
     }
+    @IBAction func onPressPauseButton(_ sender: UIButton) {
+        if let title = musicPlayer.nowPlayingItem?.title {
+            songTitle.text = title
+        }
+        if musicPlayer.playbackState == MPMusicPlaybackState.playing {
+            miniPauseButton.setImage(UIImage(systemName: "play.fill"), for: UIControl.State.normal)
+            musicPlayer.pause()
+        }else{
+            miniPauseButton.setImage(UIImage(systemName: "pause.fill"), for: UIControl.State.normal)
+            musicPlayer.play()
+        }
+    }
     
+    @IBAction func onPressForwardButton(_ sender: UIButton) {
+        musicPlayer.skipToNextItem()
+        if let title = musicPlayer.nowPlayingItem?.title {
+            songTitle.text = title
+            
+        }
+    }
+    @IBAction func onPressBackwardButton(_ sender: UIButton) {
+        
+        musicPlayer.skipToPreviousItem()
+        if let title = musicPlayer.nowPlayingItem?.title {
+            songTitle.text = title
+        }
+    }
 }
 
 
