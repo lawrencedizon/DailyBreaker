@@ -16,7 +16,6 @@ Break'n Reality - Roxrite is Stronger than Ever - Ep. 13
 * Media Player
 
 ## Development Progress 
-#8/23/2020
-[Video Link](https://www.youtube.com/watch?v=6lDL9-F2rSg)
+[8/23/2020](https://www.youtube.com/watch?v=6lDL9-F2rSg)
 
 
