@@ -8,14 +8,16 @@
 
 ## Inspiration
 
-Roxrite [Video](https://youtu.be/4CofNyGY_AY?t=150)
+Roxrite\
+[Video](https://youtu.be/4CofNyGY_AY?t=150)
 
-&nbsp;Roxrite is considered one of the greats in breaking. His video inspired me to create this break training app idea
+Roxrite is considered one of the greats in breaking. His video inspired me to create this break training app idea
 so that you could train on your own in a very easy and accessible way.
 
-Vincanity [Youtube](https://www.youtube.com/user/VincaniTV)
+Vincanity\ 
+[Youtube](https://www.youtube.com/user/VincaniTV)
 
-&nbsp;I've been following Vince since I started breakdancing in 2010.
+I've been following Vince since I started breakdancing in 2010.
 He really shows his love for hip hop and he has helped me grow as a dancer.
 His youtube channel has videos for all elements in breaking. 
 Thank you Vince for inspiring new breakers and for spreading knowledge for the breaker community.
