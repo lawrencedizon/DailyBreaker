@@ -6,6 +6,13 @@
 * Learn new moves (footwork, power moves, freezes)
 * Conveniently listen to your favorite breakdance song playlists from your Apple Music library.
 
+## Screenshots
+
+<img src= "/screenshots/1.jpg" width = "150">&emsp;
+<img src= "/screenshots/2.jpg" width = "150">&emsp;
+<img src= "/screenshots/3.jpg" width = "150">&emsp;
+<img src= "/screenshots/4.jpg" width = "150">
+
 ## Inspiration
 
 Roxrite
