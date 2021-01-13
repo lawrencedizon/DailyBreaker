@@ -90,6 +90,7 @@ class TimerViewController: UIViewController, MPMediaPickerControllerDelegate{
     }
     
     func updateSongInfo(){
+    
         if let title = musicPlayer.nowPlayingItem?.title {
             songTitle.text = title
         }
