@@ -14,11 +14,9 @@
 		90407E1124E350C6009160A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90407E1024E350C6009160A3 /* Assets.xcassets */; };
 		90407E1424E350C6009160A3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90407E1224E350C6009160A3 /* LaunchScreen.storyboard */; };
 		90407E2024E3578B009160A3 /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90407E1F24E3578B009160A3 /* Song.swift */; };
-		90407E2424E3648D009160A3 /* MusicPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90407E2324E3648D009160A3 /* MusicPlayerViewController.swift */; };
 		90407E2624E369D0009160A3 /* LearnViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90407E2524E369D0009160A3 /* LearnViewController.swift */; };
 		906BC1B524E8776600901350 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 906BC1B424E8776600901350 /* Video.swift */; };
 		906BC1B724E87A7B00901350 /* VideoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 906BC1B624E87A7B00901350 /* VideoCollectionViewCell.swift */; };
-		90912C68259AE1AA009AE8C0 /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90912C67259AE1AA009AE8C0 /* PlayerViewController.swift */; };
 		90E1E69025A8F36F00D29E25 /* TrainingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E1E68F25A8F36F00D29E25 /* TrainingViewController.swift */; };
 		90E1E69A25A925FF00D29E25 /* TrainingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E1E69925A925FF00D29E25 /* TrainingTableViewCell.swift */; };
 /* End PBXBuildFile section */
@@ -33,11 +31,9 @@
 		90407E1324E350C6009160A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		90407E1524E350C6009160A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		90407E1F24E3578B009160A3 /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
-		90407E2324E3648D009160A3 /* MusicPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayerViewController.swift; sourceTree = "<group>"; };
 		90407E2524E369D0009160A3 /* LearnViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnViewController.swift; sourceTree = "<group>"; };
 		906BC1B424E8776600901350 /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
 		906BC1B624E87A7B00901350 /* VideoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCollectionViewCell.swift; sourceTree = "<group>"; };
-		90912C67259AE1AA009AE8C0 /* PlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
 		90E1E68F25A8F36F00D29E25 /* TrainingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingViewController.swift; sourceTree = "<group>"; };
 		90E1E69925A925FF00D29E25 /* TrainingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -109,8 +105,6 @@
 				90E1E68F25A8F36F00D29E25 /* TrainingViewController.swift */,
 				90407E0B24E350C4009160A3 /* TimerViewController.swift */,
 				90407E2524E369D0009160A3 /* LearnViewController.swift */,
-				90407E2324E3648D009160A3 /* MusicPlayerViewController.swift */,
-				90912C67259AE1AA009AE8C0 /* PlayerViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -203,8 +197,6 @@
 				90407E0824E350C4009160A3 /* AppDelegate.swift in Sources */,
 				90407E0A24E350C4009160A3 /* SceneDelegate.swift in Sources */,
 				906BC1B524E8776600901350 /* Video.swift in Sources */,
-				90407E2424E3648D009160A3 /* MusicPlayerViewController.swift in Sources */,
-				90912C68259AE1AA009AE8C0 /* PlayerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

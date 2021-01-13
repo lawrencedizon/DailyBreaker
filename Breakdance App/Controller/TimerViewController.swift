@@ -3,10 +3,6 @@ import UIKit
 import Foundation
 import MediaPlayer
 
-enum TimeEnum: Int {
-    case hour = 3600, minute = 60, second = 1
-}
-
 class TimerViewController: UIViewController, MPMediaPickerControllerDelegate{
     //
     //MARK: - Properties
@@ -18,6 +14,8 @@ class TimerViewController: UIViewController, MPMediaPickerControllerDelegate{
     var timer: Timer?
     let timerShapeLayer = CAShapeLayer()
     
+    @IBOutlet var timerStartStopButton: UIButton!
+    @IBOutlet var timerResetButton: UIButton!
     // Get the system music player.
     let musicPlayer = MPMusicPlayerController.systemMusicPlayer
     
@@ -41,9 +39,7 @@ class TimerViewController: UIViewController, MPMediaPickerControllerDelegate{
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        if let title = musicPlayer.nowPlayingItem?.title {
-            songTitle.text = title
-        }
+        updateSongInfo()
         
     }
     
@@ -71,13 +67,13 @@ class TimerViewController: UIViewController, MPMediaPickerControllerDelegate{
     func createProgressBar(){
         
         //create circular path
-        let center = CGPoint(x: view.frame.size.width / 2, y: view.frame.size.height / 4)
+        let center = CGPoint(x: view.frame.size.width / 2, y: view.frame.size.height / 3)
         let circularPath = UIBezierPath(arcCenter: center, radius: 100, startAngle: -CGFloat.pi / 2, endAngle: CGFloat.pi * 2, clockwise: true)
         
         //create track layer
         let trackLayer = CAShapeLayer()
         trackLayer.path = circularPath.cgPath
-        trackLayer.strokeColor = UIColor.lightGray.cgColor
+        trackLayer.strokeColor = UIColor.black.cgColor
         trackLayer.lineWidth = 10
         trackLayer.fillColor = UIColor.clear.cgColor
         trackLayer.lineCap = CAShapeLayerLineCap.round
@@ -91,31 +87,18 @@ class TimerViewController: UIViewController, MPMediaPickerControllerDelegate{
         timerShapeLayer.lineCap = CAShapeLayerLineCap.round
         timerShapeLayer.strokeEnd = 0
         view.layer.addSublayer(timerShapeLayer)
-        
-        //Start progressbar animation on tap
-        view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleTap)))
-        
-        
-        
     }
     
-    @objc private func handleTap(){
-        print("Attempting to animate stroke")
+    func updateSongInfo(){
+        if let title = musicPlayer.nowPlayingItem?.title {
+            songTitle.text = title
+        }
         
-        let basicAnimation = CABasicAnimation(keyPath: "strokeEnd")
-        
-        basicAnimation.toValue = 1
-        
-        basicAnimation.duration = 300
-        
-        basicAnimation.fillMode = CAMediaTimingFillMode.forwards
-        basicAnimation.isRemovedOnCompletion = false
-        timerShapeLayer.add(basicAnimation, forKey: "urSoBasic")
-        
-        //Start timer
-        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(timerAction), userInfo: nil, repeats: true)
-        print("Timer fired!")
+        if let image = musicPlayer.nowPlayingItem?.artwork?.image(at: CGSize(width: 50, height: 50)) {
+            songImage.image = image
+        }
     }
+    
     @IBAction func onPressMusicPlayer(_ sender: UIButton) {
         let controller = MPMediaPickerController(mediaTypes: .music)
         controller.allowsPickingMultipleItems = true
@@ -145,10 +128,10 @@ class TimerViewController: UIViewController, MPMediaPickerControllerDelegate{
     func mediaPickerDidCancel(_ mediaPicker: MPMediaPickerController) {
         mediaPicker.dismiss(animated: true)
     }
+    
     @IBAction func onPressPauseButton(_ sender: UIButton) {
-        if let title = musicPlayer.nowPlayingItem?.title {
-            songTitle.text = title
-        }
+        updateSongInfo()
+        
         if musicPlayer.playbackState == MPMusicPlaybackState.playing {
             miniPauseButton.setImage(UIImage(systemName: "play.fill"), for: UIControl.State.normal)
             musicPlayer.pause()
@@ -160,16 +143,54 @@ class TimerViewController: UIViewController, MPMediaPickerControllerDelegate{
     
     @IBAction func onPressForwardButton(_ sender: UIButton) {
         musicPlayer.skipToNextItem()
-        if let title = musicPlayer.nowPlayingItem?.title {
-            songTitle.text = title
-            
-        }
+        updateSongInfo()
     }
     @IBAction func onPressBackwardButton(_ sender: UIButton) {
-        
         musicPlayer.skipToPreviousItem()
-        if let title = musicPlayer.nowPlayingItem?.title {
-            songTitle.text = title
+        updateSongInfo()
+    }
+    @IBAction func onPressStartOrStop(_ sender: UIButton) {
+        let basicAnimation = CABasicAnimation(keyPath: "strokeEnd")
+        basicAnimation.toValue = 1
+        basicAnimation.duration = CFTimeInterval(timeLeft)
+        basicAnimation.fillMode = CAMediaTimingFillMode.forwards
+        basicAnimation.isRemovedOnCompletion = false
+        timerShapeLayer.add(basicAnimation, forKey: "urSoBasic")
+        
+        //Timer doesn't exist yet
+        if timer == nil {
+            //Start timer
+            timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(timerAction), userInfo: nil, repeats: true)
+            print("Timer fired!")
+            timerStartStopButton.setTitle("Stop", for: .normal)
+            
+        //Timer is already running
+        }else if timer!.isValid {
+            timerStartStopButton.setTitle("Start", for: .normal)
+            timer?.invalidate()
+            
+        }
+        //Timer is currently paused
+        else {
+            timerStartStopButton.setTitle("Stop", for: .normal)
+            //Start timer
+            timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(timerAction), userInfo: nil, repeats: true)
+        }
+   
+    }
+    @IBAction func onPressReset(_ sender: UIButton) {
+        if timer == nil {
+            //Start timer
+            timeLeft = 300
+            timerStartStopButton.setTitle("Start", for: .normal)
+            
+        }else if timer!.isValid{
+            timer?.invalidate()
+            timeLeft = 300
+            timerStartStopButton.setTitle("Start", for: .normal)
+        }else{
+            timeLeft = 300
+            timerStartStopButton.setTitle("Start", for: .normal)
         }
     }
 }
