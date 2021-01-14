@@ -2,8 +2,9 @@
 
 ## Practice more effectively. Push your limits and dance.
 
-* Build endurance and stamina with our HIIT style guided timed sessions. 
-* Learn new moves (footwork, power moves, freezes)
+* No excuses with easy consistent daily practice
+* Build endurance and stamina with our HIIT style timed sessions. 
+* Learn new moves (toprock,footwork, power moves, freezes)
 * Conveniently listen to your favorite breakdance song playlists from your Apple Music library.
 
 ## Screenshots
@@ -36,5 +37,7 @@ Thank you Vince for inspiring new breakers and for spreading knowledge for the b
 
 ## Development Progress 
 [8/23/2020](https://www.youtube.com/watch?v=6lDL9-F2rSg)
+[1/14/2020](https://www.youtube.com/watch?v=Pwawd_iH_ro)
+
 
 
