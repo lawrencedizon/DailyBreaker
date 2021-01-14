@@ -23,9 +23,11 @@ class TimerViewController: UIViewController, MPMediaPickerControllerDelegate{
     @IBOutlet var timerLabel: UILabel!
     @IBOutlet var songTitle: UILabel!
     
-    var timeLeft = 300 {
+    let initialTimeLeft = 500
+    
+    var timeLeft = 500 {
         didSet {
-            timerLabel.text = String(timeLeft)
+            timerLabel.text = timeString(time: TimeInterval(timeLeft)).replacingOccurrences(of: "^0+", with: "", options: .regularExpression)
         }
     }
     
@@ -34,7 +36,7 @@ class TimerViewController: UIViewController, MPMediaPickerControllerDelegate{
     //
     
     override func viewDidLoad() {
-        timerLabel.text = String(timeLeft)
+        timerLabel.text = timeString(time: TimeInterval(timeLeft))
         createProgressBar()
     }
     
@@ -51,12 +53,26 @@ class TimerViewController: UIViewController, MPMediaPickerControllerDelegate{
     @objc func timerAction(){
         
         if timeLeft != 0 {
-            print(timeLeft)
+            timerLabel.text = timeString(time: TimeInterval(timeLeft))
             timeLeft -= 1
         }else{
             timerLabel.text = "Timer Stopped!"
             print("Timer Stopped!")
             timer?.invalidate()
+        }
+    }
+    
+    func timeString(time: TimeInterval) -> String {
+            let hour = Int(time) / 3600
+            let minute = Int(time) / 60 % 60
+            let second = Int(time) % 60
+
+            // return formated string
+        
+        if hour == 0 {
+            return String(format: "%02i:%02i", minute, second).replacingOccurrences(of: "^0+", with: "", options: .regularExpression)
+        }else{
+            return String(format: "%02i:%02i:%02i", hour, minute, second).replacingOccurrences(of: "^0+", with: "", options: .regularExpression)
         }
     }
     
@@ -118,9 +134,8 @@ class TimerViewController: UIViewController, MPMediaPickerControllerDelegate{
         
         musicPlayer.play()
         
-        if let title = musicPlayer.nowPlayingItem?.title {
-            songTitle.text = title
-        }
+        updateSongInfo()
+        
         miniPauseButton.setImage(UIImage(systemName: "pause.fill"),for: UIControl.State.normal)
     }
     
@@ -187,10 +202,10 @@ class TimerViewController: UIViewController, MPMediaPickerControllerDelegate{
             
         }else if timer!.isValid{
             timer?.invalidate()
-            timeLeft = 300
+            timeLeft = initialTimeLeft
             timerStartStopButton.setTitle("Start", for: .normal)
         }else{
-            timeLeft = 300
+            timeLeft = initialTimeLeft
             timerStartStopButton.setTitle("Start", for: .normal)
         }
     }

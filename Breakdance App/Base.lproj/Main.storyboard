@@ -21,10 +21,8 @@
                         <color key="selectedImageTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="2j2-rO-3Gw" kind="relationship" relationship="viewControllers" id="Mx8-Vh-q7r"/>
                         <segue destination="6Oc-wq-zmV" kind="relationship" relationship="viewControllers" id="XGl-BG-vjw"/>
                         <segue destination="3RZ-TM-JaA" kind="relationship" relationship="viewControllers" id="yQJ-Q1-MMy"/>
-                        <segue destination="Flp-si-TXL" kind="relationship" relationship="viewControllers" id="Ted-yv-Fpo"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bII-ga-K8g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -100,7 +98,7 @@
             <objects>
                 <viewController id="Flp-si-TXL" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zeW-1P-D2V">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="761"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="AwJ-AG-wlN"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -363,7 +361,7 @@
             <objects>
                 <viewController id="2j2-rO-3Gw" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TRF-N5-dhp">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="761"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="HpF-ai-HE0"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
