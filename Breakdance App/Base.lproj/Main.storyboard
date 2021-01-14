@@ -169,25 +169,25 @@
             </objects>
             <point key="canvasLocation" x="597" y="1713"/>
         </scene>
-        <!--Timer-->
+        <!--Warm Up-->
         <scene sceneID="fDR-0k-cAW">
             <objects>
                 <viewController storyboardIdentifier="TimerView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="aPw-q0-SMW" customClass="TimerViewController" customModule="Breakdance_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="r3Z-sd-18q">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="756"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="exQ-Qq-oxn">
-                                <rect key="frame" x="124.00000000000001" y="114" width="142.33333333333337" height="96.666666666666686"/>
+                                <rect key="frame" x="138.33333333333334" y="150" width="113.33333333333334" height="96.666666666666686"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current Timer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="WwM-x2-ZYi">
-                                        <rect key="frame" x="0.0" y="0.0" width="142.33333333333334" height="28.666666666666668"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pushups" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="WwM-x2-ZYi">
+                                        <rect key="frame" x="11.666666666666657" y="0.0" width="90" height="28.666666666666668"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="wBL-bT-VqP">
-                                        <rect key="frame" x="14.333333333333336" y="48.666666666666657" width="113.33333333333331" height="48"/>
+                                        <rect key="frame" x="0.0" y="48.666666666666686" width="113.33333333333333" height="48"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="40"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -195,7 +195,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="135" translatesAutoresizingMaskIntoConstraints="NO" id="XgR-QK-Umv" userLabel="Timer Control">
-                                <rect key="frame" x="90" y="457" width="210" height="30"/>
+                                <rect key="frame" x="90" y="483" width="210" height="30"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jso-Qo-Rk1">
                                         <rect key="frame" x="0.0" y="0.0" width="35" height="30"/>
@@ -220,7 +220,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="mXj-dU-BVL" userLabel="Now Playing Bar">
-                                <rect key="frame" x="0.0" y="750" width="390" height="60"/>
+                                <rect key="frame" x="0.0" y="662" width="390" height="60"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="iZc-wa-mKa">
                                         <rect key="frame" x="0.0" y="5" width="180" height="50"/>
@@ -295,7 +295,7 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cGM-0F-uLz">
-                                <rect key="frame" x="145" y="675" width="100" height="50"/>
+                                <rect key="frame" x="145" y="587" width="100" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="HKz-Jq-sLL"/>
                                     <constraint firstAttribute="height" constant="50" id="Z56-Pd-nM7"/>
@@ -315,17 +315,17 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="mXj-dU-BVL" secondAttribute="trailing" id="5Kr-0d-RdK"/>
-                            <constraint firstItem="exQ-Qq-oxn" firstAttribute="top" secondItem="lO7-dy-ej6" secondAttribute="top" constant="70" id="6tH-WG-Auw"/>
+                            <constraint firstItem="exQ-Qq-oxn" firstAttribute="top" secondItem="lO7-dy-ej6" secondAttribute="top" constant="150" id="6tH-WG-Auw"/>
                             <constraint firstItem="mXj-dU-BVL" firstAttribute="leading" secondItem="lO7-dy-ej6" secondAttribute="leading" id="Boj-0W-LoY"/>
                             <constraint firstItem="XgR-QK-Umv" firstAttribute="centerX" secondItem="r3Z-sd-18q" secondAttribute="centerX" id="PyQ-Ul-DFh"/>
                             <constraint firstItem="cGM-0F-uLz" firstAttribute="centerX" secondItem="r3Z-sd-18q" secondAttribute="centerX" id="Y02-9D-ljk"/>
                             <constraint firstItem="lO7-dy-ej6" firstAttribute="bottom" secondItem="mXj-dU-BVL" secondAttribute="bottom" id="YcN-Q4-qjG"/>
                             <constraint firstItem="mXj-dU-BVL" firstAttribute="top" secondItem="cGM-0F-uLz" secondAttribute="bottom" constant="25" id="nD4-Ob-uXK"/>
-                            <constraint firstItem="XgR-QK-Umv" firstAttribute="centerY" secondItem="r3Z-sd-18q" secondAttribute="centerY" constant="50" id="vaJ-f1-JIv"/>
+                            <constraint firstItem="XgR-QK-Umv" firstAttribute="centerY" secondItem="r3Z-sd-18q" secondAttribute="centerY" constant="120" id="vaJ-f1-JIv"/>
                             <constraint firstItem="exQ-Qq-oxn" firstAttribute="centerX" secondItem="r3Z-sd-18q" secondAttribute="centerX" id="yMt-MO-Tym"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Timer" image="clock" catalog="system" id="ML7-eO-ZHW"/>
+                    <navigationItem key="navigationItem" title="Warm Up" largeTitleDisplayMode="never" id="aao-mk-7fq"/>
                     <connections>
                         <outlet property="miniPauseButton" destination="JII-08-XpB" id="qVb-h7-13r"/>
                         <outlet property="nowPlayingBar" destination="mXj-dU-BVL" id="vgX-pl-mNX"/>
@@ -338,7 +338,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hU8-zx-FmZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="597" y="2488"/>
+            <point key="canvasLocation" x="1526.1538461538462" y="2464.6919431279621"/>
         </scene>
         <!--Item-->
         <scene sceneID="aiC-kJ-0a0">
@@ -392,11 +392,31 @@
             </objects>
             <point key="canvasLocation" x="597" y="952"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ogS-yh-2hW">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="y92-xg-l5U" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="62g-BV-gFH">
+                        <rect key="frame" x="0.0" y="44" width="390" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="aPw-q0-SMW" kind="relationship" relationship="rootViewController" id="oWx-XO-CTD"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="88A-fe-ISp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="596.92307692307691" y="2464.6919431279621"/>
+        </scene>
     </scenes>
     <resources>
         <image name="backward" catalog="system" width="128" height="79"/>
         <image name="building.columns" catalog="system" width="128" height="113"/>
-        <image name="clock" catalog="system" width="128" height="121"/>
         <image name="default" width="150" height="150"/>
         <image name="doc.plaintext" catalog="system" width="115" height="128"/>
         <image name="forward" catalog="system" width="128" height="79"/>

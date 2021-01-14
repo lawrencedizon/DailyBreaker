@@ -23,9 +23,9 @@ class TimerViewController: UIViewController, MPMediaPickerControllerDelegate{
     @IBOutlet var timerLabel: UILabel!
     @IBOutlet var songTitle: UILabel!
     
-    let initialTimeLeft = 500
+    var initialTimeLeft = 60 * 5
     
-    var timeLeft = 500 {
+    var timeLeft = 60 * 5 {
         didSet {
             timerLabel.text = timeString(time: TimeInterval(timeLeft)).replacingOccurrences(of: "^0+", with: "", options: .regularExpression)
         }
@@ -36,8 +36,43 @@ class TimerViewController: UIViewController, MPMediaPickerControllerDelegate{
     //
     
     override func viewDidLoad() {
-        timerLabel.text = timeString(time: TimeInterval(timeLeft))
+        timerLabel.text = timeString(time: TimeInterval(timeLeft)).replacingOccurrences(of: "^0+", with: "", options: .regularExpression)
+        
+        
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "gearshape"),style: .plain, target: self, action: #selector(showSettings))
+        
         createProgressBar()
+        
+        
+    }
+    
+    
+    
+    @objc func showSettings(){
+        let ac = UIAlertController(title: "Training length", message: "", preferredStyle: .alert)
+                ac.addAction(UIAlertAction(title: "Short", style: .default, handler: { action in
+                    self.navigationItem.title = "Short Warm Up"
+                    self.initialTimeLeft = 60 * 5
+                    self.timerLabel.text = self.timeString(time: TimeInterval(self.timeLeft)).replacingOccurrences(of: "^0+", with: "", options: .regularExpression)
+                    self.onPressReset()
+                }))
+                ac.addAction(UIAlertAction(title: "Medium", style: .default, handler: { action in
+                    self.navigationItem.title = "Medium Warm Up"
+                    self.initialTimeLeft = 60 * 25
+                    self.timerLabel.text = self.timeString(time: TimeInterval(self.timeLeft)).replacingOccurrences(of: "^0+", with: "", options: .regularExpression)
+                    self.onPressReset()
+                }))
+                ac.addAction(UIAlertAction(title: "Long", style: .default, handler: { action in
+                    self.navigationItem.title = "Long Warm Up"
+                    self.initialTimeLeft = 60 * 60
+                    self.timerLabel.text = self.timeString(time: TimeInterval(self.timeLeft)).replacingOccurrences(of: "^0+", with: "", options: .regularExpression)
+                    
+                    self.onPressReset()
+                }))
+                ac.addAction(UIAlertAction(title: "Continue", style: .cancel))
+                
+                present(ac, animated: true)
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -83,7 +118,7 @@ class TimerViewController: UIViewController, MPMediaPickerControllerDelegate{
     func createProgressBar(){
         
         //create circular path
-        let center = CGPoint(x: view.frame.size.width / 2, y: view.frame.size.height / 3)
+        let center = CGPoint(x: view.frame.size.width / 2, y: view.frame.size.height / 3 + 50)
         let circularPath = UIBezierPath(arcCenter: center, radius: 100, startAngle: -CGFloat.pi / 2, endAngle: CGFloat.pi * 2, clockwise: true)
         
         //create track layer
@@ -180,6 +215,7 @@ class TimerViewController: UIViewController, MPMediaPickerControllerDelegate{
             print("Timer fired!")
             timerStartStopButton.setTitle("Stop", for: .normal)
             
+            
         //Timer is already running
         }else if timer!.isValid {
             timerStartStopButton.setTitle("Start", for: .normal)
@@ -194,10 +230,10 @@ class TimerViewController: UIViewController, MPMediaPickerControllerDelegate{
         }
    
     }
-    @IBAction func onPressReset(_ sender: UIButton) {
+    @IBAction func onPressReset(_ sender: AnyObject? = nil) {
         if timer == nil {
             //Start timer
-            timeLeft = 300
+            timeLeft = initialTimeLeft
             timerStartStopButton.setTitle("Start", for: .normal)
             
         }else if timer!.isValid{
