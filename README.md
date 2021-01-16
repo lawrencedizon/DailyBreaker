@@ -16,13 +16,13 @@
 
 ## Inspiration
 
-Roxrite
+<b>Roxrite</b>
 [Video](https://youtu.be/4CofNyGY_AY?t=150)
 
 Roxrite is considered one of the greats in breaking. His video inspired me to create this break training app idea
 so that you could train on your own in a very easy and accessible way.
 
-Vincanity 
+<b>Vincanity</b>
 [Youtube](https://www.youtube.com/user/VincaniTV)
 
 I've been following Vince since I started breakdancing in 2010.
@@ -36,7 +36,7 @@ Thank you Vince for inspiring new breakers and for spreading knowledge for the b
 * Media Player
 
 ## Development Progress 
-[8/23/2020](https://www.youtube.com/watch?v=6lDL9-F2rSg)
+[8/23/2020](https://www.youtube.com/watch?v=6lDL9-F2rSg) \
 [1/14/2020](https://www.youtube.com/watch?v=Pwawd_iH_ro)
 
 
