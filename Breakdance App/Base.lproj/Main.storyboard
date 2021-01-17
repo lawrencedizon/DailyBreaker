@@ -23,6 +23,7 @@
                     <connections>
                         <segue destination="6Oc-wq-zmV" kind="relationship" relationship="viewControllers" id="XGl-BG-vjw"/>
                         <segue destination="3RZ-TM-JaA" kind="relationship" relationship="viewControllers" id="yQJ-Q1-MMy"/>
+                        <segue destination="rfm-hd-dgg" kind="relationship" relationship="viewControllers" id="M2q-Ns-9LO"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bII-ga-K8g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -93,21 +94,21 @@
             </objects>
             <point key="canvasLocation" x="1960" y="952"/>
         </scene>
-        <!--Log-->
-        <scene sceneID="UU0-oE-qSb">
+        <!--Activity-->
+        <scene sceneID="KIe-FB-CHF">
             <objects>
-                <viewController id="Flp-si-TXL" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="zeW-1P-D2V">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                <viewController id="rfm-hd-dgg" customClass="ActivityViewController" customModule="Breakdance_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jAs-uY-Xbt">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="761"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="AwJ-AG-wlN"/>
+                        <viewLayoutGuide key="safeArea" id="LBS-0r-ee6"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Log" image="doc.plaintext" catalog="system" id="IqW-rZ-1qd"/>
+                    <tabBarItem key="tabBarItem" title="Activity" id="20M-Uv-n9o"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="YDk-uC-NLh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a19-k1-SnX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3312" y="952"/>
+            <point key="canvasLocation" x="3122" y="952"/>
         </scene>
         <!--Training View Controller-->
         <scene sceneID="5dX-62-4pE">
@@ -418,7 +419,6 @@
         <image name="backward" catalog="system" width="128" height="79"/>
         <image name="building.columns" catalog="system" width="128" height="113"/>
         <image name="default" width="150" height="150"/>
-        <image name="doc.plaintext" catalog="system" width="115" height="128"/>
         <image name="forward" catalog="system" width="128" height="79"/>
         <image name="graduationcap" catalog="system" width="128" height="106"/>
         <image name="house" catalog="system" width="128" height="106"/>

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		903851A125B4FABC001CC32A /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9038519F25B4FABC001CC32A /* Model.xcdatamodeld */; };
+		903851A425B4FD7F001CC32A /* ActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903851A325B4FD7F001CC32A /* ActivityViewController.swift */; };
 		90407E0824E350C4009160A3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90407E0724E350C4009160A3 /* AppDelegate.swift */; };
 		90407E0A24E350C4009160A3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90407E0924E350C4009160A3 /* SceneDelegate.swift */; };
 		90407E0C24E350C4009160A3 /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90407E0B24E350C4009160A3 /* TimerViewController.swift */; };
@@ -22,6 +24,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		903851A025B4FABC001CC32A /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		903851A325B4FD7F001CC32A /* ActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityViewController.swift; sourceTree = "<group>"; };
 		90407E0424E350C4009160A3 /* Breakdance App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Breakdance App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		90407E0724E350C4009160A3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		90407E0924E350C4009160A3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -69,8 +73,10 @@
 			isa = PBXGroup;
 			children = (
 				90407E0D24E350C4009160A3 /* Main.storyboard */,
+				9038519F25B4FABC001CC32A /* Model.xcdatamodeld */,
 				90407E1224E350C6009160A3 /* LaunchScreen.storyboard */,
 				90407E0724E350C4009160A3 /* AppDelegate.swift */,
+				903851A325B4FD7F001CC32A /* ActivityViewController.swift */,
 				90407E0924E350C4009160A3 /* SceneDelegate.swift */,
 				90407E1524E350C6009160A3 /* Info.plist */,
 				90407E1B24E356F4009160A3 /* Model */,
@@ -195,8 +201,10 @@
 				90E1E69A25A925FF00D29E25 /* TrainingTableViewCell.swift in Sources */,
 				90407E2024E3578B009160A3 /* Song.swift in Sources */,
 				90407E0824E350C4009160A3 /* AppDelegate.swift in Sources */,
+				903851A125B4FABC001CC32A /* Model.xcdatamodeld in Sources */,
 				90407E0A24E350C4009160A3 /* SceneDelegate.swift in Sources */,
 				906BC1B524E8776600901350 /* Video.swift in Sources */,
+				903851A425B4FD7F001CC32A /* ActivityViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -396,6 +404,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		9038519F25B4FABC001CC32A /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				903851A025B4FABC001CC32A /* Model.xcdatamodel */,
+			);
+			currentVersion = 903851A025B4FABC001CC32A /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 90407DFC24E350C4009160A3 /* Project object */;
 }
