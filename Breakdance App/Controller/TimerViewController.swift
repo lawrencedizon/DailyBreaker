@@ -69,7 +69,7 @@ class TimerViewController: UIViewController, MPMediaPickerControllerDelegate{
                     
                     self.onPressReset()
                 }))
-                ac.addAction(UIAlertAction(title: "Continue", style: .cancel))
+                ac.addAction(UIAlertAction(title: "Cancel", style: .cancel))
                 
                 present(ac, animated: true)
         
