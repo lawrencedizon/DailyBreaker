@@ -23,7 +23,7 @@
                     <connections>
                         <segue destination="6Oc-wq-zmV" kind="relationship" relationship="viewControllers" id="XGl-BG-vjw"/>
                         <segue destination="3RZ-TM-JaA" kind="relationship" relationship="viewControllers" id="yQJ-Q1-MMy"/>
-                        <segue destination="rfm-hd-dgg" kind="relationship" relationship="viewControllers" id="M2q-Ns-9LO"/>
+                        <segue destination="dAm-mN-PoY" kind="relationship" relationship="viewControllers" id="M2q-Ns-9LO"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bII-ga-K8g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -98,17 +98,58 @@
         <scene sceneID="KIe-FB-CHF">
             <objects>
                 <viewController id="rfm-hd-dgg" customClass="ActivityViewController" customModule="Breakdance_App" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="jAs-uY-Xbt">
+                    <view key="view" autoresizesSubviews="NO" contentMode="scaleToFill" id="jAs-uY-Xbt">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="761"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" distribution="fillEqually" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="6H6-gL-6EW" userLabel="Number Stats">
+                                <rect key="frame" x="67" y="88" width="257.33333333333331" height="89.666666666666671"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ZXN-tg-BkU">
+                                        <rect key="frame" x="0.0" y="0.0" width="113.66666666666667" height="89.666666666666671"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1kx-A3-dKM">
+                                                <rect key="frame" x="39.666666666666671" y="0.0" width="34.666666666666671" height="69.333333333333329"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="58"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Workouts" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vt4-kZ-9Fm">
+                                                <rect key="frame" x="0.0" y="69.333333333333329" width="113.66666666666667" height="20.333333333333329"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="A9X-1d-fwZ">
+                                        <rect key="frame" x="143.66666666666666" y="0.0" width="113.66666666666666" height="89.666666666666671"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FMt-Nj-sWT">
+                                                <rect key="frame" x="39.666666666666686" y="0.0" width="34.666666666666657" height="69.333333333333329"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="58"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Minutes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uig-AL-9Ss">
+                                                <rect key="frame" x="6" y="69.333333333333329" width="102" height="20.333333333333329"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="LBS-0r-ee6"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Activity" id="20M-Uv-n9o"/>
+                    <navigationItem key="navigationItem" title="Activity" id="YBi-Gh-6xu"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a19-k1-SnX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3122" y="952"/>
+            <point key="canvasLocation" x="4050.7692307692305" y="951.89573459715632"/>
         </scene>
         <!--Training View Controller-->
         <scene sceneID="5dX-62-4pE">
@@ -414,10 +455,30 @@
             </objects>
             <point key="canvasLocation" x="596.92307692307691" y="2464.6919431279621"/>
         </scene>
+        <!--Activity-->
+        <scene sceneID="boQ-tT-bI6">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dAm-mN-PoY" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Activity" image="chart.bar.doc.horizontal" catalog="system" id="20M-Uv-n9o"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="QjL-yN-kOR">
+                        <rect key="frame" x="0.0" y="44" width="390" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="rfm-hd-dgg" kind="relationship" relationship="rootViewController" id="lOH-KT-73G"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="n7K-HA-7Ib" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3121.5384615384614" y="951.89573459715632"/>
+        </scene>
     </scenes>
     <resources>
         <image name="backward" catalog="system" width="128" height="79"/>
         <image name="building.columns" catalog="system" width="128" height="113"/>
+        <image name="chart.bar.doc.horizontal" catalog="system" width="115" height="128"/>
         <image name="default" width="150" height="150"/>
         <image name="forward" catalog="system" width="128" height="79"/>
         <image name="graduationcap" catalog="system" width="128" height="106"/>
