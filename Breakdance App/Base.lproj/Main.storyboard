@@ -277,7 +277,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cna-eO-iYH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="597" y="1713"/>
+            <point key="canvasLocation" x="1526" y="1713"/>
         </scene>
         <!--Warm Up-->
         <scene sceneID="fDR-0k-cAW">
@@ -474,18 +474,55 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="761"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jan 17, 2020" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MZB-mw-jgW">
-                                <rect key="frame" x="15" y="140" width="132" height="28"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="23"/>
-                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="U7c-7d-eAN">
+                                <rect key="frame" x="15" y="461" width="360" height="299.66666666666669"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yesterday" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nEL-gP-ieT">
+                                        <rect key="frame" x="0.0" y="0.0" width="131" height="34.666666666666664"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="29"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vr7-gB-Qrw">
+                                        <rect key="frame" x="0.0" y="42.666666666666657" width="360" height="257"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </tableView>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="top" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="EEy-sP-jMD">
+                                <rect key="frame" x="15" y="153.00000000000003" width="360" height="299.66666666666669"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="Mzs-3U-NUu">
+                                        <rect key="frame" x="0.0" y="0.0" width="111.33333333333333" height="57.666666666666664"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Today" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zcQ-Ad-iOo">
+                                                <rect key="frame" x="0.0" y="0.0" width="79.333333333333329" height="34.666666666666664"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="29"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jan 17, 2020" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MZB-mw-jgW">
+                                                <rect key="frame" x="0.0" y="34.666666666666664" width="111.33333333333333" height="23"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
+                                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ecc-fk-OEi">
+                                        <rect key="frame" x="0.0" y="64.666666666666686" width="360" height="235"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </tableView>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="HpF-ai-HE0"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="MZB-mw-jgW" firstAttribute="leading" secondItem="HpF-ai-HE0" secondAttribute="leading" constant="15" id="Q4k-cJ-Ow0"/>
-                            <constraint firstItem="MZB-mw-jgW" firstAttribute="top" secondItem="TRF-N5-dhp" secondAttribute="topMargin" id="foe-t4-fZ9"/>
+                            <constraint firstItem="HpF-ai-HE0" firstAttribute="trailing" secondItem="EEy-sP-jMD" secondAttribute="trailing" constant="15" id="3Uc-ro-iTL"/>
+                            <constraint firstItem="U7c-7d-eAN" firstAttribute="leading" secondItem="HpF-ai-HE0" secondAttribute="leading" constant="15" id="CQU-17-3iO"/>
+                            <constraint firstItem="EEy-sP-jMD" firstAttribute="leading" secondItem="HpF-ai-HE0" secondAttribute="leading" constant="15" id="TR4-nb-2zY"/>
+                            <constraint firstItem="HpF-ai-HE0" firstAttribute="trailing" secondItem="U7c-7d-eAN" secondAttribute="trailing" constant="15" id="jgw-LG-m0U"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Home" id="vNd-yL-Mxx"/>
