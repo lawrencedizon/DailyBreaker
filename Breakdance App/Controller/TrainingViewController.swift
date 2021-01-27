@@ -40,6 +40,16 @@ class TrainingViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let viewController = storyboard?.instantiateViewController(identifier: "TimerView") as? TimerViewController {
             navigationController?.pushViewController(viewController, animated: true)
+            
+            switch skillArray[indexPath.row]{
+            case "Warm Up":
+                viewController.exercises = TrainingExercises.WarmUp
+            case "Stamina":
+                viewController.exercises = TrainingExercises.Stamina
+            default:
+                viewController.exercises = []
+            
+            }
         }
     }
     

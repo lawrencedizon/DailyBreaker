@@ -4,7 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -16,17 +15,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="bottom" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="landing_bg" translatesAutoresizingMaskIntoConstraints="NO" id="VNu-ZU-5jR">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
-                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Daily Breaker" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4xo-XR-O1S">
+                                <rect key="frame" x="156.5" y="437.5" width="101" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="VNu-ZU-5jR" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="30b-jx-iwm"/>
-                            <constraint firstItem="VNu-ZU-5jR" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="BR6-8b-zok"/>
-                            <constraint firstItem="VNu-ZU-5jR" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="m8W-nE-Gad"/>
-                            <constraint firstItem="VNu-ZU-5jR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="obM-mb-3hC"/>
+                            <constraint firstItem="4xo-XR-O1S" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="5hE-X7-hqd"/>
+                            <constraint firstItem="4xo-XR-O1S" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="C9X-9a-tiy"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -35,10 +35,4 @@
             <point key="canvasLocation" x="52.173913043478265" y="375"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="landing_bg" width="1650" height="1100"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-    </resources>
 </document>

@@ -20,6 +20,7 @@
 		90407E2624E369D0009160A3 /* LearnViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90407E2524E369D0009160A3 /* LearnViewController.swift */; };
 		906BC1B524E8776600901350 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 906BC1B424E8776600901350 /* Video.swift */; };
 		906BC1B724E87A7B00901350 /* VideoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 906BC1B624E87A7B00901350 /* VideoCollectionViewCell.swift */; };
+		90C2C89F25C0DB2C0050D7FF /* TrainingExercises.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C2C89E25C0DB2C0050D7FF /* TrainingExercises.swift */; };
 		90E1E69025A8F36F00D29E25 /* TrainingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E1E68F25A8F36F00D29E25 /* TrainingViewController.swift */; };
 		90E1E69A25A925FF00D29E25 /* TrainingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E1E69925A925FF00D29E25 /* TrainingTableViewCell.swift */; };
 /* End PBXBuildFile section */
@@ -40,6 +41,7 @@
 		90407E2524E369D0009160A3 /* LearnViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnViewController.swift; sourceTree = "<group>"; };
 		906BC1B424E8776600901350 /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
 		906BC1B624E87A7B00901350 /* VideoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCollectionViewCell.swift; sourceTree = "<group>"; };
+		90C2C89E25C0DB2C0050D7FF /* TrainingExercises.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingExercises.swift; sourceTree = "<group>"; };
 		90E1E68F25A8F36F00D29E25 /* TrainingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingViewController.swift; sourceTree = "<group>"; };
 		90E1E69925A925FF00D29E25 /* TrainingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -93,6 +95,7 @@
 			children = (
 				90407E1F24E3578B009160A3 /* Song.swift */,
 				906BC1B424E8776600901350 /* Video.swift */,
+				90C2C89E25C0DB2C0050D7FF /* TrainingExercises.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -197,6 +200,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90C2C89F25C0DB2C0050D7FF /* TrainingExercises.swift in Sources */,
 				90E1E69025A8F36F00D29E25 /* TrainingViewController.swift in Sources */,
 				906BC1B724E87A7B00901350 /* VideoCollectionViewCell.swift in Sources */,
 				90407E2624E369D0009160A3 /* LearnViewController.swift in Sources */,
