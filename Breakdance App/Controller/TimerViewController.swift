@@ -34,16 +34,22 @@ class TimerViewController: UIViewController, MPMediaPickerControllerDelegate{
         }
     }
     
+    
     //Exercise Labels
     @IBOutlet var currentExerciseDuration: UILabel!
     @IBOutlet var currentExerciseLabel: UILabel!
     @IBOutlet var upNextExerciseLabel: UILabel!
+    
+    var currentExerciseCounter = 0
+    var numberOfExercises = 0
     
     //
     //MARK: - View States
     //
     
     override func viewDidLoad() {
+        numberOfExercises = exercises.count
+        
         timerLabel.text = timeString(time: TimeInterval(timeLeft)).replacingOccurrences(of: "^0+", with: "", options: .regularExpression)
 
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "doc.plaintext"),style: .plain, target: self, action: #selector(showSettings))
@@ -66,11 +72,37 @@ class TimerViewController: UIViewController, MPMediaPickerControllerDelegate{
     
     @objc func timerAction(){
         
+        
         if timeLeft != 0 {
-            timerLabel.text = timeString(time: TimeInterval(timeLeft))
             timeLeft -= 1
+            timerLabel.text = timeString(time: TimeInterval(timeLeft))
+            if(currentExerciseCounter > numberOfExercises){
+                //Stop
+                timerLabel.text = "Done!"
+                print("Timer Stopped!")
+                timer?.invalidate()
+                
+            }
+                
+            else{
+            //We have more exercises to count
+            exercises[currentExerciseCounter].duration -= 1
+            currentExerciseDuration.text = String(exercises[currentExerciseCounter].duration)
+                currentExerciseLabel.text = exercises[currentExerciseCounter].name
+                if (exercises[currentExerciseCounter].duration == 0){
+                    currentExerciseCounter += 1
+                    if(currentExerciseCounter + 1  >= numberOfExercises){
+                        upNextExerciseLabel.text = ""
+                        
+                    }else{
+                        upNextExerciseLabel.text = String(exercises[currentExerciseCounter + 1].name)
+                    }
+                    
+                }
+            }
         }else{
-            timerLabel.text = "Timer Stopped!"
+            timerLabel.text = "Done!"
+            currentExerciseDuration.text = "Done!"
             print("Timer Stopped!")
             timer?.invalidate()
         }
@@ -92,7 +124,7 @@ class TimerViewController: UIViewController, MPMediaPickerControllerDelegate{
     @IBAction func onPressStartOrStop(_ sender: UIButton) {
         let basicAnimation = CABasicAnimation(keyPath: "strokeEnd")
         basicAnimation.toValue = 1
-        basicAnimation.duration = CFTimeInterval(timeLeft)
+        basicAnimation.duration = CFTimeInterval(exercises[currentExerciseCounter].duration)
         basicAnimation.fillMode = CAMediaTimingFillMode.forwards
         basicAnimation.isRemovedOnCompletion = false
         timerShapeLayer.add(basicAnimation, forKey: "urSoBasic")
@@ -144,7 +176,7 @@ class TimerViewController: UIViewController, MPMediaPickerControllerDelegate{
         //create circular path
         let center = CGPoint(x: view.frame.size.width / 2, y: view.frame.size.height / 3 + 50)
         
-        let circularPath = UIBezierPath(arcCenter: center, radius: 100, startAngle: -(.pi/2), endAngle: .pi * 2, clockwise: true)
+        let circularPath = UIBezierPath(arcCenter: center, radius: 120, startAngle: -(.pi/2), endAngle: .pi * 2, clockwise: true)
         
         //create track layer
         let trackLayer = CAShapeLayer()
@@ -257,32 +289,6 @@ class TimerViewController: UIViewController, MPMediaPickerControllerDelegate{
                 present(ac, animated: true)
     }
 }
-
-extension CALayer
-   {
-       func pauseAnimation() {
-           if isPaused() == false {
-               let pausedTime = convertTime(CACurrentMediaTime(), from: nil)
-               speed = 0.0
-               timeOffset = pausedTime
-           }
-       }
-
-       func resumeAnimation() {
-           if isPaused() {
-               let pausedTime = timeOffset
-               speed = 1.0
-               timeOffset = 0.0
-               beginTime = 0.0
-               let timeSincePause = convertTime(CACurrentMediaTime(), from: nil) - pausedTime
-               beginTime = timeSincePause
-           }
-       }
-
-       func isPaused() -> Bool {
-           return speed == 0
-       }
-   }
 
 
 

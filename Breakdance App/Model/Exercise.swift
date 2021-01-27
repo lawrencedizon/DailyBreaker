@@ -9,6 +9,6 @@
 import Foundation
 
 struct Exercise {
-    let name: String
-    let duration: Int
+    var name: String
+    var duration: Int
 }

@@ -9,6 +9,7 @@
 class TrainingExercises{
     
     static var WarmUp = [Exercise(name: "Pushups", duration: 60),
+                         Exercise(name: "Jumping Jacks", duration: 60),
                          Exercise(name: "Situps", duration: 60),
                          Exercise(name: "Squats", duration: 60),
                          Exercise(name: "Lunges", duration: 60)]

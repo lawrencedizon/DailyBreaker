@@ -41,6 +41,8 @@ class TrainingViewController: UITableViewController {
         if let viewController = storyboard?.instantiateViewController(identifier: "TimerView") as? TimerViewController {
             navigationController?.pushViewController(viewController, animated: true)
             
+            viewController.navigationItem.title = skillArray[indexPath.row]
+            
             switch skillArray[indexPath.row]{
             case "Warm Up":
                 viewController.exercises = TrainingExercises.WarmUp
