@@ -4,7 +4,7 @@ import Foundation
 import MediaPlayer
 
 class TimerViewController: UIViewController, MPMediaPickerControllerDelegate{
-    var exercises : [String] = []
+    var exercises : [Exercise] = []
     
     //
     //MARK: - Properties
@@ -35,6 +35,7 @@ class TimerViewController: UIViewController, MPMediaPickerControllerDelegate{
     }
     
     //Exercise Labels
+    @IBOutlet var currentExerciseDuration: UILabel!
     @IBOutlet var currentExerciseLabel: UILabel!
     @IBOutlet var upNextExerciseLabel: UILabel!
     
@@ -45,13 +46,12 @@ class TimerViewController: UIViewController, MPMediaPickerControllerDelegate{
     override func viewDidLoad() {
         timerLabel.text = timeString(time: TimeInterval(timeLeft)).replacingOccurrences(of: "^0+", with: "", options: .regularExpression)
 
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "gearshape"),style: .plain, target: self, action: #selector(showSettings))
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "doc.plaintext"),style: .plain, target: self, action: #selector(showSettings))
         
         createProgressBar()
-        currentExerciseLabel.text = exercises[0]
-        upNextExerciseLabel.text = exercises[1]
-        
-        
+        currentExerciseLabel.text = exercises[0].name
+        currentExerciseDuration.text = String(exercises[0].duration)
+        upNextExerciseLabel.text = exercises[1].name
         
         
     }

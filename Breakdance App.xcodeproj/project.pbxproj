@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		903851A125B4FABC001CC32A /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9038519F25B4FABC001CC32A /* Model.xcdatamodeld */; };
 		903851A425B4FD7F001CC32A /* ActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903851A325B4FD7F001CC32A /* ActivityViewController.swift */; };
-		903851AB25B52014001CC32A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903851AA25B52014001CC32A /* HomeViewController.swift */; };
 		90407E0824E350C4009160A3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90407E0724E350C4009160A3 /* AppDelegate.swift */; };
 		90407E0A24E350C4009160A3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90407E0924E350C4009160A3 /* SceneDelegate.swift */; };
 		90407E0C24E350C4009160A3 /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90407E0B24E350C4009160A3 /* TimerViewController.swift */; };
@@ -20,6 +19,7 @@
 		90407E2624E369D0009160A3 /* LearnViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90407E2524E369D0009160A3 /* LearnViewController.swift */; };
 		906BC1B524E8776600901350 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 906BC1B424E8776600901350 /* Video.swift */; };
 		906BC1B724E87A7B00901350 /* VideoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 906BC1B624E87A7B00901350 /* VideoCollectionViewCell.swift */; };
+		906DC39625C20775007A8EF2 /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 906DC39525C20775007A8EF2 /* Exercise.swift */; };
 		90C2C89F25C0DB2C0050D7FF /* TrainingExercises.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C2C89E25C0DB2C0050D7FF /* TrainingExercises.swift */; };
 		90E1E69025A8F36F00D29E25 /* TrainingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E1E68F25A8F36F00D29E25 /* TrainingViewController.swift */; };
 		90E1E69A25A925FF00D29E25 /* TrainingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E1E69925A925FF00D29E25 /* TrainingTableViewCell.swift */; };
@@ -28,7 +28,6 @@
 /* Begin PBXFileReference section */
 		903851A025B4FABC001CC32A /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		903851A325B4FD7F001CC32A /* ActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityViewController.swift; sourceTree = "<group>"; };
-		903851AA25B52014001CC32A /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		90407E0424E350C4009160A3 /* Breakdance App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Breakdance App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		90407E0724E350C4009160A3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		90407E0924E350C4009160A3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -41,6 +40,7 @@
 		90407E2524E369D0009160A3 /* LearnViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnViewController.swift; sourceTree = "<group>"; };
 		906BC1B424E8776600901350 /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
 		906BC1B624E87A7B00901350 /* VideoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCollectionViewCell.swift; sourceTree = "<group>"; };
+		906DC39525C20775007A8EF2 /* Exercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
 		90C2C89E25C0DB2C0050D7FF /* TrainingExercises.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingExercises.swift; sourceTree = "<group>"; };
 		90E1E68F25A8F36F00D29E25 /* TrainingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingViewController.swift; sourceTree = "<group>"; };
 		90E1E69925A925FF00D29E25 /* TrainingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingTableViewCell.swift; sourceTree = "<group>"; };
@@ -94,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				90407E1F24E3578B009160A3 /* Song.swift */,
+				906DC39525C20775007A8EF2 /* Exercise.swift */,
 				906BC1B424E8776600901350 /* Video.swift */,
 				90C2C89E25C0DB2C0050D7FF /* TrainingExercises.swift */,
 			);
@@ -112,7 +113,6 @@
 		90407E1D24E35717009160A3 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				903851AA25B52014001CC32A /* HomeViewController.swift */,
 				90E1E68F25A8F36F00D29E25 /* TrainingViewController.swift */,
 				90407E0B24E350C4009160A3 /* TimerViewController.swift */,
 				90407E2524E369D0009160A3 /* LearnViewController.swift */,
@@ -209,10 +209,10 @@
 				90407E2024E3578B009160A3 /* Song.swift in Sources */,
 				90407E0824E350C4009160A3 /* AppDelegate.swift in Sources */,
 				903851A125B4FABC001CC32A /* Model.xcdatamodeld in Sources */,
+				906DC39625C20775007A8EF2 /* Exercise.swift in Sources */,
 				90407E0A24E350C4009160A3 /* SceneDelegate.swift in Sources */,
 				906BC1B524E8776600901350 /* Video.swift in Sources */,
 				903851A425B4FD7F001CC32A /* ActivityViewController.swift in Sources */,
-				903851AB25B52014001CC32A /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

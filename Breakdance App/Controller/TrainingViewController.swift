@@ -46,6 +46,8 @@ class TrainingViewController: UITableViewController {
                 viewController.exercises = TrainingExercises.WarmUp
             case "Stamina":
                 viewController.exercises = TrainingExercises.Stamina
+            case "Battle":
+                viewController.exercises = TrainingExercises.Battle
             default:
                 viewController.exercises = []
             
