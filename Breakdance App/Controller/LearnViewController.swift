@@ -1,20 +1,19 @@
-//
-//  LearnViewController.swift
-//  Breakdance App
-//
-//  Created by Lawrence Dizon on 8/11/20.
-//  Copyright © 2020 Lawrence Dizon. All rights reserved.
-//
-
 import UIKit
 import SafariServices
 
+//
+// LearnViewController manages the different learning topics.
+// Each topic leads to a video playlist pertaining to that topic.
+//
 class LearnViewController: UICollectionViewController {
-   
+    //
     // MARK: - Properties
+    //
     private var videoList = Video.allVideos
     
-    // MARK: - Life Cycles
+    //
+    // MARK: - View Controller LifeCycle States
+    //
     override func viewDidLoad() {
         super.viewDidLoad()
         configureLayout()
@@ -27,7 +26,7 @@ extension LearnViewController {
         return videoList.count
     }
     
-// MARK: - UICollectionViewDataSource
+// MARK: - CollectionView DataSource
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let video = videoList[indexPath.row]
         guard let cell = collectionView.dequeueReusableCell(
@@ -38,7 +37,7 @@ extension LearnViewController {
     }
 }
 
-// MARK: - UICollectionViewDelegate
+// MARK: - CollectionView Delegate
 extension LearnViewController {
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let video = videoList[indexPath.row]
@@ -56,18 +55,12 @@ extension LearnViewController {
     private func configureLayout(){
         collectionView.collectionViewLayout = UICollectionViewCompositionalLayout(sectionProvider: { (sectionIndex, layoutEnvironment) -> NSCollectionLayoutSection? in
             let isPhone = layoutEnvironment.traitCollection.userInterfaceIdiom == UIUserInterfaceIdiom.phone
-            
             let size = NSCollectionLayoutSize(widthDimension: NSCollectionLayoutDimension.fractionalWidth(1), heightDimension: NSCollectionLayoutDimension.absolute(isPhone ? 280 : 250))
-            
             let itemCount = isPhone ? 1 : 3
             let item = NSCollectionLayoutItem(layoutSize: size)
-            
             let group = NSCollectionLayoutGroup.horizontal(layoutSize: size, subitem: item, count: itemCount)
-            
             let section = NSCollectionLayoutSection(group: group)
-            
             section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0)
-            
             return section
         })
     }

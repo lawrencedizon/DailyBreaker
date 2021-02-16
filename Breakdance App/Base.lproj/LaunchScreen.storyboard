@@ -15,18 +15,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Daily Breaker" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4xo-XR-O1S">
-                                <rect key="frame" x="156.5" y="437.5" width="101" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="oGk-yi-B2e">
+                                <rect key="frame" x="97.5" y="382" width="219" height="132"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="D A I L Y" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VNE-T3-rWg">
+                                        <rect key="frame" x="40" y="0.0" width="139.5" height="66"/>
+                                        <fontDescription key="fontDescription" name="GranthaSangamMN-Bold" family="Grantha Sangam MN" pointSize="38"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="B R E A K E R" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4xo-XR-O1S">
+                                        <rect key="frame" x="0.0" y="66" width="219" height="66"/>
+                                        <fontDescription key="fontDescription" name="GranthaSangamMN-Bold" family="Grantha Sangam MN" pointSize="38"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="4xo-XR-O1S" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="5hE-X7-hqd"/>
-                            <constraint firstItem="4xo-XR-O1S" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="C9X-9a-tiy"/>
+                            <constraint firstItem="oGk-yi-B2e" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Ajy-lb-pXJ"/>
+                            <constraint firstItem="oGk-yi-B2e" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="ZTc-K8-Qz2"/>
                         </constraints>
                     </view>
                 </viewController>

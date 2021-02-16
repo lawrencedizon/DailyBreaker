@@ -1,11 +1,3 @@
-//
-//  Video.swift
-//  Breakdance App
-//
-//  Created by Lawrence Dizon on 8/15/20.
-//  Copyright © 2020 Lawrence Dizon. All rights reserved.
-//
-
 import UIKit
 
 class Video {
@@ -20,8 +12,10 @@ class Video {
         self.link = link
     }
 }
-    
+//
 // MARK: - Video Data
+//
+
 extension Video {
     static let allVideos = [
         Video(

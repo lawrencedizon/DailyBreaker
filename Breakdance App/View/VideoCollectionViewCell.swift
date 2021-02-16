@@ -1,11 +1,3 @@
-//
-//  VideoCollectionViewCell.swift
-//  Breakdance App
-//
-//  Created by Lawrence Dizon on 8/15/20.
-//  Copyright © 2020 Lawrence Dizon. All rights reserved.
-//
-
 import UIKit
 
 class VideoCollectionViewCell: UICollectionViewCell {

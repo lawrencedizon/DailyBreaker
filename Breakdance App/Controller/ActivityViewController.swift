@@ -1,19 +1,36 @@
-//
-//  ActivityViewController.swift
-//  Breakdance App
-//
-//  Created by Lawrence Dizon on 1/17/21.
-//  Copyright © 2021 Lawrence Dizon. All rights reserved.
-//
-
 import UIKit
 import CoreData
 
+//
+// ActivityViewController provides the user some information about their overall workout data.
+//
+//
 class ActivityViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    //
+    // MARK: - Properties
+    //
     
     @IBOutlet var tableView: UITableView!
     
+    //
+    // MARK: - ViewController LifeCycle States
+    //
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        tableView.dataSource = self
+        tableView.delegate = self
+        
+//        self.save(value: "Test 1")
+//        self.save(value: "Test 2")
+//        self.save(value: "Test 3")
+        
+        retrieveValues()
+    }
+    
+    //
+    // MARK: - TableView Properties
+    //
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 5
     }
@@ -26,28 +43,12 @@ class ActivityViewController: UIViewController, UITableViewDelegate, UITableView
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 50
-        
     }
-    
-    
-    
-    
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        tableView.dataSource = self
-        tableView.delegate = self
-        
-//        self.save(value: "Test 1")
-//        self.save(value: "Test 2")
-//        self.save(value: "Test 3")
-        
-        retrieveValues()
-    }
-    
-
 }
+
+//
+// MARK: - Core Data
+//
 
 extension ActivityViewController {
     func save(value: String){
