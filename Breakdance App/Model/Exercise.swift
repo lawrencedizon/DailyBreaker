@@ -7,7 +7,7 @@ struct Exercise {
 
 enum TrainingExercises{
     static let WarmUp: [Exercise] = [
-        Exercise(name: "Pushups", duration: 10),
+        Exercise(name: "Pushups", duration: 60),
         Exercise(name: "Jumping Jacks", duration: 60),
         Exercise(name: "Situps", duration: 60),
         Exercise(name: "Squats", duration: 60),

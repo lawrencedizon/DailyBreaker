@@ -319,7 +319,7 @@
                                                             <imageReference key="image" image="play.fill" catalog="system" symbolScale="large"/>
                                                         </state>
                                                         <connections>
-                                                            <action selector="onPressStartOrStop:" destination="aPw-q0-SMW" eventType="touchUpInside" id="TO3-Dz-Qso"/>
+                                                            <action selector="onPressTimerStartOrStop:" destination="aPw-q0-SMW" eventType="touchUpInside" id="KqU-P7-UNh"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -364,8 +364,8 @@
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="mXj-dU-BVL" userLabel="Now Playing Bar">
                                 <rect key="frame" x="0.0" y="662" width="390" height="60"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="iZc-wa-mKa">
-                                        <rect key="frame" x="0.0" y="5" width="180" height="50"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="iZc-wa-mKa">
+                                        <rect key="frame" x="0.0" y="5" width="181" height="50"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" preservesSuperviewLayoutMargins="YES" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fpI-gY-sRY" userLabel="Song Artwork">
                                                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
@@ -378,7 +378,7 @@
                                                 <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
                                             </imageView>
                                             <stackView autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="2.5" translatesAutoresizingMaskIntoConstraints="NO" id="Tu9-L0-mTa" userLabel="Now Playing &amp; Title">
-                                                <rect key="frame" x="55" y="3.3333333333333712" width="125" height="43.333333333333336"/>
+                                                <rect key="frame" x="56" y="3.3333333333333712" width="125" height="43.333333333333336"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Now Playing" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NkX-oa-jfV" userLabel="Now Playing">
                                                         <rect key="frame" x="0.0" y="0.0" width="100.33333333333333" height="20.333333333333332"/>
@@ -398,12 +398,15 @@
                                                 </constraints>
                                             </stackView>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstItem="fpI-gY-sRY" firstAttribute="leading" secondItem="iZc-wa-mKa" secondAttribute="leading" constant="4" id="gGW-Ev-a1t"/>
+                                        </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="D94-DA-Ypv" userLabel="Music Controls">
-                                        <rect key="frame" x="183" y="19" width="207" height="22"/>
+                                        <rect key="frame" x="184" y="19" width="206" height="22"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5BT-TF-v2w" userLabel="Backward">
-                                                <rect key="frame" x="0.0" y="0.0" width="69" height="22"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="68.666666666666671" height="22"/>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" image="backward" catalog="system"/>
                                                 <connections>
@@ -411,7 +414,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JII-08-XpB" userLabel="Pause">
-                                                <rect key="frame" x="69" y="0.0" width="69" height="22"/>
+                                                <rect key="frame" x="68.666666666666657" y="0.0" width="68.666666666666657" height="22"/>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal">
                                                     <imageReference key="image" image="play.fill" catalog="system" symbolScale="medium"/>
@@ -421,7 +424,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ngf-Yx-qIl" userLabel="Forward">
-                                                <rect key="frame" x="138" y="0.0" width="69" height="22"/>
+                                                <rect key="frame" x="137.33333333333331" y="0.0" width="68.666666666666686" height="22"/>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" image="forward" catalog="system"/>
                                                 <connections>
@@ -485,9 +488,7 @@
                             <constraint firstItem="lO7-dy-ej6" firstAttribute="trailing" secondItem="3le-jl-THd" secondAttribute="trailing" constant="15" id="ndr-Fj-4wU"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="aao-mk-7fq">
-                        <barButtonItem key="rightBarButtonItem" title="List" image="doc.plaintext" catalog="system" id="2kO-zE-kYH"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="aao-mk-7fq"/>
                     <connections>
                         <outlet property="currentExerciseDuration" destination="VQT-N7-UMO" id="V7E-DR-G2O"/>
                         <outlet property="currentExerciseLabel" destination="WwM-x2-ZYi" id="FjA-lc-T02"/>
@@ -588,7 +589,6 @@
         <image name="building.columns" catalog="system" width="128" height="113"/>
         <image name="chart.bar.doc.horizontal" catalog="system" width="115" height="128"/>
         <image name="default" width="150" height="150"/>
-        <image name="doc.plaintext" catalog="system" width="115" height="128"/>
         <image name="forward" catalog="system" width="128" height="79"/>
         <image name="gobackward" catalog="system" width="121" height="128"/>
         <image name="graduationcap" catalog="system" width="128" height="106"/>
