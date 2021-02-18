@@ -493,6 +493,7 @@
                         <outlet property="currentExerciseDuration" destination="VQT-N7-UMO" id="V7E-DR-G2O"/>
                         <outlet property="currentExerciseLabel" destination="WwM-x2-ZYi" id="FjA-lc-T02"/>
                         <outlet property="miniPauseButton" destination="JII-08-XpB" id="qVb-h7-13r"/>
+                        <outlet property="nextLabel" destination="oR0-GF-78T" id="Opy-L5-sHZ"/>
                         <outlet property="nowPlayingBar" destination="mXj-dU-BVL" id="vgX-pl-mNX"/>
                         <outlet property="songImage" destination="fpI-gY-sRY" id="AQs-mo-7KY"/>
                         <outlet property="songTitle" destination="xee-4w-PAr" id="bs4-rB-RII"/>
