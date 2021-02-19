@@ -277,6 +277,21 @@
             </objects>
             <point key="canvasLocation" x="1526" y="1713"/>
         </scene>
+        <!--Playlist View Controller-->
+        <scene sceneID="evM-b6-FNB">
+            <objects>
+                <viewController id="oWq-Oh-lez" customClass="PlaylistViewController" customModule="Breakdance_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ytG-VQ-NBZ">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="qZH-sE-HPM"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GXT-99-He3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2889" y="1655"/>
+        </scene>
         <!--Timer View Controller-->
         <scene sceneID="fDR-0k-cAW">
             <objects>
@@ -506,6 +521,31 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hU8-zx-FmZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1526.1538461538462" y="2464.6919431279621"/>
+        </scene>
+        <!--Video Player View Controller-->
+        <scene sceneID="Hyf-WT-hFA">
+            <objects>
+                <viewController id="VAi-6r-tS6" customClass="VideoPlayerViewController" customModule="Breakdance_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vw3-df-xOu">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jVo-qf-Jqh" customClass="YTPlayerView" customModule="Breakdance_App" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="171" width="390" height="317"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="eGq-UN-MmN"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <connections>
+                        <outlet property="playerView" destination="jVo-qf-Jqh" id="RbI-tD-cNF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ArL-97-jVu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2872.3076923076924" y="2471.8009478672984"/>
         </scene>
         <!--Item-->
         <scene sceneID="aiC-kJ-0a0">

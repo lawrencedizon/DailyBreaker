@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -20,11 +20,17 @@
 		906BC1B524E8776600901350 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 906BC1B424E8776600901350 /* Video.swift */; };
 		906BC1B724E87A7B00901350 /* VideoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 906BC1B624E87A7B00901350 /* VideoCollectionViewCell.swift */; };
 		906DC39625C20775007A8EF2 /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 906DC39525C20775007A8EF2 /* Exercise.swift */; };
+		906E0C1225E052E900D55EFA /* VideoPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 906E0C1125E052E900D55EFA /* VideoPlayerViewController.swift */; };
+		906E0C1925E0585C00D55EFA /* PlaylistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 906E0C1825E0585C00D55EFA /* PlaylistViewController.swift */; };
 		90E1E69025A8F36F00D29E25 /* TrainingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E1E68F25A8F36F00D29E25 /* TrainingViewController.swift */; };
 		90E1E69A25A925FF00D29E25 /* TrainingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E1E69925A925FF00D29E25 /* TrainingTableViewCell.swift */; };
+		90F3674F25E073B40041EA9B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F3674E25E073B40041EA9B /* Constants.swift */; };
+		DF8BFF2CDAE9610AAC1518A8 /* Pods_Breakdance_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F2294EF49D02BF273CFA816 /* Pods_Breakdance_App.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		40C68A5808AD76FD699B02DA /* Pods-Breakdance App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Breakdance App.release.xcconfig"; path = "Target Support Files/Pods-Breakdance App/Pods-Breakdance App.release.xcconfig"; sourceTree = "<group>"; };
+		5F2294EF49D02BF273CFA816 /* Pods_Breakdance_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Breakdance_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		903043B425DB3D0A005FF5FD /* beep.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = beep.mp3; path = "Breakdance App/Resources/beep.mp3"; sourceTree = SOURCE_ROOT; };
 		903851A025B4FABC001CC32A /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		903851A325B4FD7F001CC32A /* ActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityViewController.swift; sourceTree = "<group>"; };
@@ -40,8 +46,12 @@
 		906BC1B424E8776600901350 /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
 		906BC1B624E87A7B00901350 /* VideoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCollectionViewCell.swift; sourceTree = "<group>"; };
 		906DC39525C20775007A8EF2 /* Exercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
+		906E0C1125E052E900D55EFA /* VideoPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerViewController.swift; sourceTree = "<group>"; };
+		906E0C1825E0585C00D55EFA /* PlaylistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistViewController.swift; sourceTree = "<group>"; };
 		90E1E68F25A8F36F00D29E25 /* TrainingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingViewController.swift; sourceTree = "<group>"; };
 		90E1E69925A925FF00D29E25 /* TrainingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingTableViewCell.swift; sourceTree = "<group>"; };
+		90F3674E25E073B40041EA9B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		B91C6FFBB8EE8CB850727734 /* Pods-Breakdance App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Breakdance App.debug.xcconfig"; path = "Target Support Files/Pods-Breakdance App/Pods-Breakdance App.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,17 +59,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF8BFF2CDAE9610AAC1518A8 /* Pods_Breakdance_App.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3E9030E84B41FEB09E724CC8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B91C6FFBB8EE8CB850727734 /* Pods-Breakdance App.debug.xcconfig */,
+				40C68A5808AD76FD699B02DA /* Pods-Breakdance App.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		90407DFB24E350C4009160A3 = {
 			isa = PBXGroup;
 			children = (
 				90407E0624E350C4009160A3 /* Breakdance App */,
 				90407E0524E350C4009160A3 /* Products */,
+				3E9030E84B41FEB09E724CC8 /* Pods */,
+				A0951794A55407C6625B10C8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -91,6 +113,7 @@
 		90407E1B24E356F4009160A3 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				90F3674E25E073B40041EA9B /* Constants.swift */,
 				906DC39525C20775007A8EF2 /* Exercise.swift */,
 				906BC1B424E8776600901350 /* Video.swift */,
 			);
@@ -109,10 +132,12 @@
 		90407E1D24E35717009160A3 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				90E1E68F25A8F36F00D29E25 /* TrainingViewController.swift */,
-				90407E0B24E350C4009160A3 /* TimerViewController.swift */,
-				90407E2524E369D0009160A3 /* LearnViewController.swift */,
 				903851A325B4FD7F001CC32A /* ActivityViewController.swift */,
+				90407E0B24E350C4009160A3 /* TimerViewController.swift */,
+				90E1E68F25A8F36F00D29E25 /* TrainingViewController.swift */,
+				90407E2524E369D0009160A3 /* LearnViewController.swift */,
+				906E0C1825E0585C00D55EFA /* PlaylistViewController.swift */,
+				906E0C1125E052E900D55EFA /* VideoPlayerViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -126,6 +151,14 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		A0951794A55407C6625B10C8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5F2294EF49D02BF273CFA816 /* Pods_Breakdance_App.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -133,9 +166,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 90407E1824E350C6009160A3 /* Build configuration list for PBXNativeTarget "Breakdance App" */;
 			buildPhases = (
+				28B632A098DAC631AD83A764 /* [CP] Check Pods Manifest.lock */,
 				90407E0024E350C4009160A3 /* Sources */,
 				90407E0124E350C4009160A3 /* Frameworks */,
 				90407E0224E350C4009160A3 /* Resources */,
+				7733E0E890A92B5281D53B6A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -193,6 +228,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		28B632A098DAC631AD83A764 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Breakdance App-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7733E0E890A92B5281D53B6A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Breakdance App/Pods-Breakdance App-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Breakdance App/Pods-Breakdance App-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Breakdance App/Pods-Breakdance App-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		90407E0024E350C4009160A3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -202,11 +279,14 @@
 				906BC1B724E87A7B00901350 /* VideoCollectionViewCell.swift in Sources */,
 				90407E2624E369D0009160A3 /* LearnViewController.swift in Sources */,
 				90407E0C24E350C4009160A3 /* TimerViewController.swift in Sources */,
+				906E0C1925E0585C00D55EFA /* PlaylistViewController.swift in Sources */,
 				90E1E69A25A925FF00D29E25 /* TrainingTableViewCell.swift in Sources */,
 				90407E0824E350C4009160A3 /* AppDelegate.swift in Sources */,
 				903851A125B4FABC001CC32A /* Model.xcdatamodeld in Sources */,
 				906DC39625C20775007A8EF2 /* Exercise.swift in Sources */,
 				90407E0A24E350C4009160A3 /* SceneDelegate.swift in Sources */,
+				906E0C1225E052E900D55EFA /* VideoPlayerViewController.swift in Sources */,
+				90F3674F25E073B40041EA9B /* Constants.swift in Sources */,
 				906BC1B524E8776600901350 /* Video.swift in Sources */,
 				903851A425B4FD7F001CC32A /* ActivityViewController.swift in Sources */,
 			);
@@ -352,6 +432,7 @@
 		};
 		90407E1924E350C6009160A3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B91C6FFBB8EE8CB850727734 /* Pods-Breakdance App.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -370,6 +451,7 @@
 		};
 		90407E1A24E350C6009160A3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 40C68A5808AD76FD699B02DA /* Pods-Breakdance App.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

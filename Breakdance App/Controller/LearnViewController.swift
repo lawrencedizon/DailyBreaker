@@ -1,6 +1,9 @@
 import UIKit
 import SafariServices
 
+//Personal notes:
+// When a user clicks on the category, it should lead to PlaylistViewController TableView of
+
 //
 // LearnViewController manages the different learning topics.
 // Each topic leads to a video playlist pertaining to that topic.
@@ -28,6 +31,7 @@ extension LearnViewController {
     
 // MARK: - CollectionView DataSource
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
         let video = videoList[indexPath.row]
         guard let cell = collectionView.dequeueReusableCell(
             withReuseIdentifier: "VideoCollectionViewCell",
@@ -40,13 +44,12 @@ extension LearnViewController {
 // MARK: - CollectionView Delegate
 extension LearnViewController {
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let video = videoList[indexPath.row]
-        guard let link = video.link else {
-            print("Invalid link")
-            return
-        }
-        let safariViewController = SFSafariViewController(url: link)
-        present(safariViewController, animated: true, completion: nil)
+//        let video = videoList[indexPath.row]
+//        print(video.title)
+        let playstViewController = PlaylistViewController()
+        present(playstViewController, animated: true, completion: nil)
+        
+        
     }
 }
     
@@ -66,12 +69,12 @@ extension LearnViewController {
     }
 }
 
-// MARK: - SFSafariViewControllerDelegate Implementation
-extension LearnViewController: SFSafariViewControllerDelegate {
-    func safariViewControllerDidFinish(_ controller: SFSafariViewController) {
-        controller.dismiss(animated: true, completion: nil)
-    }
-}
+//// MARK: - SFSafariViewControllerDelegate Implementation
+//extension LearnViewController: SFSafariViewControllerDelegate {
+//    func safariViewControllerDidFinish(_ controller: SFSafariViewController) {
+//        controller.dismiss(animated: true, completion: nil)
+//    }
+//}
 
     
     

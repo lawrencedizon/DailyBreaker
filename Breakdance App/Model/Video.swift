@@ -1,5 +1,10 @@
 import UIKit
 
+
+struct APIResponse: Codable {
+    var videoId: String
+}
+
 class Video {
     var id = UUID()
     var title: String
