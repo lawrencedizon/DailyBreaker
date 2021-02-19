@@ -56,6 +56,7 @@ class TimerViewController: UIViewController, MPMediaPickerControllerDelegate{
     @IBOutlet var upNextExerciseLabel: UILabel!
     
     var currentExerciseCounter = 0
+    var currentExerciseTimeLeft = 0
     var numberOfExercises = 0
     
     //
@@ -65,6 +66,7 @@ class TimerViewController: UIViewController, MPMediaPickerControllerDelegate{
     override func viewDidLoad() {
         numberOfExercises = exercises.count
         timeLeft = initialTimeLeft
+        currentExerciseTimeLeft = exercises[currentExerciseCounter].duration
         
         timerLabel.text = timeString(time: TimeInterval(timeLeft)).replacingOccurrences(of: "^0+", with: "", options: .regularExpression)
         
@@ -85,7 +87,7 @@ class TimerViewController: UIViewController, MPMediaPickerControllerDelegate{
  
     func updateCurrentExerciseLabels(){
         currentExerciseLabel.text = exercises[currentExerciseCounter].name
-        currentExerciseDuration.text = timeString(time: TimeInterval(exercises[currentExerciseCounter].duration)).replacingOccurrences(of: "^0+", with: "", options: .regularExpression)
+        currentExerciseDuration.text = timeString(time: TimeInterval(currentExerciseTimeLeft)).replacingOccurrences(of: "^0+", with: "", options: .regularExpression)
     }
     
     func updateNextExerciseLabel(){
@@ -102,13 +104,29 @@ class TimerViewController: UIViewController, MPMediaPickerControllerDelegate{
         print("Beep sound made!")
         let path = Bundle.main.path(forResource: "beep", ofType: "mp3")!
         let url = URL(fileURLWithPath: path)
-
-        do {
-            beepSoundEffect = try AVAudioPlayer(contentsOf: url)
-            beepSoundEffect?.play()
-        } catch {
+        if musicPlayer.playbackState == MPMusicPlaybackState.playing{
+            musicPlayer.pause()
+            do {
+                beepSoundEffect = try AVAudioPlayer(contentsOf: url)
+                beepSoundEffect?.play()
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {  self.musicPlayer.play()
+                }
+            } catch {
             // couldn't load file :(
+            }
+        }else{
+            do {
+                beepSoundEffect = try AVAudioPlayer(contentsOf: url)
+                beepSoundEffect?.play()
+            } catch {
+                // couldn't load file :(
+            }
         }
+        
+        
+       
+        
+        
     }
     //
     //MARK: - Timer
@@ -125,22 +143,32 @@ class TimerViewController: UIViewController, MPMediaPickerControllerDelegate{
                 timer?.invalidate()
             }else{
             //We have more exercises to count
-            exercises[currentExerciseCounter].duration -= 1
-            currentExerciseDuration.text = timeString(time: TimeInterval(exercises[currentExerciseCounter].duration)).replacingOccurrences(of: "^0+", with: "", options: .regularExpression)
+            currentExerciseTimeLeft -= 1
+            currentExerciseDuration.text = timeString(time: TimeInterval(currentExerciseTimeLeft)).replacingOccurrences(of: "^0+", with: "", options: .regularExpression)
                 currentExerciseLabel.text = exercises[currentExerciseCounter].name
                 
                 // Current Exercise is finished
-                if (exercises[currentExerciseCounter].duration == 0){
+                if (currentExerciseTimeLeft == 0){
                     playBeep() // Play beep sound when exercise is done
                     currentExerciseCounter += 1
+                    
                     // There are no more exercises after the current one, don't update the next exercise label
-                    if(currentExerciseCounter + 1  >= numberOfExercises){
+                    
+                    if (currentExerciseCounter + 1 == numberOfExercises){
+                        upNextExerciseLabel.isHidden = true
+                        nextLabel.isHidden = true
+                        currentExerciseTimeLeft = exercises[currentExerciseCounter].duration
+                        animateProgressBar() //Restart progress bar animation
+                    }
+                    else if(currentExerciseCounter + 1  > numberOfExercises){
+                        
                         upNextExerciseLabel.isHidden = true
                         nextLabel.isHidden = true
                         
                     // We still have an exercise after the current one, update the next exercise label
                     }else{
                         upNextExerciseLabel.text = String(exercises[currentExerciseCounter + 1].name)
+                        currentExerciseTimeLeft = exercises[currentExerciseCounter].duration
                         animateProgressBar() //Restart progress bar animation
                     }
                     
@@ -171,6 +199,7 @@ class TimerViewController: UIViewController, MPMediaPickerControllerDelegate{
     @IBAction func onPressTimerStartOrStop(_ sender: UIButton) {
         //Timer doesn't exist yet
         if timer == nil {
+            
             //Start timer
             timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(timerAction), userInfo: nil, repeats: true)
             print("Timer fired!")
@@ -180,12 +209,14 @@ class TimerViewController: UIViewController, MPMediaPickerControllerDelegate{
             
         //Timer is already running
         }else if timer!.isValid {
+            
             timerStartStopButton.setImage(UIImage(systemName: "play.fill"), for: UIControl.State.normal)
             timer?.invalidate()
             pauseProgressBar()
         }
         //Timer is currently paused
         else {
+           
             timerStartStopButton.setImage(UIImage(systemName: "pause.fill"), for: UIControl.State.normal)
             //Start timer
             timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(timerAction), userInfo: nil, repeats: true)
@@ -196,13 +227,27 @@ class TimerViewController: UIViewController, MPMediaPickerControllerDelegate{
     
     @IBAction func onPressReset(_ sender: AnyObject? = nil) {
         //TODO: - Fix reset progressbar
+        
+        // Reset exercise to first
+        currentExerciseCounter = 0
+        
+        // Reset current exercise duration time to first one.
+        currentExerciseTimeLeft = exercises[currentExerciseCounter].duration
+        timeLeft = initialTimeLeft
+        updateCurrentExerciseLabels()
+        timerShapeLayer.removeAllAnimations()
         if timer == nil {
-            //Start timer
             timerStartStopButton.setImage(UIImage(systemName: "play.fill"), for: UIControl.State.normal)
         }else if timer!.isValid{
             timer?.invalidate()
+            timer = nil
             timerStartStopButton.setImage(UIImage(systemName: "play.fill"), for: UIControl.State.normal)
         }else{
+            if timer != nil {
+                timer?.invalidate()
+                timer = nil
+            }
+            timerShapeLayer.speed = 0.8 //Resume animation incase they paused the timer before reset
             timerStartStopButton.setImage(UIImage(systemName: "play.fill"), for: UIControl.State.normal)
         }
     }
@@ -316,7 +361,7 @@ class TimerViewController: UIViewController, MPMediaPickerControllerDelegate{
         }
     }
     
-    @IBAction func onPressPauseButton(_ sender: UIButton) {
+    @IBAction func onPressPauseButton(_ sender: UIButton? = nil) {
         updateSongInfo()
         
         if musicPlayer.playbackState == MPMusicPlaybackState.playing {
