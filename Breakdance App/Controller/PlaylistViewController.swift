@@ -11,7 +11,7 @@ import UIKit
 class PlaylistViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     var playlistVideos: [String] = []
-    
+    var titleH: String?
     let tableView = UITableView()
     
     override func viewDidLoad() {
@@ -22,6 +22,12 @@ class PlaylistViewController: UIViewController, UITableViewDelegate, UITableView
         tableView.dataSource = self
                
         view.addSubview(tableView)
+        fetchInfo(url: Constants.API_URL)
+        print("VIEWDIDLOAD \(self.playlistVideos.count)")
+        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2)) {
+            print("HAHAAHHA \(self.playlistVideos.count)")
+        }
+        
         
     }
     
@@ -54,20 +60,41 @@ class PlaylistViewController: UIViewController, UITableViewDelegate, UITableView
     func fetchInfo(url: String){
         guard let url = URL(string: url) else { return }
         
-        let task = URLSession.shared.dataTask(with: url)  { [weak self] data, _, error in
+        let task = URLSession.shared.dataTask(with: url)  { (data, _, error) in
+            
+            //error check
+            guard error == nil else {
+                print("An error occurred")
+                print(error)
+                return
+            }
+            
+            //make sure we get data
             guard let data = data, error == nil else {
                 return
             }
             do {
                 let jsonResult = try JSONDecoder().decode(APIResponse.self, from: data)
+                print("API CALL:  \(url)")
                 DispatchQueue.main.async {
-                                    }
+                    print("WE IN THERE DOG")
+                    for item in jsonResult.items{
+                        self.playlistVideos.append(item.snippet.title)
+                    }
+                    self.titleH = self.playlistVideos[0]
+                    print("playlist count \(self.playlistVideos.count)")
+                    
+                }
             }catch{
+                print("API CALL: \(url)")
                 print("FUUUUCK")
                 print(error)
             }
+            
         }
+        
         task.resume()
+        print("playlist count after resume \(self.playlistVideos.count)")
     }
 
     
