@@ -20,8 +20,8 @@
 		906BC1B524E8776600901350 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 906BC1B424E8776600901350 /* Video.swift */; };
 		906BC1B724E87A7B00901350 /* VideoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 906BC1B624E87A7B00901350 /* VideoCollectionViewCell.swift */; };
 		906DC39625C20775007A8EF2 /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 906DC39525C20775007A8EF2 /* Exercise.swift */; };
-		906E0C1225E052E900D55EFA /* VideoPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 906E0C1125E052E900D55EFA /* VideoPlayerViewController.swift */; };
 		906E0C1925E0585C00D55EFA /* PlaylistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 906E0C1825E0585C00D55EFA /* PlaylistViewController.swift */; };
+		90AAB78425ED90980050FA2F /* VideoPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90AAB78325ED90980050FA2F /* VideoPlayerViewController.swift */; };
 		90E1E69025A8F36F00D29E25 /* TrainingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E1E68F25A8F36F00D29E25 /* TrainingViewController.swift */; };
 		90E1E69A25A925FF00D29E25 /* TrainingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E1E69925A925FF00D29E25 /* TrainingTableViewCell.swift */; };
 		90F3674F25E073B40041EA9B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F3674E25E073B40041EA9B /* Constants.swift */; };
@@ -46,8 +46,8 @@
 		906BC1B424E8776600901350 /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
 		906BC1B624E87A7B00901350 /* VideoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCollectionViewCell.swift; sourceTree = "<group>"; };
 		906DC39525C20775007A8EF2 /* Exercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
-		906E0C1125E052E900D55EFA /* VideoPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerViewController.swift; sourceTree = "<group>"; };
 		906E0C1825E0585C00D55EFA /* PlaylistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistViewController.swift; sourceTree = "<group>"; };
+		90AAB78325ED90980050FA2F /* VideoPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerViewController.swift; sourceTree = "<group>"; };
 		90E1E68F25A8F36F00D29E25 /* TrainingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingViewController.swift; sourceTree = "<group>"; };
 		90E1E69925A925FF00D29E25 /* TrainingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingTableViewCell.swift; sourceTree = "<group>"; };
 		90F3674E25E073B40041EA9B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -137,7 +137,7 @@
 				90E1E68F25A8F36F00D29E25 /* TrainingViewController.swift */,
 				90407E2524E369D0009160A3 /* LearnViewController.swift */,
 				906E0C1825E0585C00D55EFA /* PlaylistViewController.swift */,
-				906E0C1125E052E900D55EFA /* VideoPlayerViewController.swift */,
+				90AAB78325ED90980050FA2F /* VideoPlayerViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -278,6 +278,7 @@
 				90E1E69025A8F36F00D29E25 /* TrainingViewController.swift in Sources */,
 				906BC1B724E87A7B00901350 /* VideoCollectionViewCell.swift in Sources */,
 				90407E2624E369D0009160A3 /* LearnViewController.swift in Sources */,
+				90AAB78425ED90980050FA2F /* VideoPlayerViewController.swift in Sources */,
 				90407E0C24E350C4009160A3 /* TimerViewController.swift in Sources */,
 				906E0C1925E0585C00D55EFA /* PlaylistViewController.swift in Sources */,
 				90E1E69A25A925FF00D29E25 /* TrainingTableViewCell.swift in Sources */,
@@ -285,7 +286,6 @@
 				903851A125B4FABC001CC32A /* Model.xcdatamodeld in Sources */,
 				906DC39625C20775007A8EF2 /* Exercise.swift in Sources */,
 				90407E0A24E350C4009160A3 /* SceneDelegate.swift in Sources */,
-				906E0C1225E052E900D55EFA /* VideoPlayerViewController.swift in Sources */,
 				90F3674F25E073B40041EA9B /* Constants.swift in Sources */,
 				906BC1B524E8776600901350 /* Video.swift in Sources */,
 				903851A425B4FD7F001CC32A /* ActivityViewController.swift in Sources */,

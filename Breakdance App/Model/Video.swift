@@ -11,6 +11,11 @@ struct Playlist: Codable{
 
 struct PlaylistItem: Codable{
     var title: String
+    var resourceId: ResourceInfo
+}
+
+struct ResourceInfo: Codable{
+    var videoId: String
 }
 
 class Video {

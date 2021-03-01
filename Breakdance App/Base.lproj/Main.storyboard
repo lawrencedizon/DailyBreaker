@@ -278,19 +278,41 @@
             <point key="canvasLocation" x="1526" y="1713"/>
         </scene>
         <!--Playlist View Controller-->
-        <scene sceneID="evM-b6-FNB">
+        <scene sceneID="R1M-UG-vL9">
             <objects>
-                <viewController id="oWq-Oh-lez" customClass="PlaylistViewController" customModule="Breakdance_App" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="ytG-VQ-NBZ">
+                <tableViewController id="twE-UP-h6R" customClass="PlaylistViewController" customModule="Breakdance_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="sMv-Um-iyc">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="qZH-sE-HPM"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="GXT-99-He3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="9lg-jw-wsl" style="IBUITableViewCellStyleDefault" id="OsY-yu-Fqn">
+                                <rect key="frame" x="0.0" y="28" width="390" height="43.666667938232422"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="OsY-yu-Fqn" id="WnI-st-kKe">
+                                    <rect key="frame" x="0.0" y="0.0" width="390" height="43.666667938232422"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9lg-jw-wsl">
+                                            <rect key="frame" x="20" y="0.0" width="350" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="twE-UP-h6R" id="9Yq-GV-R7W"/>
+                            <outlet property="delegate" destination="twE-UP-h6R" id="Op0-AM-uzd"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zbn-dy-614" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2889" y="1655"/>
+            <point key="canvasLocation" x="2880" y="1746"/>
         </scene>
         <!--Timer View Controller-->
         <scene sceneID="fDR-0k-cAW">
@@ -521,31 +543,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hU8-zx-FmZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1526.1538461538462" y="2464.6919431279621"/>
-        </scene>
-        <!--Video Player View Controller-->
-        <scene sceneID="Hyf-WT-hFA">
-            <objects>
-                <viewController id="VAi-6r-tS6" customClass="VideoPlayerViewController" customModule="Breakdance_App" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="vw3-df-xOu">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jVo-qf-Jqh" customClass="YTPlayerView" customModule="Breakdance_App" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="171" width="390" height="317"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            </view>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="eGq-UN-MmN"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <connections>
-                        <outlet property="playerView" destination="jVo-qf-Jqh" id="RbI-tD-cNF"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ArL-97-jVu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2872.3076923076924" y="2471.8009478672984"/>
         </scene>
         <!--Item-->
         <scene sceneID="aiC-kJ-0a0">
