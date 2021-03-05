@@ -22,7 +22,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="6Oc-wq-zmV" kind="relationship" relationship="viewControllers" id="XGl-BG-vjw"/>
-                        <segue destination="3RZ-TM-JaA" kind="relationship" relationship="viewControllers" id="yQJ-Q1-MMy"/>
+                        <segue destination="ceJ-T1-1Ys" kind="relationship" relationship="viewControllers" id="yQJ-Q1-MMy"/>
                         <segue destination="dAm-mN-PoY" kind="relationship" relationship="viewControllers" id="M2q-Ns-9LO"/>
                     </connections>
                 </tabBarController>
@@ -30,7 +30,7 @@
             </objects>
             <point key="canvasLocation" x="1323" y="-166"/>
         </scene>
-        <!--Learn-->
+        <!--Learn View Controller-->
         <scene sceneID="eWp-Xv-lyO">
             <objects>
                 <collectionViewController id="3RZ-TM-JaA" customClass="LearnViewController" customModule="Breakdance_App" customModuleProvider="target" sceneMemberID="viewController">
@@ -88,11 +88,11 @@
                             <outlet property="delegate" destination="3RZ-TM-JaA" id="g5F-Pv-Czw"/>
                         </connections>
                     </collectionView>
-                    <tabBarItem key="tabBarItem" title="Learn" image="graduationcap" catalog="system" id="UaM-mo-Uyx"/>
+                    <navigationItem key="navigationItem" id="Zm1-nC-Lq0"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ReB-MN-DgX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2889.2307692307691" y="951.89573459715632"/>
+            <point key="canvasLocation" x="3818.4615384615381" y="951.89573459715632"/>
         </scene>
         <!--Activity-->
         <scene sceneID="KIe-FB-CHF">
@@ -216,7 +216,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a19-k1-SnX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4980" y="951.89573459715632"/>
+            <point key="canvasLocation" x="5909.2307692307686" y="951.89573459715632"/>
         </scene>
         <!--Training View Controller-->
         <scene sceneID="5dX-62-4pE">
@@ -280,7 +280,7 @@
         <!--Playlist View Controller-->
         <scene sceneID="R1M-UG-vL9">
             <objects>
-                <tableViewController id="twE-UP-h6R" customClass="PlaylistViewController" customModule="Breakdance_App" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="PlaylistView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="twE-UP-h6R" customClass="PlaylistViewController" customModule="Breakdance_App" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="sMv-Um-iyc">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -313,6 +313,38 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zbn-dy-614" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2880" y="1746"/>
+        </scene>
+        <!--Video Player View Controller-->
+        <scene sceneID="Atx-Co-leR">
+            <objects>
+                <viewController storyboardIdentifier="Video" useStoryboardIdentifierAsRestorationIdentifier="YES" id="UAf-vR-QAu" customClass="VideoPlayerViewController" customModule="Breakdance_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WiA-gt-vMt">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mm9-St-ZEZ" customClass="YTPlayerView">
+                                <rect key="frame" x="0.0" y="272" width="390" height="300"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="Z1s-4k-5vL"/>
+                                    <constraint firstAttribute="width" constant="390" id="lax-G0-HyN"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="FGR-8M-tLw"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Mm9-St-ZEZ" firstAttribute="centerY" secondItem="WiA-gt-vMt" secondAttribute="centerY" id="WYE-Bp-CCP"/>
+                            <constraint firstItem="Mm9-St-ZEZ" firstAttribute="centerX" secondItem="WiA-gt-vMt" secondAttribute="centerX" id="ifS-3P-lC0"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="playerView" destination="Mm9-St-ZEZ" id="5sE-tP-tkN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X0j-CE-pgJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2887.6923076923076" y="2464.6919431279621"/>
         </scene>
         <!--Timer View Controller-->
         <scene sceneID="fDR-0k-cAW">
@@ -618,7 +650,26 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n7K-HA-7Ib" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4050.7692307692305" y="951.89573459715632"/>
+            <point key="canvasLocation" x="4980" y="951.89573459715632"/>
+        </scene>
+        <!--Learn-->
+        <scene sceneID="OtM-qv-5P6">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ceJ-T1-1Ys" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Learn" image="graduationcap" catalog="system" id="UaM-mo-Uyx"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="xQy-QU-nZ3">
+                        <rect key="frame" x="0.0" y="44" width="390" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="3RZ-TM-JaA" kind="relationship" relationship="rootViewController" id="AgB-FL-TJd"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Djm-1k-4pG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2889.2307692307691" y="951.89573459715632"/>
         </scene>
     </scenes>
     <resources>

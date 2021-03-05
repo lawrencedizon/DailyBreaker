@@ -1,15 +1,25 @@
-//
-//  VideoPlayerViewController.swift
-//  Breakdance App
-//
-//  Created by Lawrence Dizon on 3/1/21.
-//  Copyright © 2021 Lawrence Dizon. All rights reserved.
-//
 
+import youtube_ios_player_helper
 import UIKit
 
-class VideoPlayerViewController: UIViewController {
+class VideoPlayerViewController: UIViewController, YTPlayerViewDelegate {
+    var videoId: String?
+    @IBOutlet var playerView: YTPlayerView!
     override func viewDidLoad() {
-            super.viewDidLoad()
+        super.viewDidLoad()
+        playerView.delegate = self
+    
+        if let id = videoId  {
+            print("id: \(id)")
+            playerView.load(withVideoId: id)
         }
+    }
+    
+    func playerViewDidBecomeReady(_ playerView: YTPlayerView) {
+        playerView.playVideo()
+    }
+
+
 }
+
+

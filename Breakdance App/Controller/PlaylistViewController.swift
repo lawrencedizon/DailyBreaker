@@ -28,9 +28,8 @@ class PlaylistViewController: UITableViewController {
             self.tableView.reloadData()
             
         }
-        
-        
     }
+
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return playlistVideos.count
@@ -85,6 +84,11 @@ class PlaylistViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        if let viewController = storyboard?.instantiateViewController(identifier: "Video") as? VideoPlayerViewController {
+            viewController.videoId = videoIds[indexPath.row]
+            navigationController?.pushViewController(viewController, animated: true)
+        }
         
     }
 

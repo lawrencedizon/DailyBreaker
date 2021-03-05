@@ -46,9 +46,11 @@ extension LearnViewController {
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
 //        let video = videoList[indexPath.row]
 //        print(video.title)
-        let playstViewController = PlaylistViewController()
-        present(playstViewController, animated: true, completion: nil)
         
+        if let viewController = storyboard?.instantiateViewController(identifier: "PlaylistView") as? PlaylistViewController {
+            
+            navigationController?.pushViewController(viewController, animated: true)
+        }
         
     }
 }
