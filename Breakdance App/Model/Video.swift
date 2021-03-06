@@ -2,21 +2,38 @@ import UIKit
 
 
 struct APIResponse: Codable {
-    var items: [Playlist]
+    let items: [Playlist]
 }
 
 struct Playlist: Codable{
-    var snippet: PlaylistItem
+    let snippet: PlaylistItem
+    
 }
 
 struct PlaylistItem: Codable{
-    var title: String
-    var resourceId: ResourceInfo
+    let title: String
+    let resourceId: ResourceInfo
+    let thumbnails: ThumbNailItem
+}
+
+struct ThumbNailItem: Codable {
+    let high: ThumbNail
+}
+
+struct ThumbNail: Codable {
+    let url: String
+    let width: Int
+    let height: Int
+    
 }
 
 struct ResourceInfo: Codable{
-    var videoId: String
+    let videoId: String
 }
+
+
+
+
 
 class Video {
     var id = UUID()

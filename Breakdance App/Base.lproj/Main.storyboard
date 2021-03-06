@@ -28,7 +28,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bII-ga-K8g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1323" y="-166"/>
+            <point key="canvasLocation" x="3518" y="-232"/>
         </scene>
         <!--Learn View Controller-->
         <scene sceneID="eWp-Xv-lyO">
@@ -92,7 +92,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ReB-MN-DgX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3818.4615384615381" y="951.89573459715632"/>
+            <point key="canvasLocation" x="3514" y="1713"/>
         </scene>
         <!--Activity-->
         <scene sceneID="KIe-FB-CHF">
@@ -216,7 +216,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a19-k1-SnX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5909.2307692307686" y="951.89573459715632"/>
+            <point key="canvasLocation" x="4891" y="1713"/>
         </scene>
         <!--Training View Controller-->
         <scene sceneID="5dX-62-4pE">
@@ -275,33 +275,62 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cna-eO-iYH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1526" y="1713"/>
+            <point key="canvasLocation" x="2108" y="1713"/>
         </scene>
         <!--Playlist View Controller-->
         <scene sceneID="R1M-UG-vL9">
             <objects>
                 <tableViewController storyboardIdentifier="PlaylistView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="twE-UP-h6R" customClass="PlaylistViewController" customModule="Breakdance_App" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="sMv-Um-iyc">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="270" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="sMv-Um-iyc">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="9lg-jw-wsl" style="IBUITableViewCellStyleDefault" id="OsY-yu-Fqn">
-                                <rect key="frame" x="0.0" y="28" width="390" height="43.666667938232422"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="playlistcell" id="QHY-9j-E8Q" customClass="PlaylistTableViewCell" customModule="Breakdance_App" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="390" height="270"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="OsY-yu-Fqn" id="WnI-st-kKe">
-                                    <rect key="frame" x="0.0" y="0.0" width="390" height="43.666667938232422"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="QHY-9j-E8Q" id="wxR-I2-ab8">
+                                    <rect key="frame" x="0.0" y="0.0" width="390" height="270"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9lg-jw-wsl">
-                                            <rect key="frame" x="20" y="0.0" width="350" height="43.666667938232422"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
+                                        <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ykk-eX-YX0">
+                                            <rect key="frame" x="0.0" y="11" width="400" height="238"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0wQ-RQ-dAS">
+                                                    <rect key="frame" x="0.0" y="0.0" width="400" height="180"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="400" id="N7Z-9a-SA8"/>
+                                                        <constraint firstAttribute="height" constant="180" id="ZiF-1h-lf2"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ub-qT-WWU">
+                                                    <rect key="frame" x="0.0" y="180" width="400" height="58"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="kdO-Bt-UCH"/>
+                                                        <constraint firstAttribute="width" constant="400" id="ykm-ss-cDL"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="0wQ-RQ-dAS" firstAttribute="leading" secondItem="ykk-eX-YX0" secondAttribute="leadingMargin" id="DLa-WW-dj5"/>
+                                                <constraint firstItem="6ub-qT-WWU" firstAttribute="top" secondItem="0wQ-RQ-dAS" secondAttribute="bottom" id="S52-x7-jya"/>
+                                                <constraint firstItem="0wQ-RQ-dAS" firstAttribute="trailing" secondItem="ykk-eX-YX0" secondAttribute="trailingMargin" id="XPa-yD-9bi"/>
+                                                <constraint firstItem="6ub-qT-WWU" firstAttribute="bottom" secondItem="ykk-eX-YX0" secondAttribute="bottomMargin" constant="5" id="dkW-Vy-mfu"/>
+                                            </constraints>
+                                        </stackView>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottomMargin" secondItem="ykk-eX-YX0" secondAttribute="bottom" constant="10" id="PM6-kL-9W5"/>
+                                        <constraint firstItem="ykk-eX-YX0" firstAttribute="top" secondItem="wxR-I2-ab8" secondAttribute="topMargin" id="dXe-fw-m1b"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="playlistImage" destination="0wQ-RQ-dAS" id="g2y-XW-WEj"/>
+                                    <outlet property="playlistItemLabel" destination="6ub-qT-WWU" id="vVL-P6-rbk"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -312,7 +341,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zbn-dy-614" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2880" y="1746"/>
+            <point key="canvasLocation" x="3513.8461538461538" y="2464.6919431279621"/>
         </scene>
         <!--Video Player View Controller-->
         <scene sceneID="Atx-Co-leR">
@@ -344,7 +373,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X0j-CE-pgJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2887.6923076923076" y="2464.6919431279621"/>
+            <point key="canvasLocation" x="3517" y="3205"/>
         </scene>
         <!--Timer View Controller-->
         <scene sceneID="fDR-0k-cAW">
@@ -574,7 +603,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hU8-zx-FmZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1526.1538461538462" y="2464.6919431279621"/>
+            <point key="canvasLocation" x="2108" y="2465"/>
         </scene>
         <!--Item-->
         <scene sceneID="aiC-kJ-0a0">
@@ -590,7 +619,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aea-yk-Bos" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="597" y="3272"/>
+            <point key="canvasLocation" x="1180" y="3205"/>
         </scene>
         <!--Training-->
         <scene sceneID="16x-P1-Cfc">
@@ -610,7 +639,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RkT-QT-mGT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1526.1538461538462" y="951.89573459715632"/>
+            <point key="canvasLocation" x="2109" y="952"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ogS-yh-2hW">
@@ -631,7 +660,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="88A-fe-ISp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="596.92307692307691" y="2464.6919431279621"/>
+            <point key="canvasLocation" x="1180" y="2465"/>
         </scene>
         <!--Activity-->
         <scene sceneID="boQ-tT-bI6">
@@ -650,7 +679,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n7K-HA-7Ib" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4980" y="951.89573459715632"/>
+            <point key="canvasLocation" x="4891" y="952"/>
         </scene>
         <!--Learn-->
         <scene sceneID="OtM-qv-5P6">
@@ -669,7 +698,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Djm-1k-4pG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2889.2307692307691" y="951.89573459715632"/>
+            <point key="canvasLocation" x="3517" y="952"/>
         </scene>
     </scenes>
     <resources>

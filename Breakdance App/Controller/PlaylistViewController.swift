@@ -11,23 +11,18 @@ import UIKit
 class PlaylistViewController: UITableViewController {
     var playlistVideos: [String] = []
     var videoIds: [String] = []
+    var thumbNails: [UIImage] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
-        
         fetchInfo(url: Constants.API_URL)
         print("VIEWDIDLOAD \(self.playlistVideos.count)")
 
-        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2)) {
-//            print("We're going to print all the videos in the playlist")
-//            for title in self.playlistVideos {
-//                print(title)
-//            }
+        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1)) {
             self.tableView.reloadData()
-            
         }
+        
     }
 
     
@@ -37,11 +32,10 @@ class PlaylistViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell =  tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        let cell =  tableView.dequeueReusableCell(withIdentifier: "playlistcell", for: indexPath) as! PlaylistTableViewCell
         
-        cell.textLabel?.text = playlistVideos[indexPath.row]
-        
-        
+        cell.playlistItemLabel?.text = playlistVideos[indexPath.row]
+        cell.playlistImage?.image = thumbNails[indexPath.row]
         return cell
     }
     
@@ -71,8 +65,17 @@ class PlaylistViewController: UITableViewController {
                     for item in jsonResult.items{
                         self.playlistVideos.append(item.snippet.title)
                         self.videoIds.append(item.snippet.resourceId.videoId)
+                        
+                        if let url = URL(string: item.snippet.thumbnails.high.url){
+                            let image = try? Data(contentsOf: url)
+                            
+                            if let imageData = image {
+                                self.thumbNails.append(UIImage(data: imageData)!)
+                            }
+                        }
                     }
                 }
+               
             }catch{
                 print(error)
             }
@@ -82,6 +85,8 @@ class PlaylistViewController: UITableViewController {
         task.resume()
         print("playlist count after resume \(self.playlistVideos.count)")
     }
+    
+    
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
