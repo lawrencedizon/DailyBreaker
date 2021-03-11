@@ -32,7 +32,7 @@
 /* Begin PBXFileReference section */
 		40C68A5808AD76FD699B02DA /* Pods-Breakdance App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Breakdance App.release.xcconfig"; path = "Target Support Files/Pods-Breakdance App/Pods-Breakdance App.release.xcconfig"; sourceTree = "<group>"; };
 		5F2294EF49D02BF273CFA816 /* Pods_Breakdance_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Breakdance_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		903043B425DB3D0A005FF5FD /* beep.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = beep.mp3; path = "Breakdance App/Resources/beep.mp3"; sourceTree = SOURCE_ROOT; };
+		903043B425DB3D0A005FF5FD /* beep.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = beep.mp3; path = "Breakdance App/Resources/Mp3/beep.mp3"; sourceTree = SOURCE_ROOT; };
 		903851A025B4FABC001CC32A /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		903851A325B4FD7F001CC32A /* ActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityViewController.swift; sourceTree = "<group>"; };
 		90407E0424E350C4009160A3 /* Breakdance App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Breakdance App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -98,16 +98,15 @@
 		90407E0624E350C4009160A3 /* Breakdance App */ = {
 			isa = PBXGroup;
 			children = (
-				90407E0D24E350C4009160A3 /* Main.storyboard */,
-				9038519F25B4FABC001CC32A /* Model.xcdatamodeld */,
-				90407E1224E350C6009160A3 /* LaunchScreen.storyboard */,
-				90407E0724E350C4009160A3 /* AppDelegate.swift */,
 				90407E0924E350C4009160A3 /* SceneDelegate.swift */,
+				90407E0724E350C4009160A3 /* AppDelegate.swift */,
+				9038519F25B4FABC001CC32A /* Model.xcdatamodeld */,
 				90407E1524E350C6009160A3 /* Info.plist */,
 				90407E1B24E356F4009160A3 /* Model */,
 				90407E1C24E356F9009160A3 /* View */,
 				90407E1D24E35717009160A3 /* Controller */,
 				90407E1E24E3574A009160A3 /* Resources */,
+				90584EAC25F4116E008EE202 /* Tests */,
 			);
 			path = "Breakdance App";
 			sourceTree = "<group>";
@@ -125,6 +124,7 @@
 		90407E1C24E356F9009160A3 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				90584EAE25F41569008EE202 /* Storyboards */,
 				906BC1B624E87A7B00901350 /* VideoCollectionViewCell.swift */,
 				90E1E69925A925FF00D29E25 /* TrainingTableViewCell.swift */,
 				909D145525F33D9C00BA7F89 /* PlaylistTableViewCell.swift */,
@@ -148,10 +148,34 @@
 		90407E1E24E3574A009160A3 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				903043B425DB3D0A005FF5FD /* beep.mp3 */,
+				90584EAD25F41372008EE202 /* Mp3 */,
 				90407E1024E350C6009160A3 /* Assets.xcassets */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		90584EAC25F4116E008EE202 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		90584EAD25F41372008EE202 /* Mp3 */ = {
+			isa = PBXGroup;
+			children = (
+				903043B425DB3D0A005FF5FD /* beep.mp3 */,
+			);
+			path = Mp3;
+			sourceTree = "<group>";
+		};
+		90584EAE25F41569008EE202 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				90407E0D24E350C4009160A3 /* Main.storyboard */,
+				90407E1224E350C6009160A3 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 		A0951794A55407C6625B10C8 /* Frameworks */ = {

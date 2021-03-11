@@ -10,7 +10,7 @@ class ActivityViewController: UIViewController, UITableViewDelegate, UITableView
     // MARK: - Properties
     //
     
-    @IBOutlet var tableView: UITableView!
+    //@IBOutlet var tableView: UITableView!
     
     //
     // MARK: - ViewController LifeCycle States
@@ -18,8 +18,8 @@ class ActivityViewController: UIViewController, UITableViewDelegate, UITableView
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.dataSource = self
-        tableView.delegate = self
+//        tableView.dataSource = self
+//        tableView.delegate = self
         
 //        self.save(value: "Test 1")
 //        self.save(value: "Test 2")
