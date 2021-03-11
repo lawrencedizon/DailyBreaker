@@ -49,7 +49,7 @@ class PlaylistViewController: UITableViewController {
             
             //error check
             guard error == nil else {
-                print(error)
+                print("Failed to fetch Youtube playlist info")
                 return
             }
             
