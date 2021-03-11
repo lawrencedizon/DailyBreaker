@@ -207,6 +207,11 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lF2-wu-Pft" customClass="PieChartView" customModule="Charts">
+                                <rect key="frame" x="75" y="564" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="LBS-0r-ee6"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -216,6 +221,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Activity" id="YBi-Gh-6xu"/>
+                    <connections>
+                        <outlet property="pieChartView" destination="lF2-wu-Pft" id="7dQ-N7-Qsa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a19-k1-SnX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

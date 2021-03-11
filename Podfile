@@ -6,5 +6,6 @@ target 'Breakdance App' do
   use_frameworks!
 
 pod 'youtube-ios-player-helper'
-
+pod 'Charts'
+  # Pods for SimpleYoutubePlayer
 end

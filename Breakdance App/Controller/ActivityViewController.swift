@@ -1,16 +1,18 @@
 import UIKit
 import CoreData
+import Charts
 
 //
 // ActivityViewController provides the user some information about their overall workout data.
 //
 //
-class ActivityViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+
+class ActivityViewController: UIViewController {
     //
     // MARK: - Properties
     //
     
-    //@IBOutlet var tableView: UITableView!
+    @IBOutlet weak var pieChartView: PieChartView!
     
     //
     // MARK: - ViewController LifeCycle States
@@ -18,31 +20,11 @@ class ActivityViewController: UIViewController, UITableViewDelegate, UITableView
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        tableView.dataSource = self
-//        tableView.delegate = self
         
-//        self.save(value: "Test 1")
-//        self.save(value: "Test 2")
-//        self.save(value: "Test 3")
+        pieChartView.noDataText = "We will add data shortly"
         
-        retrieveValues()
-    }
-    
-    //
-    // MARK: - TableView Properties
-    //
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "activityCell", for: indexPath)
-        cell.textLabel?.text = "Test"
-        return cell
-    }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 50
+        //CoreData stuff
+        //retrieveValues()
     }
 }
 
