@@ -9,7 +9,7 @@ class TrainingViewController: UITableViewController {
     //
     //MARK: - Properties
     //
-    private var skillArray: [String] = ["Warm Up","Stamina", "Battle"]
+    private var skillArray: [String] = ["Warm Up","Battle", "Toprock","Footwork","Freezes","Powermoves","Stamina"]
     
     //
     //MARK: - Lifecycle States
@@ -43,10 +43,18 @@ class TrainingViewController: UITableViewController {
             switch skillArray[indexPath.row]{
             case "Warm Up":
                 viewController.exercises = TrainingExercises.WarmUp
-            case "Stamina":
-                viewController.exercises = TrainingExercises.Stamina
             case "Battle":
                 viewController.exercises = TrainingExercises.Battle
+            case "Toprock":
+                viewController.exercises = TrainingExercises.Toprock
+            case "Footwork":
+                viewController.exercises = TrainingExercises.Footwork
+            case "Freezes":
+                viewController.exercises = TrainingExercises.Freezes
+            case "Powermoves":
+                viewController.exercises = TrainingExercises.Powermoves
+            case "Stamina":
+                viewController.exercises = TrainingExercises.Stamina
             default:
                 // We should never go here
                 viewController.exercises = []
