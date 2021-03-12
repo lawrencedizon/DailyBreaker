@@ -10,12 +10,13 @@ import AVFoundation
 // It also controls the mediaplayer functionality.
 //
 //TODO: THIS CLASS NEEDS MAJOR REFACTORING
+//
 class TimerViewController: UIViewController, MPMediaPickerControllerDelegate{
     //
     //MARK: - Properties
     //
     
-    var beepSoundEffect: AVAudioPlayer?
+    var beepSoundEffect: AVAudioPlayer!
     
     var exercises : [Exercise] = []
     
@@ -64,6 +65,7 @@ class TimerViewController: UIViewController, MPMediaPickerControllerDelegate{
     //
     
     override func viewDidLoad() {
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(modifyExercises))
         numberOfExercises = exercises.count
         timeLeft = initialTimeLeft
         currentExerciseTimeLeft = exercises[currentExerciseCounter].duration
@@ -77,6 +79,7 @@ class TimerViewController: UIViewController, MPMediaPickerControllerDelegate{
         updateNextExerciseLabel()
     }
     
+   
     override func viewDidAppear(_ animated: Bool) {
         updateSongInfo()
     }
@@ -94,7 +97,14 @@ class TimerViewController: UIViewController, MPMediaPickerControllerDelegate{
         upNextExerciseLabel.text = exercises[currentExerciseCounter + 1].name
     }
     
- 
+    //TODO: - Work on RightBarButtonItem
+    
+    //We will create a view controller that shows the list of exercises and the user can rearrange and modify the exercise list
+    
+    @objc func modifyExercises(){
+        print("Will work on this")
+    }
+    
     
     //
     //MARK: - Beep sound effect
@@ -226,7 +236,6 @@ class TimerViewController: UIViewController, MPMediaPickerControllerDelegate{
     }
     
     @IBAction func onPressReset(_ sender: AnyObject? = nil) {
-        //TODO: - Fix reset progressbar
         
         // Reset exercise to first
         currentExerciseCounter = 0

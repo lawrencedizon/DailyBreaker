@@ -1,22 +1,15 @@
 import UIKit
 import SafariServices
 
-//Personal notes:
-// When a user clicks on the category, it should lead to PlaylistViewController TableView of
+// Personal notes: When a user clicks on the category, it should lead to PlaylistViewController TableView of
 
-//
-// LearnViewController manages the different learning topics.
-// Each topic leads to a video playlist pertaining to that topic.
-//
+/// - LearnViewController manages the different learning topics. Each topic leads to a video playlist pertaining to that topic.
 class LearnViewController: UICollectionViewController {
-    //
+    
     // MARK: - Properties
-    //
     private var videoList = Video.allVideos
     
-    //
     // MARK: - View Controller LifeCycle States
-    //
     override func viewDidLoad() {
         super.viewDidLoad()
         configureLayout()
@@ -29,7 +22,7 @@ extension LearnViewController {
         return videoList.count
     }
     
-// MARK: - CollectionView DataSource
+    // MARK: - CollectionView DataSource
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let video = videoList[indexPath.row]
@@ -44,8 +37,6 @@ extension LearnViewController {
 // MARK: - CollectionView Delegate
 extension LearnViewController {
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        let video = videoList[indexPath.row]
-//        print(video.title)
         
         if let viewController = storyboard?.instantiateViewController(identifier: "PlaylistView") as? PlaylistViewController {
             
@@ -70,13 +61,6 @@ extension LearnViewController {
         })
     }
 }
-
-//// MARK: - SFSafariViewControllerDelegate Implementation
-//extension LearnViewController: SFSafariViewControllerDelegate {
-//    func safariViewControllerDidFinish(_ controller: SFSafariViewController) {
-//        controller.dismiss(animated: true, completion: nil)
-//    }
-//}
 
     
     

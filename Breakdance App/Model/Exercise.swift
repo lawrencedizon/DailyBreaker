@@ -7,11 +7,15 @@ struct Exercise {
 
 enum TrainingExercises {
     static let WarmUp: [Exercise] = [
-        Exercise(name: "Pushups", duration: 100),
-        Exercise(name: "Jumping Jacks", duration: 100),
-        Exercise(name: "Situps", duration: 100),
-        Exercise(name: "Squats", duration: 100),
-        Exercise(name: "Lunges", duration: 100)]
+        Exercise(name: "Pushups", duration: 60),
+        Exercise(name: "Break", duration: 30),
+        Exercise(name: "Jumping Jacks", duration: 60),
+        Exercise(name: "Break", duration: 30),
+        Exercise(name: "Situps", duration: 30),
+        Exercise(name: "Break", duration: 30),
+        Exercise(name: "Squats", duration: 30),
+        Exercise(name: "Break", duration: 30),
+        Exercise(name: "Lunges", duration: 30)]
     
     static let Toprock: [Exercise] = [
         Exercise(name: "Toprock 1", duration: 100),

@@ -1,28 +1,20 @@
 import Foundation
 import UIKit
 
-//
-// TrainingViewController manages the list of exercises the user can choose from.
-//
-//
+
+/// - TrainingViewController manages the list of exercises the user can choose from.
+
 class TrainingViewController: UITableViewController {
-    //
-    //MARK: - Properties
-    //
+    // MARK: - Properties
     private var skillArray: [String] = ["Warm Up","Battle", "Toprock","Footwork","Freezes","Powermoves","Stamina"]
     
-    //
-    //MARK: - Lifecycle States
-    //
+    // MARK: - Lifecycle States
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.title = "Training"
     }
     
-    //
-    //MARK: - TableView Properties
-    //
-    
+    // MARK: - TableView Properties
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return skillArray.count
     }

@@ -2,75 +2,35 @@ import UIKit
 import CoreData
 import Charts
 
-//
-// ActivityViewController provides the user some information about their overall workout data.
-//
-//
-
-class ActivityViewController: UIViewController {
-    //
+/// - ActivityViewController provides the user some information about their overall workout data.
+class ActivityViewController: UIViewController, ChartViewDelegate {
+   
     // MARK: - Properties
-    //
-    
     @IBOutlet weak var pieChartView: PieChartView!
     
-    //
-    // MARK: - ViewController LifeCycle States
-    //
-    
+    // MARK: - ViewController Life States
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "Activity"
         
-        pieChartView.noDataText = "We will add data shortly"
+        pieChartView.delegate = self
+        pieChartView.centerText = "All Sessions"
         
-        //CoreData stuff
-        //retrieveValues()
-    }
-}
-
-//
-// MARK: - Core Data
-//
-
-extension ActivityViewController {
-    func save(value: String){
-        if let appDelegate = UIApplication.shared.delegate as? AppDelegate {
-            let context = appDelegate.persistentContainer.viewContext
-            
-            guard let entityDescription = NSEntityDescription.entity(forEntityName: "TestEntity", in: context) else { return }
-            
-            let newValue = NSManagedObject(entity: entityDescription, insertInto: context)
-            
-            newValue.setValue(value, forKey: "testValue")
-            
-            do {
-                try context.save()
-                print("Saved \(value)")
-            }catch {
-                print("Saving error")
-            }
-        }
+        var entries = [PieChartDataEntry]()
+        entries.append(PieChartDataEntry(value: 5, label: "Toprock"))
+        entries.append(PieChartDataEntry(value: 1, label: "Footwork"))
+        entries.append(PieChartDataEntry(value: 2, label: "Freezes"))
+        entries.append(PieChartDataEntry(value: 3, label: "Powermoves"))
+        entries.append(PieChartDataEntry(value: 5, label: "Battle"))
+        
+        let set = PieChartDataSet(entries: entries)
+        set.colors = ChartColorTemplates.pastel()
+        
+        let data = PieChartData(dataSets: [set])
+        pieChartView.data = data
     }
     
-    func retrieveValues(){
-        if let appDelegate = UIApplication.shared.delegate as? AppDelegate {
-            let context = appDelegate.persistentContainer.viewContext
-            let fetchRequest = NSFetchRequest<TestEntity>(entityName: "TestEntity")
-            
-            do {
-                let results = try context.fetch(fetchRequest)
-                
-                for result in results {
-                    if let testValue = result.testValue {
-                        print(testValue)
-                    }
-                }
-                
-            } catch {
-                print("Could not retrieve")
-            }
-        }
-    }
 }
+
 
 
