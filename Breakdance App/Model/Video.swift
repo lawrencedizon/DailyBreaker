@@ -1,6 +1,5 @@
 import UIKit
 
-
 struct APIResponse: Codable {
     let items: [Playlist]
 }

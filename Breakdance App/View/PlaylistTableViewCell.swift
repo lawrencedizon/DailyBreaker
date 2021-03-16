@@ -12,6 +12,5 @@ import Foundation
 class PlaylistTableViewCell: UITableViewCell {
     @IBOutlet var playlistItemLabel: UILabel!
     @IBOutlet var playlistImage: UIImageView!
-    
 }
 

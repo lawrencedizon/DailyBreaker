@@ -2,6 +2,7 @@ import UIKit
 import Foundation
 import MediaPlayer
 import AVFoundation
+import CoreData
 
 
 
@@ -13,9 +14,10 @@ import AVFoundation
 //
 class TimerViewController: UIViewController, MPMediaPickerControllerDelegate{
     //
-    //MARK: - Properties
+    //MARK:- Properties
     //
     
+    var sessionTest: [NSManagedObject] = []
     var beepSoundEffect: AVAudioPlayer!
     
     var exercises : [Exercise] = []
@@ -61,7 +63,7 @@ class TimerViewController: UIViewController, MPMediaPickerControllerDelegate{
     var numberOfExercises = 0
     
     //
-    //MARK: - View States
+    //MARK:- View States
     //
     
     override func viewDidLoad() {
@@ -77,6 +79,8 @@ class TimerViewController: UIViewController, MPMediaPickerControllerDelegate{
         //Initialize labels
         updateCurrentExerciseLabels()
         updateNextExerciseLabel()
+        
+    
     }
     
    
@@ -85,7 +89,7 @@ class TimerViewController: UIViewController, MPMediaPickerControllerDelegate{
     }
     
     //
-    //MARK: - UI Updates
+    //MARK:- UI Updates
     //
  
     func updateCurrentExerciseLabels(){
@@ -107,7 +111,7 @@ class TimerViewController: UIViewController, MPMediaPickerControllerDelegate{
     
     
     //
-    //MARK: - Beep sound effect
+    //MARK:- Beep sound effect
     //
     
     func playBeep(){
@@ -139,7 +143,7 @@ class TimerViewController: UIViewController, MPMediaPickerControllerDelegate{
         
     }
     //
-    //MARK: - Timer
+    //MARK:- Timer
     //
     
     @objc func timerAction(){
@@ -160,7 +164,12 @@ class TimerViewController: UIViewController, MPMediaPickerControllerDelegate{
                 // Current Exercise is finished
                 if (currentExerciseTimeLeft == 0){
                     playBeep() // Play beep sound when exercise is done
+                    
                     currentExerciseCounter += 1
+                    
+                    // Add a Session to CoreData
+                    saveSession(date: NSDate(),duration: 5, type: "Test")
+                    fetchSessions()
                     
                     // There are no more exercises after the current one, don't update the next exercise label
                     
@@ -190,6 +199,64 @@ class TimerViewController: UIViewController, MPMediaPickerControllerDelegate{
             print("Timer Stopped!")
             timer?.invalidate()
         }
+    }
+    
+    // MARK:- Core Data Support
+    
+    func saveSession(date: NSDate, duration: Int, type: String){
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+            return
+        }
+        
+        // 1
+        let managedContext = appDelegate.persistentContainer.viewContext
+        
+        // 2
+        let entity = NSEntityDescription.entity(forEntityName: "Session", in: managedContext)!
+        
+        let session = NSManagedObject(entity: entity, insertInto: managedContext)
+        
+        // 3
+        session.setValue(date, forKey: "date")
+        session.setValue(duration, forKey: "duration")
+        session.setValue(type, forKey: "type")
+        
+        // 4
+        do {
+            try managedContext.save()
+            sessionTest.append(session)
+        }catch let error as NSError {
+            print("Could not save. \(error), \(error.userInfo)")
+        }
+        
+    }
+    
+    // Properly fetches session
+    func fetchSessions(){
+        // 1
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+            return
+        }
+        
+        let managedContext = appDelegate.persistentContainer.viewContext
+        
+        // 2
+        
+        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Session")
+        
+        // 3
+        
+        do {
+            sessionTest = try managedContext.fetch(fetchRequest)
+        }catch let error as NSError {
+            print("Could not fetch. \(error), \(error.userInfo)")
+        }
+        
+        for session in self.sessionTest{
+            print(session)
+        }
+        
+        print("Session's current count: \(self.sessionTest.count)")
     }
     
     func timeString(time: TimeInterval) -> String {
@@ -262,7 +329,7 @@ class TimerViewController: UIViewController, MPMediaPickerControllerDelegate{
     }
     
     //
-    //MARK: - ProgressBar
+    //MARK:- ProgressBar
     //
     
     func drawTrackLayer(){

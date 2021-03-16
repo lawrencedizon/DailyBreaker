@@ -98,10 +98,10 @@
 		90407E0624E350C4009160A3 /* Breakdance App */ = {
 			isa = PBXGroup;
 			children = (
-				90407E0924E350C4009160A3 /* SceneDelegate.swift */,
-				90407E0724E350C4009160A3 /* AppDelegate.swift */,
-				9038519F25B4FABC001CC32A /* Model.xcdatamodeld */,
 				90407E1524E350C6009160A3 /* Info.plist */,
+				90407E0724E350C4009160A3 /* AppDelegate.swift */,
+				90407E0924E350C4009160A3 /* SceneDelegate.swift */,
+				9038519F25B4FABC001CC32A /* Model.xcdatamodeld */,
 				90407E1B24E356F4009160A3 /* Model */,
 				90407E1C24E356F9009160A3 /* View */,
 				90407E1D24E35717009160A3 /* Controller */,

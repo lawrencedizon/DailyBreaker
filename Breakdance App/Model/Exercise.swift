@@ -48,5 +48,5 @@ enum TrainingExercises {
         Exercise(name: "Set 4", duration: 11),
         Exercise(name: "Set 5", duration: 11)]
 
-    
+
 }
