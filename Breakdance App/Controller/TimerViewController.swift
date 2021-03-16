@@ -6,17 +6,11 @@ import CoreData
 
 
 
-//
-// TimerViewController manages the application's exercise timer.
-// It also controls the mediaplayer functionality.
-//
-//TODO: THIS CLASS NEEDS MAJOR REFACTORING
-//
+//TODO:- THIS CLASS NEEDS MAJOR REFACTORING
+/// - TimerViewController manages the application's exercise timer. It also controls the mediaplayer functionality.
 class TimerViewController: UIViewController, MPMediaPickerControllerDelegate{
-    //
-    //MARK:- Properties
-    //
     
+    //MARK:- Properties
     var sessionTest: [NSManagedObject] = []
     var beepSoundEffect: AVAudioPlayer!
     
@@ -62,11 +56,11 @@ class TimerViewController: UIViewController, MPMediaPickerControllerDelegate{
     var currentExerciseTimeLeft = 0
     var numberOfExercises = 0
     
-    //
     //MARK:- View States
-    //
     
     override func viewDidLoad() {
+        fetchSessions()
+        print("Session Test: \(sessionTest.count)")
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(modifyExercises))
         numberOfExercises = exercises.count
         timeLeft = initialTimeLeft
@@ -80,17 +74,15 @@ class TimerViewController: UIViewController, MPMediaPickerControllerDelegate{
         updateCurrentExerciseLabels()
         updateNextExerciseLabel()
         
+       
+        
     
     }
-    
-   
     override func viewDidAppear(_ animated: Bool) {
         updateSongInfo()
     }
     
-    //
     //MARK:- UI Updates
-    //
  
     func updateCurrentExerciseLabels(){
         currentExerciseLabel.text = exercises[currentExerciseCounter].name
@@ -109,10 +101,7 @@ class TimerViewController: UIViewController, MPMediaPickerControllerDelegate{
         print("Will work on this")
     }
     
-    
-    //
     //MARK:- Beep sound effect
-    //
     
     func playBeep(){
         print("Beep sound made!")
@@ -249,14 +238,8 @@ class TimerViewController: UIViewController, MPMediaPickerControllerDelegate{
         do {
             sessionTest = try managedContext.fetch(fetchRequest)
         }catch let error as NSError {
-            print("Could not fetch. \(error), \(error.userInfo)")
+            print("Could not fetch sessions. \(error), \(error.userInfo)")
         }
-        
-        for session in self.sessionTest{
-            print(session)
-        }
-        
-        print("Session's current count: \(self.sessionTest.count)")
     }
     
     func timeString(time: TimeInterval) -> String {
@@ -328,9 +311,7 @@ class TimerViewController: UIViewController, MPMediaPickerControllerDelegate{
         }
     }
     
-    //
     //MARK:- ProgressBar
-    //
     
     func drawTrackLayer(){
         //create circular path
@@ -397,11 +378,7 @@ class TimerViewController: UIViewController, MPMediaPickerControllerDelegate{
         layer.beginTime = timeSincePause
     }
 
-    
-    //
-    //MARK: - Music Playlist
-    //
-    
+    //MARK:- Music Playlist
     @IBAction func onPressMusicPlayer(_ sender: UIButton) {
         let controller = MPMediaPickerController(mediaTypes: .music)
         controller.allowsPickingMultipleItems = true
