@@ -18,8 +18,6 @@ class VideoPlayerViewController: UIViewController, YTPlayerViewDelegate {
     func playerViewDidBecomeReady(_ playerView: YTPlayerView) {
         playerView.playVideo()
     }
-
-
 }
 
 

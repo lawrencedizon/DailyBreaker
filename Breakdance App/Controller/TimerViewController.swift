@@ -10,6 +10,7 @@ import CoreData
 /// - TimerViewController manages the application's exercise timer. It also controls the mediaplayer functionality.
 class TimerViewController: UIViewController, MPMediaPickerControllerDelegate{
     
+    var sessionTitle: String?
     //MARK:- Properties
     var sessionTest: [NSManagedObject] = []
     var beepSoundEffect: AVAudioPlayer!
@@ -157,7 +158,7 @@ class TimerViewController: UIViewController, MPMediaPickerControllerDelegate{
                     currentExerciseCounter += 1
                     
                     // Add a Session to CoreData
-                    saveSession(date: NSDate(),duration: 5, type: "Test")
+                    saveSession(date: NSDate(),duration: initialTimeLeft, type: sessionTitle ?? "")
                     fetchSessions()
                     
                     // There are no more exercises after the current one, don't update the next exercise label
@@ -239,6 +240,10 @@ class TimerViewController: UIViewController, MPMediaPickerControllerDelegate{
             sessionTest = try managedContext.fetch(fetchRequest)
         }catch let error as NSError {
             print("Could not fetch sessions. \(error), \(error.userInfo)")
+        }
+        
+        for session in sessionTest{
+            print("Session: \(session)")
         }
     }
     

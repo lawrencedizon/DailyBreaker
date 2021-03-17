@@ -51,6 +51,8 @@ class TrainingViewController: UITableViewController {
                 // We should never go here
                 viewController.exercises = []
             }
+            
+            viewController.sessionTitle = skillArray[indexPath.row]
         }
     }
     
