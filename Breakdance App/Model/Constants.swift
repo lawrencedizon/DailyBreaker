@@ -9,5 +9,5 @@
 import Foundation
 
 struct Constants {
-    static var API_KEY = "AIzaSyBZfHZO8qt3zVul5WX5740vmsIE89F-f_0"
+    static var API_KEY = ""
 }
