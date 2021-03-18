@@ -12,6 +12,7 @@ class LearnViewController: UICollectionViewController {
     // MARK: - View Controller LifeCycle States
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "Learn"
         configureLayout()
     }
 }
@@ -42,15 +43,19 @@ extension LearnViewController {
             switch indexPath.row{
                 case 0:
                 //Toprock
+                    viewController.title = "Toprock"
                     viewController.API_URL = "https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=PL57E01028C82367BD&key=\(Constants.API_KEY)&maxResults=50"
                 //Footwork
                 case 1:
+                    viewController.title = "Footwork"
                     viewController.API_URL = "https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=PLC03D627286ADDD94&key=\(Constants.API_KEY)&maxResults=50"
                 //Freezes
                 case 2:
+                    viewController.title = "Freezes"
                     viewController.API_URL = "https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=PL667C395494400FC0&key=\(Constants.API_KEY)&maxResults=50"
                 //Powermoves
                 case 3:
+                    viewController.title = "Powermoves"
                     viewController.API_URL = "https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=PL0498871864379CC0&key=\(Constants.API_KEY)&maxResults=50"
                 default:
                     print("This should never happen")
