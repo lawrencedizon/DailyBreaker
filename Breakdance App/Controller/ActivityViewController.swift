@@ -16,10 +16,11 @@ class ActivityViewController: UIViewController, ChartViewDelegate {
     var sessionArray: [Session] = []
     var sessionDict = [String:Int]()
     
-    // MARK: - ViewController Lifecyle States
+    // MARK: - ViewController Lifecycle States
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Activity"
+        pieChartView.legend.enabled = false
         calculateSessions()
         pieChartView.delegate = self
         pieChartView.centerText = "All Sessions"
@@ -34,6 +35,8 @@ class ActivityViewController: UIViewController, ChartViewDelegate {
     
     //MARK:- PieChart Functions
     func updatePieChartData(){
+        fetchAllSessions()
+        calculateSessions()
         sessionDict = countSessions()
         var entries = [PieChartDataEntry]()
         for session in sessionDict{

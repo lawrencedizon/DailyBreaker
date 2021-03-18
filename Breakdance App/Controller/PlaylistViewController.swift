@@ -10,19 +10,18 @@ import UIKit
 
 class PlaylistViewController: UITableViewController {
     var playlistVideos: [String] = []
+    var API_URL: String?
     var videoIds: [String] = []
     var thumbNails: [UIImage] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        fetchInfo(url: Constants.API_URL)
-        print("VIEWDIDLOAD \(self.playlistVideos.count)")
-
-        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1)) {
+        if let url = API_URL {
+            fetchInfo(url: url)
+        }
+        DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(500)) {
             self.tableView.reloadData()
         }
-        
     }
 
     

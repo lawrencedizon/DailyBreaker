@@ -56,7 +56,7 @@
                                             <rect key="frame" x="8" y="8" width="398" height="238"/>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dro-sV-we5">
-                                            <rect key="frame" x="30" y="10" width="238" height="44"/>
+                                            <rect key="frame" x="30" y="10" width="200" height="44"/>
                                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="44" id="MCf-TY-deI"/>
@@ -68,10 +68,9 @@
                                     </subviews>
                                     <constraints>
                                         <constraint firstAttribute="bottom" secondItem="Vrg-1V-ToZ" secondAttribute="bottom" id="9Uk-DI-ssz"/>
+                                        <constraint firstItem="dro-sV-we5" firstAttribute="leading" secondItem="SyH-Cs-SWC" secondAttribute="leadingMargin" constant="10" id="TDa-1X-dDM"/>
                                         <constraint firstAttribute="trailing" secondItem="Vrg-1V-ToZ" secondAttribute="trailing" constant="8" id="UGh-x3-I0R"/>
-                                        <constraint firstItem="dro-sV-we5" firstAttribute="leading" secondItem="SyH-Cs-SWC" secondAttribute="leading" constant="20" id="dUE-lR-Pfw"/>
                                         <constraint firstItem="dro-sV-we5" firstAttribute="top" secondItem="SyH-Cs-SWC" secondAttribute="top" id="nXU-iC-VxH"/>
-                                        <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="dro-sV-we5" secondAttribute="trailing" constant="146" id="oS2-en-QTv"/>
                                         <constraint firstItem="Vrg-1V-ToZ" firstAttribute="top" secondItem="SyH-Cs-SWC" secondAttribute="top" id="xiJ-mP-MLp"/>
                                         <constraint firstItem="Vrg-1V-ToZ" firstAttribute="leading" secondItem="SyH-Cs-SWC" secondAttribute="leading" constant="8" id="zgV-2H-rUV"/>
                                     </constraints>
@@ -92,7 +91,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ReB-MN-DgX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3514" y="1713"/>
+            <point key="canvasLocation" x="3513.8461538461538" y="1712.5592417061609"/>
         </scene>
         <!--Activity-->
         <scene sceneID="KIe-FB-CHF">

@@ -327,7 +327,7 @@ class TimerViewController: UIViewController, MPMediaPickerControllerDelegate{
         let trackLayer = CAShapeLayer()
         trackLayer.path = circularPath.cgPath
         trackLayer.strokeColor = UIColor.black.cgColor
-        trackLayer.lineWidth = 10
+        trackLayer.lineWidth = 15
         trackLayer.fillColor = UIColor.clear.cgColor
         trackLayer.lineCap = CAShapeLayerLineCap.round
         view.layer.addSublayer(trackLayer)
@@ -339,8 +339,8 @@ class TimerViewController: UIViewController, MPMediaPickerControllerDelegate{
         
         //Progressbar layer
         timerShapeLayer.path = circularPath.cgPath
-        timerShapeLayer.strokeColor = UIColor.red.cgColor
-        timerShapeLayer.lineWidth = 10
+        timerShapeLayer.strokeColor = UIColor.black.cgColor
+        timerShapeLayer.lineWidth = 15
         timerShapeLayer.fillColor = UIColor.clear.cgColor
         timerShapeLayer.lineCap = CAShapeLayerLineCap.round
         timerShapeLayer.strokeEnd = 0

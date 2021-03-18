@@ -39,6 +39,23 @@ extension LearnViewController {
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
         if let viewController = storyboard?.instantiateViewController(identifier: "PlaylistView") as? PlaylistViewController {
+            switch indexPath.row{
+                case 0:
+                //Toprock
+                    viewController.API_URL = "https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=PL57E01028C82367BD&key=\(Constants.API_KEY)&maxResults=50"
+                //Footwork
+                case 1:
+                    viewController.API_URL = "https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=PLC03D627286ADDD94&key=\(Constants.API_KEY)&maxResults=50"
+                //Freezes
+                case 2:
+                    viewController.API_URL = "https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=PL667C395494400FC0&key=\(Constants.API_KEY)&maxResults=50"
+                //Powermoves
+                case 3:
+                    viewController.API_URL = "https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=PL0498871864379CC0&key=\(Constants.API_KEY)&maxResults=50"
+                default:
+                    print("This should never happen")
+                    return
+            }
             
             navigationController?.pushViewController(viewController, animated: true)
         }
