@@ -95,62 +95,66 @@ class ActivityViewController: UIViewController, ChartViewDelegate {
         }
     }
     
-    /* Notes: Use NSPredicate to specify requests. I need to create Date ranges
+    /// Fetches all Session counts for Today, This Week, This Month, and This Year (BRUTE FORCE APPROACH)
+    //FIXME: - Clean and Refacor this
+    // Currently we have a fixed solution, but we can make this generalized.
+    // We use DateComponents to construct the date, is there a better way?
     
-     Year: 1/1/2021
-     YearEnd: 12/31/2021
-     
-     Month: (Current Month first day)
-     MonthEnd: (Current month last day)
-     
-     Week: (Get first day of current week)
-     WeekEnd: (Get last day of current week)
-     
-     Today: (Get first time of day)
-     Today: (Get last time of day)
-     
-     */
-    
-    /// Fetches all Session counts for Today, This Week, This Month, and This Year
     func calculateSessions(){
         // Get context from Core Data
         guard let appDelegate =  UIApplication.shared.delegate as? AppDelegate else {
             return
         }
-
         let managedContext = appDelegate.persistentContainer.viewContext
         
-        // We need 4 seperate fetch requests (Y,M,W,T)
+        // We need 4 seperate fetch requests (Y,T,W,M)
         
         // YEAR
         let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Session")
-        
-        let startDate = Date()
-        let predicate = NSPredicate(format: "date < %@", argumentArray: [startDate])
+        let calendar = Calendar.current
+        let dateComponents = DateComponents(calendar: calendar, year: 2021, month: 1, day: 1)
+        let dateComponents2 = DateComponents(calendar: calendar, year: 2021, month: 12,day: 31)
+        let startYearDate = calendar.date(from: dateComponents)! // 1/1/2021
+        let endYearDate = calendar.date(from: dateComponents2)
+        let predicate = NSPredicate(format: "date > %@ AND date < %@", argumentArray: [startYearDate, endYearDate])
         fetchRequest.predicate = predicate
         
-        // MONTH
+        // TODAY
+        let fetchRequest2 = NSFetchRequest<NSManagedObject>(entityName: "Session")
+        let dateComponents3 = DateComponents(calendar: calendar, year: 2021, month: 3, day: 19)
+        let dateComponents4 = DateComponents(calendar: calendar, year: 2021, month: 3, day: 20)
+        let startTodayDate = calendar.date(from: dateComponents3)
+        let endTodayDate = calendar.date(from: dateComponents4)
+        let predicate2 = NSPredicate(format: "date > %@ AND date < %@", argumentArray: [startTodayDate, endTodayDate])
+        fetchRequest2.predicate = predicate2
         
         // WEEK
+        let fetchRequest3 = NSFetchRequest<NSManagedObject>(entityName: "Session")
+        let dateComponents5 = DateComponents(year: 2021, month: 3, day: 15)
+        let dateComponents6 = DateComponents(year: 2021, month: 3, day: 21)
+        let startWeekDate = calendar.date(from: dateComponents5)
+        let endWeekDate = calendar.date(from: dateComponents6)
+        let predicate3 = NSPredicate(format: "date > %@ AND date < %@", argumentArray: [startWeekDate, endWeekDate])
+        fetchRequest3.predicate = predicate3
         
-        // TODAY
+        // MONTH
+        let fetchRequest4 = NSFetchRequest<NSManagedObject>(entityName: "Session")
+        let dateComponents7 = DateComponents(year: 2021, month: 3, day: 1)
+        let dateComponents8 = DateComponents(year: 2021, month: 4, day: 1)
+        let startMonthDate = calendar.date(from: dateComponents7)
+        let endMonthDate = calendar.date(from: dateComponents8)
+        let predicate4 = NSPredicate(format: "date > %@ AND date < %@", argumentArray: [startMonthDate, endMonthDate])
+        fetchRequest4.predicate = predicate4
         
         do {
-            //Update Year label
             try thisYearLabel?.text = String(managedContext.count(for: fetchRequest))
-            try thisMonthLabel?.text = String(managedContext.count(for: fetchRequest))
-            try thisWeekLabel?.text = String(managedContext.count(for: fetchRequest))
-            try todayLabel?.text = String(managedContext.count(for: fetchRequest))
-            //Update Month label
-            
-            //Update Week label
-            
-            //Update today's label
+            try todayLabel?.text = String(managedContext.count(for: fetchRequest2))
+            try thisWeekLabel?.text = String(managedContext.count(for: fetchRequest3))
+            try thisMonthLabel?.text = String(managedContext.count(for: fetchRequest4))
         }catch let error as NSError{
             print("Could not fetch \(error)")
         }
     }
-    
 }
 
 
