@@ -23,11 +23,22 @@
 		906E0C1925E0585C00D55EFA /* PlaylistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 906E0C1825E0585C00D55EFA /* PlaylistViewController.swift */; };
 		909D145625F33D9C00BA7F89 /* PlaylistTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909D145525F33D9C00BA7F89 /* PlaylistTableViewCell.swift */; };
 		90AAB78425ED90980050FA2F /* VideoPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90AAB78325ED90980050FA2F /* VideoPlayerViewController.swift */; };
+		90D24BB92638D3B600585421 /* Breakdance_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D24BB82638D3B600585421 /* Breakdance_AppTests.swift */; };
 		90E1E69025A8F36F00D29E25 /* TrainingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E1E68F25A8F36F00D29E25 /* TrainingViewController.swift */; };
 		90E1E69A25A925FF00D29E25 /* TrainingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E1E69925A925FF00D29E25 /* TrainingTableViewCell.swift */; };
 		90F3674F25E073B40041EA9B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F3674E25E073B40041EA9B /* Constants.swift */; };
 		DF8BFF2CDAE9610AAC1518A8 /* Pods_Breakdance_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F2294EF49D02BF273CFA816 /* Pods_Breakdance_App.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		90D24BBB2638D3B600585421 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 90407DFC24E350C4009160A3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 90407E0324E350C4009160A3;
+			remoteInfo = "Breakdance App";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		40C68A5808AD76FD699B02DA /* Pods-Breakdance App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Breakdance App.release.xcconfig"; path = "Target Support Files/Pods-Breakdance App/Pods-Breakdance App.release.xcconfig"; sourceTree = "<group>"; };
@@ -50,6 +61,9 @@
 		906E0C1825E0585C00D55EFA /* PlaylistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistViewController.swift; sourceTree = "<group>"; };
 		909D145525F33D9C00BA7F89 /* PlaylistTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistTableViewCell.swift; sourceTree = "<group>"; };
 		90AAB78325ED90980050FA2F /* VideoPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerViewController.swift; sourceTree = "<group>"; };
+		90D24BB62638D3B600585421 /* Breakdance AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Breakdance AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		90D24BB82638D3B600585421 /* Breakdance_AppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Breakdance_AppTests.swift; sourceTree = "<group>"; };
+		90D24BBA2638D3B600585421 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		90E1E68F25A8F36F00D29E25 /* TrainingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingViewController.swift; sourceTree = "<group>"; };
 		90E1E69925A925FF00D29E25 /* TrainingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingTableViewCell.swift; sourceTree = "<group>"; };
 		90F3674E25E073B40041EA9B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -62,6 +76,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				DF8BFF2CDAE9610AAC1518A8 /* Pods_Breakdance_App.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		90D24BB32638D3B600585421 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				90407E0624E350C4009160A3 /* Breakdance App */,
+				90D24BB72638D3B600585421 /* Breakdance AppTests */,
 				90407E0524E350C4009160A3 /* Products */,
 				3E9030E84B41FEB09E724CC8 /* Pods */,
 				A0951794A55407C6625B10C8 /* Frameworks */,
@@ -91,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				90407E0424E350C4009160A3 /* Breakdance App.app */,
+				90D24BB62638D3B600585421 /* Breakdance AppTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -106,7 +129,6 @@
 				90407E1C24E356F9009160A3 /* View */,
 				90407E1D24E35717009160A3 /* Controller */,
 				90407E1E24E3574A009160A3 /* Resources */,
-				90584EAC25F4116E008EE202 /* Tests */,
 			);
 			path = "Breakdance App";
 			sourceTree = "<group>";
@@ -154,13 +176,6 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		90584EAC25F4116E008EE202 /* Tests */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Tests;
-			sourceTree = "<group>";
-		};
 		90584EAD25F41372008EE202 /* Mp3 */ = {
 			isa = PBXGroup;
 			children = (
@@ -176,6 +191,15 @@
 				90407E1224E350C6009160A3 /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		90D24BB72638D3B600585421 /* Breakdance AppTests */ = {
+			isa = PBXGroup;
+			children = (
+				90D24BB82638D3B600585421 /* Breakdance_AppTests.swift */,
+				90D24BBA2638D3B600585421 /* Info.plist */,
+			);
+			path = "Breakdance AppTests";
 			sourceTree = "<group>";
 		};
 		A0951794A55407C6625B10C8 /* Frameworks */ = {
@@ -208,18 +232,40 @@
 			productReference = 90407E0424E350C4009160A3 /* Breakdance App.app */;
 			productType = "com.apple.product-type.application";
 		};
+		90D24BB52638D3B600585421 /* Breakdance AppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 90D24BBD2638D3B600585421 /* Build configuration list for PBXNativeTarget "Breakdance AppTests" */;
+			buildPhases = (
+				90D24BB22638D3B600585421 /* Sources */,
+				90D24BB32638D3B600585421 /* Frameworks */,
+				90D24BB42638D3B600585421 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				90D24BBC2638D3B600585421 /* PBXTargetDependency */,
+			);
+			name = "Breakdance AppTests";
+			productName = "Breakdance AppTests";
+			productReference = 90D24BB62638D3B600585421 /* Breakdance AppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		90407DFC24E350C4009160A3 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1160;
+				LastSwiftUpdateCheck = 1250;
 				LastUpgradeCheck = 1230;
 				ORGANIZATIONNAME = "Lawrence Dizon";
 				TargetAttributes = {
 					90407E0324E350C4009160A3 = {
 						CreatedOnToolsVersion = 11.6;
+					};
+					90D24BB52638D3B600585421 = {
+						CreatedOnToolsVersion = 12.5;
+						TestTargetID = 90407E0324E350C4009160A3;
 					};
 				};
 			};
@@ -237,6 +283,7 @@
 			projectRoot = "";
 			targets = (
 				90407E0324E350C4009160A3 /* Breakdance App */,
+				90D24BB52638D3B600585421 /* Breakdance AppTests */,
 			);
 		};
 /* End PBXProject section */
@@ -250,6 +297,13 @@
 				90407E1124E350C6009160A3 /* Assets.xcassets in Resources */,
 				903043B525DB3D0A005FF5FD /* beep.mp3 in Resources */,
 				90407E0F24E350C4009160A3 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		90D24BB42638D3B600585421 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -320,7 +374,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		90D24BB22638D3B600585421 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				90D24BB92638D3B600585421 /* Breakdance_AppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		90D24BBC2638D3B600585421 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 90407E0324E350C4009160A3 /* Breakdance App */;
+			targetProxy = 90D24BBB2638D3B600585421 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		90407E0D24E350C4009160A3 /* Main.storyboard */ = {
@@ -496,6 +566,48 @@
 			};
 			name = Release;
 		};
+		90D24BBE2638D3B600585421 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = M28B8923AA;
+				INFOPLIST_FILE = "Breakdance AppTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.lawrencedizon.Breakdance-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Breakdance App.app/Breakdance App";
+			};
+			name = Debug;
+		};
+		90D24BBF2638D3B600585421 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = M28B8923AA;
+				INFOPLIST_FILE = "Breakdance AppTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.lawrencedizon.Breakdance-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Breakdance App.app/Breakdance App";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -513,6 +625,15 @@
 			buildConfigurations = (
 				90407E1924E350C6009160A3 /* Debug */,
 				90407E1A24E350C6009160A3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		90D24BBD2638D3B600585421 /* Build configuration list for PBXNativeTarget "Breakdance AppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				90D24BBE2638D3B600585421 /* Debug */,
+				90D24BBF2638D3B600585421 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
