@@ -2,10 +2,11 @@
 ## Learn to breakdance and practice more effectively
 
 ## Screenshots
-<img src= "/screenshots/1.jpg" width = "180">&emsp;
-<img src= "/screenshots/2.jpg" width = "180">&emsp;
-<img src= "/screenshots/3.jpg" width = "180">&emsp;
-<img src= "/screenshots/4.jpg" width = "180">
+<img src= "/screenshots/1.png" width = "180">&emsp;
+<img src= "/screenshots/2.png" width = "180">&emsp;
+<img src= "/screenshots/3.png" width = "180">&emsp;
+<img src= "/screenshots/4.png" width = "180">&emsp;
+<img src= "/screenshots/5.png" width = "180">
 
 ## Features
 * Build endurance and stamina with our High-Intensity Interval Training (HIIT) timer
