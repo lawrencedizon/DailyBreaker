@@ -19,9 +19,6 @@ class PlaylistViewController: UITableViewController {
         if let url = API_URL {
             fetchInfo(url: url)
         }
-        DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(500)) {
-            self.tableView.reloadData()
-        }
     }
 
     
@@ -43,7 +40,7 @@ class PlaylistViewController: UITableViewController {
     }
     func fetchInfo(url: String){
         guard let url = URL(string: url) else { return }
-        
+        print("API CALL:  \(url)")
         let task = URLSession.shared.dataTask(with: url)  { (data, _, error) in
             
             //error check
@@ -57,32 +54,30 @@ class PlaylistViewController: UITableViewController {
                 return
             }
             do {
-                print("API CALL:  \(url)")
                 let jsonResult = try JSONDecoder().decode(APIResponse.self, from: data)
-                
-                DispatchQueue.main.async {
-                    for item in jsonResult.items{
-                        self.playlistVideos.append(item.snippet.title)
-                        self.videoIds.append(item.snippet.resourceId.videoId)
+
+                for item in jsonResult.items{
+                    self.playlistVideos.append(item.snippet.title)
+                    self.videoIds.append(item.snippet.resourceId.videoId)
+                    
+                    if let url = URL(string: item.snippet.thumbnails.high.url){
+                        let image = try? Data(contentsOf: url)
                         
-                        if let url = URL(string: item.snippet.thumbnails.high.url){
-                            let image = try? Data(contentsOf: url)
-                            
-                            if let imageData = image {
-                                self.thumbNails.append(UIImage(data: imageData)!)
-                            }
+                        if let imageData = image {
+                            self.thumbNails.append(UIImage(data: imageData)!)
                         }
                     }
+                }
+                
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
                 }
                
             }catch{
                 print(error)
             }
-            
         }
-        
         task.resume()
-        print("playlist count after resume \(self.playlistVideos.count)")
     }
     
     
@@ -95,7 +90,4 @@ class PlaylistViewController: UITableViewController {
         }
         
     }
-
-    
-
 }
